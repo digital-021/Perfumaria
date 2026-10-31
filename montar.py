@@ -6,7 +6,7 @@ Rodar de novo sempre que o HMC ou a C7 mudar, e depois fazer commit/push."""
 import json, os, re, shutil, subprocess, sys, tempfile
 
 P = "/mnt/project-files/"
-BASE = "https://digital-021.github.io/perfumaria/"
+BASE = "https://digital-021.github.io/Perfumaria/"
 LOJAS = [
     dict(id="hmc", nome="HMC Perfumaria", local="Bonsucesso, RJ", dir=P + "hmc-catalogo", html=P + "hmc-catalogo/hmc-perfumaria.html"),
     dict(id="c7", nome="C7 Perfumaria", local="Bangu, RJ", dir=P + "loja2-catalogo", html=None),
