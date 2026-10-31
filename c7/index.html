@@ -1,0 +1,1270 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Perfumes árabes 100% originais. Atacado e varejo, loja em Bangu, RJ. Entrega para todo o Brasil, Rio em até 12h. Peça pelo WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="C7 Perfumaria">
+<meta property="og:title" content="C7 Perfumaria · Catálogo">
+<meta property="og:description" content="Perfumes árabes 100% originais. Atacado e varejo, loja em Bangu, RJ. Entrega para todo o Brasil, Rio em até 12h. Peça pelo WhatsApp.">
+<meta property="og:url" content="https://digital-021.github.io/perfumaria/c7/">
+<meta property="og:image" content="https://digital-021.github.io/perfumaria/c7/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/logo.png">
+<link rel="apple-touch-icon" href="img/logo.png">
+<title>C7 Perfumaria</title>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Figtree:wght@400;500;600;700&family=Amiri:wght@400&display=swap">
+<style>
+/* Layout: vitrine de celular. Cabeçalho com selo, busca e abas fixas, cartões com foto do frasco, ficha completa abre por baixo */
+:root{
+  --bg:#F5F3EF; --surface:#FFFFFF; --ink:#1F1A16; --muted:#6E655C; --line:#E4DED5;
+  --accent:#8E6224; --accent-soft:#F1E6D3; --wa:#1F8F4E; --wa-ink:#FFFFFF;
+  --f-display:"Bodoni Moda", "Didot", Georgia, serif;
+  --f-body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-ar:"Amiri", "Geeza Pro", serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#13110F; --surface:#1D1A17; --ink:#EFE7DC; --muted:#A99D8F; --line:#332D27;
+  --accent:#D7A85E; --accent-soft:#2C2318; --wa:#25A55C; --wa-ink:#FFFFFF; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#13110F; --surface:#1D1A17; --ink:#EFE7DC; --muted:#A99D8F; --line:#332D27;
+  --accent:#D7A85E; --accent-soft:#2C2318; --wa:#25A55C; --wa-ink:#FFFFFF; color-scheme:dark}
+
+*{box-sizing:border-box}
+:root,:root[data-theme="light"]{--bg:#141414; --surface:rgba(18,17,16,.93); --ink:#FFFFFF; --muted:#E2D7C9; --line:rgba(215,168,94,.28);
+  --accent:#D7A85E; --accent-soft:rgba(215,168,94,.16); --wa:#25A55C; --wa-ink:#FFFFFF; color-scheme:dark}
+html{background:#141414}
+body{-webkit-font-smoothing:antialiased}
+header.wrap,header.wrap *{text-shadow:0 1px 3px rgba(0,0,0,.85)}
+header.wrap :is(a,button,strong,.chip,.chip *),header.wrap a *,header.wrap button *,header.wrap .promo.hot,header.wrap .promo.hot *{text-shadow:none}
+header.wrap p,header.wrap .lede{font-weight:500}
+body{background:transparent !important}
+.tile.ph:has(img[src$=".png"]),.tile.ph:has(img[src*=".png"]){background:transparent}
+.tile.ph:has(img[src$=".png"])::after,.tile.ph:has(img[src*=".png"])::after{background:transparent}
+.track img[src*=".png"],.tile.ph img[src*=".png"]{background:transparent}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(img/fundo-mob.jpg) center/cover no-repeat #141414}
+@media (min-aspect-ratio:1/1){body::after{background-image:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(img/fundo-desk.jpg)}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.top{padding-block:28px 8px;display:grid;gap:14px}
+.brand{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand h1{font-family:var(--f-display);font-weight:700;font-size:clamp(30px,7vw,46px);line-height:1;margin:0;letter-spacing:.01em}
+.brand h1 small{display:block;font-family:var(--f-body);font-weight:600;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.brand{justify-content:flex-start;align-items:center;gap:14px}
+.brand .logo{width:76px;height:76px;border-radius:50%;flex:none;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.brand h1{flex:1;min-width:0}
+@media (max-width:520px){.brand .ar{display:none}}
+.brand .ar{font-family:var(--f-ar);font-size:28px;color:var(--accent);line-height:1}
+.tagline{margin:0;color:var(--muted);max-width:52ch}
+.seals{display:flex;flex-wrap:wrap;gap:8px}
+.seal{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--accent);color:var(--accent);border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;letter-spacing:.04em}
+.seal svg{width:14px;height:14px}
+
+.from{margin:0;display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 8px;font-size:15px;font-weight:600}
+.from span{font-family:var(--f-display);font-size:19px}
+.from strong{font-family:var(--f-display);font-size:34px;line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
+.promos{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+@media (max-width:700px){.promos{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:-16px;padding-inline:16px;scroll-padding-inline:16px}.promos::-webkit-scrollbar{display:none}.promo{flex:0 0 84%;scroll-snap-align:start}}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px}
+.info .it{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.info svg{flex:none;width:24px;height:24px;color:var(--accent);margin-top:2px}
+.info b{display:block;font-size:14.5px}
+.info span{font-size:13px;color:var(--muted)}
+.info a{color:var(--accent);font-weight:600}
+.go{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;border:0;border-radius:14px;padding:17px 20px;background:#D7A85E;color:#1F1A16;font-size:18px;font-weight:800;letter-spacing:.02em;box-shadow:0 6px 18px rgba(142,98,36,.35);cursor:pointer}
+.go svg{width:22px;height:22px}
+details.helper > summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px;background:#F6EBD8;color:#6B4A1A;border:1px solid #D9C29A;border-radius:12px;padding:12px 14px;font-weight:700;font-size:14.5px}
+details.helper > summary::-webkit-details-marker{display:none}
+details.helper > summary::after{content:"+";font-size:20px;line-height:1}
+details.helper[open] > summary::after{content:"–"}
+details.helper[open] > summary{margin-bottom:12px}
+.promo{border:1px solid var(--line);background:var(--surface);border-radius:14px;padding:14px 16px;display:grid;gap:6px;align-content:start;min-width:0}
+.promo.hot{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.promo .kicker{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.promo h2{font-family:var(--f-display);font-size:21px;line-height:1.15;margin:0;text-wrap:balance}
+.promo p{margin:0;font-size:14px;opacity:.85}
+.promo p.min{opacity:1;color:var(--accent)}
+.pbtn{border:0;cursor:pointer;justify-self:start;margin-top:4px;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;font-size:13.5px;border-radius:10px;padding:9px 14px}
+.send{display:block;text-align:center;border:1.5px solid var(--wa);color:var(--wa);text-decoration:none;font-weight:700;border-radius:10px;padding:10px 8px;font-size:14px}
+.mini-link{text-align:center;color:var(--accent);font-weight:600;font-size:14px}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line)}
+.bar .wrap{display:grid;gap:10px}
+.seg{display:flex;overflow-x:auto;scrollbar-width:none;gap:6px;padding:2px 0}
+.seg button{flex:1 0 auto;white-space:nowrap;padding-inline:10px!important;border:1px solid #8E6224;background:#2B2420;color:#F3E6CF;border-radius:10px;padding:10px 4px;font-weight:700;font-size:13.5px;box-shadow:0 1px 3px rgba(0,0,0,.18)}
+.seg button[aria-pressed="true"]{background:#D7A85E;color:#1F1A16;box-shadow:0 0 0 2px #8E6224 inset}
+.search{display:flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:0 12px}
+.search svg{width:18px;height:18px;color:var(--muted);flex:none}
+.search input{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);font:inherit;padding:11px 0;outline:none}
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:0 -4px;padding:0 4px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;border:1px solid #D9C29A;background:#EAD7B4;color:#3A2A14;border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600;white-space:nowrap}
+.tab[aria-pressed="true"]{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+
+.helper{padding-block:18px 4px;display:grid;gap:10px}
+.helper h2{font-family:var(--f-display);font-weight:500;font-style:italic;font-size:20px;margin:0}
+.helper h3{margin:6px 0 0;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.quick{display:flex;gap:8px;flex-wrap:wrap}
+.qbtn{border:1px solid #D9C29A;background:#F6EBD8;color:#6B4A1A;border-radius:10px;padding:8px 12px;font-size:13px;font-weight:600}
+.qbtn[aria-pressed="true"]{background:var(--accent);color:var(--bg);border-style:solid}
+.notes-pop{display:flex;gap:6px;flex-wrap:wrap}
+.npill{border:0;background:var(--accent-soft);color:var(--ink);border-radius:6px;padding:5px 10px;font-size:12.5px}
+.npill[aria-pressed="true"]{background:var(--accent);color:var(--bg)}
+
+.count{color:var(--muted);font-size:13px;padding-block:14px 6px;margin:0;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.count button{border:0;background:none;color:var(--accent);font-weight:600;font-size:13px;padding:0;text-decoration:underline}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;padding-bottom:110px}
+@media (min-width:640px){.grid{grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:grid;grid-template-rows:auto 1fr;min-width:0}
+.shot{position:relative;aspect-ratio:4/5;max-width:100%;background:#111;cursor:pointer;overflow:hidden}
+.track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.track::-webkit-scrollbar{display:none}
+.track img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;display:block;scroll-snap-align:start}
+.dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:5px;pointer-events:none}
+.dots i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.45);box-shadow:0 0 2px rgba(0,0,0,.5)}
+.dots i.on{background:#fff}
+.nav{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;border:0;background:rgba(0,0,0,.45);color:#fff;font-size:18px;line-height:1;display:none}
+.nav.prev{left:6px}.nav.next{right:6px}
+@media (hover:hover){.shot:hover .nav{display:block}}
+.tile{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:2px;padding:16px 14px;color:#F3E6CF;text-align:left}
+.tile.f{background:linear-gradient(160deg,#5A2333 0%,#2A1018 100%)}
+.tile.m{background:linear-gradient(160deg,#1E2C3D 0%,#0D141D 100%)}
+.tile.u{background:linear-gradient(160deg,#3D3320 0%,#1A150C 100%)}
+.tile.ph{justify-content:flex-end;padding:0 10px 8px;background:#fff;gap:0}
+.tile.ph img{position:absolute;left:0;right:0;top:0;width:100%;height:calc(100% - 52px);object-fit:contain;background:#fff}
+.tile.ph .track{position:absolute;left:0;right:0;top:0;height:calc(100% - 52px);background:#fff}
+.tile.ph .track img{position:static;height:100%;object-fit:contain}
+.tile.ph > .dots{position:absolute;bottom:60px;z-index:1}
+.tile.ph:has(img[src$=".png"]){background:var(--bg)}
+.tile.ph img[src$=".png"],.tile.ph .track:has(img[src$=".png"]){background:transparent}
+.track img[src$=".png"]{background:var(--bg)}
+.tile.ph::after{content:"";position:absolute;left:0;right:0;bottom:0;height:52px;background:#1F1A16}
+.tile.ph > span{position:relative;z-index:1}
+.tile.ph .tl-tam{position:absolute;bottom:14px}
+.tile.ph .badge{position:absolute;z-index:1}
+.tile.ph .tl-brand,.tile.ph .tl-insp{display:none}
+.tile.ph .tl-num{font-size:17px;font-family:var(--f-body);font-weight:800;letter-spacing:.04em;color:#D7A85E}
+.tile.ph .tl-num::before{content:"Nº "}
+.tile.ph .tl-name{font-size:13.5px;max-width:calc(100% - 52px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile .tl-num.long{font-size:clamp(34px,11vw,52px)}
+.tile.ph .tl-num.long{font-size:17px}
+.badge.hot{background:#D7A85E;color:#1F1A16;font-weight:800}
+.tile.ph .badge:not(.hot){box-shadow:0 0 0 1px #D9C29A}
+.aviso{grid-column:1/-1;background:#1F1A16;color:#F3E6CF;border-radius:14px;padding:14px 16px;margin:0 0 4px}
+.aviso .sexo{display:flex;gap:8px;margin-top:12px}
+.aviso .sexo .qbtn{flex:1}
+.aviso .faixa{display:block;margin:10px 0 2px;padding:10px 12px;border-radius:10px;background:#D7A85E;color:#1F1A16;font-weight:800;font-size:15px;line-height:1.35}
+.aviso b{color:#D7A85E}.aviso p{margin:6px 0 0;font-size:14px;line-height:1.45}
+.tile .tl-brand{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#D7A85E;font-weight:700;margin-top:18px}
+.tile .tl-num{font-family:var(--f-display);font-weight:700;font-size:clamp(40px,14vw,64px);line-height:1;color:#F3E6CF}
+.tile .tl-insp{font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-top:6px}
+.tile .tl-name{font-family:var(--f-display);font-style:italic;font-size:17px;line-height:1.15;overflow-wrap:anywhere}
+.tile .tl-tam{position:absolute;right:8px;bottom:8px;font-size:10.5px;font-weight:700;border:1px solid rgba(243,230,207,.5);border-radius:5px;padding:2px 6px}
+.gal{display:flex;align-items:flex-start;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;margin-right:-4px}
+.gal img{flex:0 0 64%;width:64%;min-width:0;max-width:none;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:10px;scroll-snap-align:start}
+.badge{position:absolute;top:8px;left:8px;background:rgba(255,255,255,.92);color:#1F1A16;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:5px;padding:3px 7px}
+.badge.orig{left:auto;right:8px;background:rgba(20,16,12,.8);color:#E9C989}
+.body{padding:12px 12px 14px;display:grid;gap:7px;align-content:start;min-width:0}
+.maker{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.name{font-family:var(--f-display);font-weight:700;font-size:19px;line-height:1.1;margin:0;text-wrap:balance;overflow-wrap:anywhere}
+.cheira{margin:0;font-size:13px;color:var(--ink)}
+.cheira b{color:var(--muted);font-weight:600}
+.fams{display:flex;gap:4px;flex-wrap:wrap}
+.fam{font-size:11px;font-weight:600;color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:1px 8px}
+.price{font-weight:700;font-size:15px;font-variant-numeric:tabular-nums}
+.precos{display:grid;gap:4px}
+.pr{display:grid;gap:0;line-height:1.2;border-radius:9px;padding:5px 10px;border:1.5px solid var(--accent);min-width:0}
+.pr small{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pr b{font-size:16px;font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pr.at{background:var(--accent);border-color:var(--accent)}
+.pr.at small,.pr.at b{color:var(--bg)}
+.price.repo{font-size:12px;font-weight:700;color:var(--muted);border:1px dashed var(--line);border-radius:8px;padding:4px 8px;justify-self:start}
+.precos-nota{font-size:11px;color:var(--muted);margin-top:-3px}
+.from{font-size:16px;font-weight:700}
+.from strong{font-family:var(--f-body);font-size:32px;font-weight:700;color:var(--bg);background:var(--accent);padding:6px 14px 4px;border-radius:12px;letter-spacing:.01em}
+.price.ask{font-weight:600;font-size:13px;color:var(--muted)}
+.more{border:0;background:none;color:var(--accent);font-weight:600;font-size:13px;padding:2px 0;text-decoration:underline;text-underline-offset:3px;justify-self:start}
+.wa{display:flex;align-items:center;justify-content:center;gap:7px;background:var(--wa);color:var(--wa-ink);text-decoration:none;font-weight:700;border-radius:10px;padding:10px 8px;font-size:14px;text-align:center}
+.wa svg{width:17px;height:17px;flex:none}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px 0}
+
+.sheet-bg{position:fixed;inset:0;background:rgba(10,8,6,.55);z-index:20}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:21;max-height:90%;overflow:auto;background:var(--surface);border-radius:20px 20px 0 0;
+  padding:20px max(20px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) max(20px,env(safe-area-inset-left,0px));
+  max-width:640px;margin:0 auto;display:grid;gap:16px}
+.sheet .x{position:absolute;top:12px;right:max(12px,env(safe-area-inset-right,0px));border:0;background:var(--accent-soft);border-radius:999px;width:36px;height:36px;font-size:20px;line-height:1}
+.sheet-head{padding-right:36px}
+.sheet h3{font-family:var(--f-display);font-size:26px;margin:2px 0 6px;line-height:1.1}
+.sheet h4{margin:0 0 8px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.traits{display:flex;gap:6px;flex-wrap:wrap}
+.trait{background:var(--accent-soft);border-radius:6px;padding:4px 10px;font-size:12.5px;font-weight:600}
+.pyr{display:grid;gap:10px}
+.tier{display:grid;grid-template-columns:86px 1fr;gap:10px;align-items:start}
+.tier b{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);padding-top:3px}
+.tier span{min-width:0}
+.tier em{font-style:normal;color:var(--muted);font-size:12px;display:block}
+.notechips{display:flex;gap:6px;flex-wrap:wrap}
+.notechips span{border:1px solid var(--line);border-radius:999px;padding:4px 11px;font-size:13px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;font-size:13.5px;margin:0}
+.facts dt{color:var(--muted);font-size:12px}
+.facts dd{margin:0;font-weight:600}
+
+.float{position:fixed;right:calc(env(safe-area-inset-right,0px) + 16px);bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:6;
+  display:flex;align-items:center;gap:8px;background:var(--wa);color:var(--wa-ink);text-decoration:none;font-weight:700;border-radius:999px;padding:12px 18px;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.float svg{width:20px;height:20px}
+footer{border-top:1px solid var(--line);padding-block:24px 120px;color:var(--muted);font-size:13px}
+footer p{margin:0 0 6px;max-width:60ch}
+@media (prefers-reduced-motion:no-preference){.card{transition:transform .2s}.card:hover{transform:translateY(-2px)}}
+</style>
+
+<header class="wrap top">
+  <div class="brand">
+    <img class="logo" src="img/logo.png" alt="Logo C7 Perfumaria" width="76" height="76">
+    <h1><small>Perfumes árabes e inspirações</small>C7 Perfumaria</h1>
+    <span class="ar" lang="ar" aria-hidden="true">عطور</span>
+  </div>
+  <p class="from"><span>Perfumes árabes originais e inspirações</span> a partir de <strong>R$&nbsp;47</strong></p>
+  <p class="tagline">Nosso foco são os perfumes árabes 100% originais e as inspirações dos perfumes de sucesso do momento, da Brand Collection. Escolha pela família, procure pela nota que você ama e peça direto no WhatsApp.</p>
+  <button class="go" data-l="todos" data-ir="1">Ver os perfumes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg></button>
+  <div class="seals">
+    <span class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 3h4v4l3 3-3 3v4h-4l-3 3-3-3H5v-4l-3-3 3-3V5h4z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Árabes 100% originais</span>
+    <span class="seal">Lacrados de fábrica</span>
+    <span class="seal">Árabes direto dos Emirados</span>
+    <span class="seal">Inspirações Brand Collection</span>
+    <span class="seal">Atacado e varejo</span>
+  </div>
+  <div class="info">
+    <div class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Rio de Janeiro em até 12 horas</b><span>Entregamos em qualquer lugar do Rio de Janeiro.</span></div></div>
+    <div class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg><div><b>Entregamos em todo o Brasil</b><span>Enviamos para qualquer cidade do país.</span></div></div>
+    <div class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 10l1.5-5h13L20 10M4 10v10h16V10M4 10h16M9 20v-5h6v5"/></svg><div><b>Loja física em Bangu (RJ)</b><span>Venha conhecer e sentir os perfumes. <a id="ctaLoja" target="_blank" rel="noopener">Pedir endereço no WhatsApp</a></span></div></div>
+  </div>
+  <div class="promos">
+    <div class="promo hot">
+      <span class="kicker">Preço de atacado</span>
+      <h2>O melhor preço do mercado em perfumes árabes</h2>
+      <p>Compramos no atacado e repassamos a diferença para você. Mais barato, seja para usar ou para revender.</p>
+      <p class="min"><strong>Atacado a partir de 4 unidades.</strong> Pode misturar perfumes diferentes.</p>
+      <a class="pbtn" id="ctaAtacado" target="_blank" rel="noopener">Quero preço de atacado</a>
+    </div>
+    <div class="promo">
+      <span class="kicker">Kits para revendedores</span>
+      <h2>Comece a revender perfumes originais</h2>
+      <p>Montamos kits com preços acessíveis para você investir pouco e lucrar com perfumes árabes e inspirações que vendem bem.</p>
+      <a class="pbtn" id="ctaKit" target="_blank" rel="noopener">Quero montar meu kit</a>
+    </div>
+    <div class="promo">
+      <span class="kicker">Miniaturas</span>
+      <h2>Prove antes de levar o frasco inteiro</h2>
+      <p>Miniaturas até 50ml: as árabes da marca Arabic e as inspirações mais vendidas da Brand Collection: ótimas para provar, presentear, levar na bolsa ou revender.</p>
+      <button class="pbtn" data-l="miniar" data-ir="1">Miniaturas árabes</button> <button class="pbtn" data-l="mini" data-ir="1">Miniaturas Brand Collection</button>
+    </div>
+  </div>
+</header>
+
+<div class="bar">
+  <div class="wrap">
+    <div class="seg" id="seg" role="group" aria-label="Linha"></div>
+    <label class="search" for="q">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Busque por nome ou nota (ex.: baunilha, oud)" autocomplete="off">
+    </label>
+    <div class="tabs" id="tabs" role="group" aria-label="Famílias olfativas"></div>
+  </div>
+</div>
+
+<main class="wrap">
+  <details class="helper">
+    <summary>Não sabe qual escolher? Filtre por ocasião, para quem e nota</summary>
+    <div class="quick" id="quick"></div>
+    <h3>Para quem</h3>
+    <div class="quick" id="pub"></div>
+    <h3>Procure por nota</h3>
+    <div class="notes-pop" id="notes"></div>
+  </details>
+  <p class="count"><span id="count" aria-live="polite"></span><button id="limpar" hidden>Limpar filtros</button></p>
+  <section class="grid" id="grid"></section>
+</main>
+
+<footer class="wrap">
+  <p><strong>C7 Perfumaria</strong> · Perfumes árabes 100% originais e inspirações dos perfumes de sucesso.</p>
+  <p>Loja física em Bangu, Rio de Janeiro. Entregamos em qualquer lugar do Rio de Janeiro em até 12 horas e enviamos para todo o Brasil. Vendemos no atacado e no varejo. Atacado a partir de 4 unidades (pode misturar perfumes diferentes) e kits para revendedores com preços acessíveis. Miniaturas disponíveis para provar antes de comprar.</p>
+  <p>Os perfumes árabes são 100% originais e lacrados. As inspirações são originais da marca Brand Collection. Ficou em dúvida sobre fixação ou qual perfume combina com você? Chame no WhatsApp.</p>
+  <p id="wa-text"></p>
+</footer>
+
+<a class="float" id="float" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.300 1.200-1.800 1.200-.5.1-1 .2-3.300-.7-2.800-1.100-4.500-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.900s.7-2 1-2.300c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.900.9c.3.1.5.2.5.3.1.2.1.7-.1 1.300z"/></svg>
+  Fale com a C7
+</a>
+
+<div class="sheet-bg" id="sheetBg" hidden></div>
+<section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" hidden></section>
+
+<script>
+/* ============================================================
+   EDITE AQUI
+   WHATSAPP: DDI + DDD + número, só dígitos. Ex.: 5521999998888
+   preco: deixe null para mostrar "Consulte o valor", ou coloque o número (ex.: 289.90)
+   ============================================================ */
+const WHATSAPP = "5521965467629";
+const LINK_SITE = "https://digital-021.github.io/perfumaria/c7/";
+
+/* Linha "arabe": notas = o que o perfume "cheira a" (do catálogo).
+   Linha "importado": topo / coracao / fundo, duracao e projecao (do catálogo).  */
+const PERFUMES = [
+  // ---------- Árabes (catálogo de verão) ----------
+  { id:"hawas", linha:"arabe", nome:"Hawas for Him", marca:"Rasasi", conc:"Eau de Parfum", ml:100, publico:"Masculino", preco:null,
+    familias:["Frescos","Cítricos"], ocasiao:["Dia","Calor"], tracos:["Fresco","Moderno","Sedutor"],
+    resumo:"Fresco e aquático, com um toque de canela. Ótimo para o calor.",
+    notas:["Bergamota","Canela","Ameixa","Almíscar"] },
+  { id:"cdnim", linha:"arabe", nome:"Club de Nuit Intense Man", marca:"Armaf", conc:"Eau de Toilette", ml:105, publico:"Masculino", preco:null,
+    familias:["Cítricos","Amadeirados"], ocasiao:["Noite","Calor","Frio"], tracos:["Elegante","Intenso","Marcante"],
+    resumo:"Cítrico defumado com abacaxi e bétula. Elegante e versátil.",
+    notas:["Limão","Abacaxi","Bétula","Almíscar"] },
+  { id:"fakhar-black", linha:"arabe", nome:"Fakhar Black", marca:"Lattafa", conc:"Eau de Parfum", ml:100, publico:"Masculino", preco:null,
+    familias:["Frescos","Amadeirados"], ocasiao:["Dia","Calor"], tracos:["Elegante","Masculino","Envolvente"],
+    resumo:"Maçã e gengibre na saída, fundo amadeirado com fava tonka.",
+    notas:["Maçã","Gengibre","Fava tonka","Patchouli"] },
+  { id:"turathi-blue", linha:"arabe", nome:"Turathi Blue", marca:"Afnan", conc:"Eau de Parfum", ml:90, publico:"Masculino", preco:null,
+    familias:["Cítricos","Frescos"], ocasiao:["Dia","Calor"], tracos:["Fresco","Elegante","Sofisticado"],
+    resumo:"Azul, fresco e cítrico. Perfume de dia a dia com presença.",
+    notas:["Bergamota","Mandarina","Âmbar","Almíscar"] },
+  { id:"amber-oud-gold", linha:"arabe", nome:"Amber Oud Gold Edition", marca:"Al Haramain", conc:"Eau de Parfum", ml:120, publico:"Compartilhável", preco:null,
+    familias:["Doces","Orientais"], ocasiao:["Noite","Calor"], tracos:["Luxuoso","Doce","Marcante"],
+    resumo:"Doce, dourado e luxuoso, com melão e baunilha. Deixa rastro.",
+    notas:["Bergamota","Melão","Baunilha","Âmbar"] },
+  { id:"asad-bourbon", linha:"arabe", nome:"Asad Bourbon", marca:"Lattafa", conc:"Eau de Parfum", ml:100, publico:"Masculino", preco:null,
+    familias:["Doces","Orientais"], ocasiao:["Noite","Frio"], tracos:["Intenso","Quente","Sofisticado"],
+    resumo:"Quente e licoroso, com cacau, baunilha e lavanda.",
+    notas:["Cacau","Baunilha","Âmbar","Lavanda"] },
+  { id:"mayar", linha:"arabe", nome:"Mayar Natural Intense", marca:"Lattafa", conc:"Eau de Parfum", ml:100, publico:"Feminino", preco:null,
+    familias:["Frescos","Frutados"], ocasiao:["Dia","Calor"], tracos:["Refrescante","Frutado","Leve"],
+    resumo:"Leve e refrescante, com figo, melão e coco. Cheiro de verão.",
+    notas:["Lima","Figo","Melão","Coco"] },
+  { id:"sabah-al-ward", linha:"arabe", nome:"Sabah Al Ward", marca:"Al Wataniah", conc:"Eau de Parfum", ml:100, publico:"Feminino", preco:null,
+    familias:["Florais","Doces"], ocasiao:["Noite","Calor","Frio"], tracos:["Sedutor","Floral","Feminino"],
+    resumo:"Rosa com frutas vermelhas e baunilha. Feminino e sedutor.",
+    notas:["Rosa","Frutas vermelhas","Âmbar","Almíscar","Baunilha"] },
+  { id:"lueur-despoir", linha:"arabe", nome:"Lueur d'Espoir Serene Grove", marca:"Paris Corner", conc:"Eau de Parfum", ml:100, publico:"Compartilhável", preco:null,
+    familias:["Frescos","Frutados"], ocasiao:["Dia","Calor"], tracos:["Tropical","Elegante","Exótico"],
+    resumo:"Verde e tropical, com folhas e frutas exóticas.",
+    notas:["Folhas verdes","Frutas tropicais","Madeiras","Almíscar"] },
+  { id:"yara-tous", linha:"arabe", nome:"Yara Tous", marca:"Lattafa", conc:"Eau de Parfum", ml:100, publico:"Feminino", preco:null,
+    familias:["Frutados","Doces"], ocasiao:["Dia","Calor","Presente"], tracos:["Tropical","Feminino","Radiante"],
+    resumo:"Manga, coco e maracujá. Alegre, solar e cremoso.",
+    notas:["Manga","Coco","Maracujá","Almíscar"] },
+  // ---------- Árabes (catálogo de inverno) ----------
+  { id:"asad", linha:"arabe", nome:"Asad", marca:"Lattafa", conc:"Eau de Parfum", ml:100, publico:"Masculino", preco:null,
+    familias:["Amadeirados","Orientais"], ocasiao:["Noite","Frio"], tracos:["Marcante","Sofisticado","Intenso"],
+    resumo:"Amadeirado apimentado com baunilha. Presença forte.",
+    notas:["Pimenta-preta","Âmbar","Baunilha","Madeiras"] },
+  { id:"khamrah", linha:"arabe", nome:"Khamrah", marca:"Lattafa", conc:"Eau de Parfum", ml:100, publico:"Compartilhável", preco:null,
+    familias:["Doces","Orientais"], ocasiao:["Noite","Frio","Presente"], tracos:["Quente","Gourmand","Sofisticado"],
+    resumo:"Doce e quente, com canela, tâmaras e praliné.",
+    notas:["Canela","Tâmaras","Praliné","Âmbar"] },
+  { id:"9pm-rebel", linha:"arabe", nome:"9PM Rebel", marca:"Afnan", conc:"Eau de Parfum", ml:100, publico:"Compartilhável", preco:null,
+    familias:["Frutados","Amadeirados"], ocasiao:["Noite","Frio"], tracos:["Moderno","Ousado","Envolvente"],
+    resumo:"Maçã com fundo amadeirado. Moderno e ousado, para a noite.",
+    notas:["Maçã","Âmbar","Madeiras","Almíscar"] },
+  { id:"yara", linha:"arabe", nome:"Yara", marca:"Lattafa", conc:"Eau de Parfum", ml:100, publico:"Feminino", preco:null,
+    familias:["Doces","Florais"], ocasiao:["Dia","Frio","Presente"], tracos:["Cremoso","Feminino","Envolvente"],
+    resumo:"Cremoso e delicado, com orquídea e baunilha. Ótimo para presente.",
+    notas:["Orquídea","Baunilha","Almíscar","Frutas"] },
+  { id:"royal-amber", linha:"arabe", nome:"Royal Amber", marca:"Orientica", conc:"Eau de Parfum", ml:80, publico:"Compartilhável", preco:null,
+    familias:["Orientais","Doces"], ocasiao:["Noite","Frio","Presente"], tracos:["Luxuoso","Elegante","Quente"],
+    resumo:"Âmbar e baunilha com flores brancas. Luxuoso e aconchegante.",
+    notas:["Âmbar","Baunilha","Flores brancas","Almíscar"] },
+  { id:"al-noble-ameer", linha:"arabe", nome:"Al Noble Ameer", marca:"Lattafa", conc:"Eau de Parfum", ml:100, publico:"Masculino", preco:null,
+    familias:["Amadeirados","Orientais"], ocasiao:["Noite","Frio"], tracos:["Nobre","Masculino","Intenso"],
+    resumo:"Oud e madeiras com maçã e cravo. O árabe clássico e nobre.",
+    notas:["Maçã","Cravo","Madeiras","Oud"] },
+  { id:"liquid-brun", linha:"arabe", nome:"Liquid Brun", marca:"French Avenue", conc:"Eau de Parfum", ml:100, publico:"Masculino", preco:null,
+    familias:["Doces","Amadeirados"], ocasiao:["Noite","Frio"], tracos:["Cremoso","Moderno","Envolvente"],
+    resumo:"Baunilha e cacau com madeiras e especiarias. Cremoso e moderno.",
+    notas:["Baunilha","Cacau","Madeiras","Especiarias"] },
+  { id:"ajwad", linha:"arabe", nome:"Ajwad", marca:"Lattafa", conc:"Eau de Parfum", ml:60, publico:"Compartilhável", preco:null,
+    familias:["Florais","Doces"], ocasiao:["Dia","Frio","Presente"], tracos:["Delicado","Elegante","Envolvente"],
+    resumo:"Frutas e rosas sobre sândalo e baunilha. Delicado e elegante.",
+    notas:["Frutas","Rosas","Sândalo","Baunilha"] },
+  // ---------- Importados (grifes) ----------
+  { id:"myslf", linha:"importado", nome:"MYSLF", marca:"Yves Saint Laurent", conc:"Eau de Parfum", publico:"Masculino", preco:null,
+    familias:["Frescos","Amadeirados"], ocasiao:["Dia","Noite"], tracos:["Moderno","Intenso","Sofisticado"],
+    resumo:"Flor de laranjeira com fundo amadeirado. Moderno e limpo.",
+    topo:["Bergamota","Flor de laranjeira"], coracao:["Lavanda","Gerânio"], fundo:["Patchouli","Ambrofix"],
+    duracao:"8 a 12 horas", projecao:"Moderada a forte", momentos:["Trabalho","Noite","Eventos","Encontros"] },
+  { id:"sauvage", linha:"importado", nome:"Sauvage", marca:"Dior", conc:"Eau de Parfum", publico:"Masculino", preco:null,
+    familias:["Frescos","Amadeirados"], ocasiao:["Dia","Noite"], tracos:["Frescor","Força","Sedução"],
+    resumo:"Fresco e apimentado com fundo de ambroxan. Um clássico que agrada a todos.",
+    topo:["Bergamota","Pimenta de Sichuan","Lavanda"], coracao:["Pimenta","Lavanda","Noz-moscada","Gerânio"], fundo:["Ambroxan","Baunilha","Cedro","Labdanum"],
+    duracao:"8 a 12 horas", projecao:"Forte", momentos:["Trabalho","Noite","Eventos","Encontros"] },
+  { id:"1-million", linha:"importado", nome:"1 Million", marca:"Paco Rabanne", conc:"Eau de Toilette", publico:"Masculino", preco:null,
+    familias:["Doces","Orientais"], ocasiao:["Noite"], tracos:["Ousado","Sedutor","Vencedor"],
+    resumo:"Doce e especiado, com canela e couro. Feito para chamar atenção.",
+    topo:["Toranja","Hortelã","Mandarina"], coracao:["Canela","Notas especiadas","Rosa"], fundo:["Âmbar","Couro","Madeiras","Patchouli"],
+    duracao:"8 a 12 horas", projecao:"Forte", momentos:["Trabalho","Noite","Eventos","Encontros"] },
+  { id:"good-girl", linha:"importado", nome:"Good Girl", marca:"Carolina Herrera", conc:"Eau de Parfum", publico:"Feminino", preco:null,
+    familias:["Doces","Florais","Orientais"], ocasiao:["Noite","Presente"], tracos:["Bombástica","Sensual","Poderosa"],
+    resumo:"Café, tuberosa e cacau. Boa menina de dia, fatal à noite.",
+    topo:["Amêndoa","Café","Bergamota","Limão"], coracao:["Tuberosa","Jasmim sambac","Flor de laranjeira","Íris"], fundo:["Fava tonka","Cacau","Baunilha","Sândalo","Praliné"],
+    duracao:"6 a 10 horas", projecao:"Moderada a forte", momentos:["Trabalho","Jantar","Festas","Encontros"] },
+  { id:"212-vip-rose", linha:"importado", nome:"212 VIP Rosé", marca:"Carolina Herrera", conc:"Eau de Parfum", publico:"Feminino", preco:null,
+    familias:["Florais","Frutados"], ocasiao:["Noite"], tracos:["Celebrar","Brilhar","Inesquecível"],
+    resumo:"Champagne rosé e pimenta rosa. Perfume de festa.",
+    topo:["Champagne rosé","Pimenta rosa","Frutas"], coracao:["Flor de pêssego","Rosa","Jasmim"], fundo:["Almíscar branco","Madeiras","Âmbar"],
+    duracao:"8 a 12 horas", projecao:"Moderada a forte", momentos:["Festas","Baladas","Eventos","Encontros"] },
+  { id:"scandal", linha:"importado", nome:"Scandal", marca:"Jean Paul Gaultier", conc:"Eau de Parfum", publico:"Feminino", preco:null,
+    familias:["Doces","Florais"], ocasiao:["Noite"], tracos:["Divertida","Ousada","Irresistível"],
+    resumo:"Mel e caramelo com gardênia. Doce, viciante e ousado.",
+    topo:["Laranja sanguínea","Mandarina","Mel"], coracao:["Gardênia","Flor de laranjeira","Jasmim","Pêssego"], fundo:["Mel","Caramelo","Patchouli","Alcaçuz","Cera de abelha"],
+    duracao:"6 a 10 horas", projecao:"Moderada a forte", momentos:["Baladas","Festas","Eventos","Encontros"] },
+  { id:"olympea", linha:"importado", nome:"Olympéa", marca:"Paco Rabanne", conc:"Eau de Parfum", publico:"Feminino", preco:null,
+    familias:["Orientais","Doces","Florais"], ocasiao:["Dia","Noite","Presente"], tracos:["Poder","Feminilidade","Glória"],
+    resumo:"Baunilha salgada com jasmim. Sensual e marcante.",
+    topo:["Mandarina verde","Flor de gengibre","Jasmim aquático"], coracao:["Baunilha salgada","Jasmim","Flor de gengibre"], fundo:["Baunilha","Âmbar","Madeira de cashmere","Sândalo"],
+    duracao:"6 a 10 horas", projecao:"Moderada a forte", momentos:["Dia a dia","Noite","Festas","Encontros"] },
+  { id:"jadore", linha:"importado", nome:"J'adore", marca:"Dior", conc:"Eau de Parfum", publico:"Feminino", preco:null,
+    familias:["Florais","Frutados"], ocasiao:["Dia","Presente"], tracos:["Feminilidade","Luxo","Radiância"],
+    resumo:"Buquê floral luminoso com ylang-ylang e jasmim. Clássico e elegante.",
+    topo:["Ylang-ylang","Magnólia","Melão","Pera","Pêssego"], coracao:["Jasmim sambac","Rosa","Tuberosa","Lírio-do-vale","Orquídea"], fundo:["Baunilha","Amora","Almíscar","Cedro"],
+    duracao:"8 a 12 horas", projecao:"Moderada a forte", momentos:["Dia a dia","Eventos","Festas","Encontros"] },
+  { id:"fame", linha:"importado", nome:"Fame", marca:"Paco Rabanne", conc:"Eau de Parfum", publico:"Feminino", preco:null,
+    familias:["Florais","Frutados","Doces"], ocasiao:["Dia","Noite"], tracos:["Ousada","Radiante","Irresistível"],
+    resumo:"Manga, jasmim e incenso. Moderno, cremoso e radiante.",
+    topo:["Manga","Bergamota","Pimenta rosa"], coracao:["Jasmim sambac","Incenso","Olíbano"], fundo:["Baunilha","Sândalo","Almíscar","Benjoim"],
+    duracao:"6 a 10 horas", projecao:"Moderada a forte", momentos:["Dia a dia","Eventos","Festas","Encontros"] },
+  { id:"212-heroes", linha:"importado", nome:"212 Heroes Forever Young", marca:"Carolina Herrera", conc:"Eau de Toilette", publico:"Masculino", preco:null,
+    familias:["Frescos","Frutados"], ocasiao:["Dia"], tracos:["Ousado","Jovem","Inspirador"],
+    resumo:"Frutas vermelhas e gengibre com fundo de couro. Jovem e cheio de energia.",
+    topo:["Frutas vermelhas","Pera","Gengibre"], coracao:["Gerânio","Sálvia","Lavanda"], fundo:["Couro","Vetiver","Âmbar"],
+    duracao:"6 a 10 horas", projecao:"Moderada a forte", momentos:["Dia a dia","Passeios","Festas","Encontros"] }
+];
+
+const C7_ASSETS = {};
+const imgSrc = f => (C7_ASSETS[f] && location.protocol !== "file:") ? `/_blob/${C7_ASSETS[f]}#${f}` : /\.\w+$/.test(f) ? `img/${f}` : `img/${f}.jpg`;
+const LINHAS = [{id:"todos",t:"Todos"},{id:"arabe",t:"Árabes"},{id:"miniar",t:"Miniaturas árabes"},{id:"mini",t:"Miniaturas Brand Collection"},{id:"brand",t:"Brand Collection"},{id:"pasta",t:"Pastas corporais"},{id:"cosm",t:"Body splash e hidratantes"}];
+// Linha "importado" (grifes europeias) fica escondida: a C7 trabalha só com árabes e Brand Collection. Para mostrar de novo, troque para false.
+const ESCONDER_IMPORTADOS = true;
+// Miniaturas: mostrar só a linha árabe e as mais vendidas (escolha do Ednando). Para mostrar a linha toda, troque para false.
+const MINI_SO_FOCO = true;
+// Frascos 80/100ml da Brand Collection: a loja tem poucos, então ficam escondidos. Para mostrar, troque para false e volte a aba {id:"brand",t:"Frascos 100ml"} em LINHAS.
+const ESCONDER_FRASCOS = false;
+
+/* Brand Collection: originais da marca Brand Collection, inspirados em perfumes famosos.
+   MINIATURAS (aba Miniaturas): [código, perfume em que se inspira, para quem]. Tamanho padrão 25ml.
+   TUBETE_30: códigos que também têm versão tubete 30ml.
+   FRASCO_GRANDE (aba Brand Collection, acima de 50ml): [código, inspiração, para quem, tamanho, nome, foto, "splash" se for body splash]. */
+/* FOTO: código → foto (arquivo em img/). Usa a foto do perfume em que é inspirado, como ilustração. */
+const FOTO = {"005":"1-million","007":"jadore","034":"212-vip-rose","087":"olympea","100":"sauvage","126":"good-girl","136":"scandal","433":"myslf","A001":"asad","A024":"royal-amber"};
+// Fotos das miniaturas árabes, recortadas dos prints do fornecedor (img/arabic-aNNN.jpg).
+["A002","A003","A004","A005","A006","A007","A008","A009","A010","A011","A012","A013","A014","A015","A016","A017","A019","A020","A021","A022","A025","A027","A028","A029","A030","A031","A032","A033","A034","A037","A038","A040"]
+  .forEach(c => FOTO[c] = "arabic-"+c.toLowerCase());
+// Fotos das miniaturas Brand Collection (prints do fornecedor): img/bc-NNN.jpg
+["001", "003", "004", "005", "007", "008", "009", "010", "011", "012", "014", "015", "017", "018", "019", "020", "021", "022", "023", "024", "026", "027", "028", "029", "030", "031", "032", "034", "037", "039", "043", "045", "046", "047", "048", "052", "054", "055", "057", "058", "060", "061", "062", "063", "064", "065", "066", "069", "070", "073", "074", "076", "079", "080", "082", "083", "084", "085", "087", "091", "092", "093", "094", "097", "099", "100", "102", "105", "106", "109", "113", "115", "116", "126", "128", "132", "133", "134", "135", "136", "137", "138", "143", "151", "152", "153", "154", "155", "156", "159", "163", "164", "165", "167", "168", "169", "170", "171", "172", "174", "175", "176", "177", "178", "179", "180", "181", "187", "188", "190", "191", "192", "193", "194", "197", "200", "202", "203", "205", "210", "214", "216", "220", "224", "225", "229", "230", "233", "234", "235", "236", "237", "238", "239", "240", "242", "246", "247", "248", "249", "250", "253", "256", "264", "265", "266", "267", "269", "270", "272", "283", "285", "286", "287", "288", "289", "292", "293", "294", "295", "296", "303", "308", "311", "312", "314", "315", "316", "320", "321", "322", "323", "324", "325", "329", "331", "333", "334", "335", "336", "338", "340", "342", "343", "346", "347", "348", "350", "351", "356", "361", "365", "366", "367", "368", "369", "370", "371", "373", "374", "375", "376", "377", "378", "379", "380", "382", "386", "387", "391", "394", "402", "408", "415", "420", "423", "424", "427", "433", "434", "436", "440", "441", "442", "443", "444", "445", "447", "465", "504", "506", "507", "508", "510"].forEach(c => FOTO[c] = "bc-"+c);
+// Só em tubete 30ml (não têm o frasco de 25ml)
+FOTO["477"] = "g-477"; // miniatura sem foto boa: usa a do frasco grande, mesmo vidro
+const TUBETE_SO = ["465", "440", "441", "442"];
+/* ARABIC_COLLECTION: miniaturas árabes 25ml da Brand Collection que só têm o nome do fornecedor.
+   [código, nome na caixa, para quem, inspirado em (se souber, senão null)] */
+const ARABIC_COLLECTION = [
+  ["A002","Rosa","Feminino","Yara Rosa"], ["A003","Tropical","Feminino","Yara Tous"], ["A004","Minha Essência","Feminino","Yara Moi"],
+  ["A005","Conhaque","Compartilhável","Khamrah"], ["A007","Fakh. Preto","Masculino","Fakhar Black"], ["A009","Ametista","Feminino","Amethyst"],
+  ["A010","Glória","Masculino","Oud for Glory"], ["A011","Sublime","Feminino","Sublime"], ["A012","Honra","Compartilhável","Honor"],
+  ["A013","Attar e Attar","Masculino",null], ["A014","From By Sabah","Feminino","Sabah"], ["A015","Lemon Imperiale","Compartilhável","Emeer"],
+  ["A016","Serenidade","Feminino",null], ["A017","Ouro Cósmico","Feminino","Tharwah Gold"], ["A019","Wazeer","Masculino","Al Noble Wazeer"],
+  ["A020","Spectro","Masculino","Spectre Ghost"], ["A021","Nuit Précieux","Masculino","Club de Nuit Précieux"], ["A022","Lembrança","Feminino","Souvenir Bouquet"],
+  ["A025","Blush Noble","Feminino","Noble Blush"], ["A027","Icônico","Masculino","Club de Nuit Iconic"], ["A028","Night Club","Masculino","Club de Nuit Intense Man"],
+  ["A029","9 da Noite","Masculino","9PM"], ["A030","Luz do Âmbar","Compartilhável","Ajwad"], ["A031","O Reino","Masculino","The Kingdom"],
+  ["A032","Doce Mistério","Compartilhável","Nebras"], ["A037","Sakeena","Feminino","Sakeena"], ["A038","Ameer","Masculino","Al Noble Ameer"],
+  ["A040","Danya","Feminino","Dania"]
+];
+/* MAIS_VENDIDOS: os mais pedidos (lista "Mais vendidos" do fornecedor). Aparecem primeiro, com selo. */
+const MAIS_VENDIDOS = ["177","151","007","136","367","402","445","269","433","100","015","159","379","288","A024","135","A006","014","005","093","154"];
+const TUBETE_30 = ["060","073","134","169","378","440","441","442","001","005","007","008","009","012","021","034","070","087","100","105","116","126","132","134","136","151","154","238","240","259","334","380","402"];
+const FRASCO_GRANDE = [
+  ["087","Olympéa","Feminino","80ml",null,"g-087"],
+  ["402","Erba Pura","Compartilhável","100ml","Grama Pura","g-402"],
+  ["151","Delina","Feminino","80ml",null,"g-151"],
+  ["034","212 VIP Rosé","Feminino","80ml",null,"g-034"],
+  ["477",null,"Feminino","90ml","Borboleta","g-477"],
+  ["069","Trésor La Nuit","Feminino","100ml","La Nuit","g-069"],
+  ["007","Jadore","Feminino","100ml"],
+  ["027","Dior Hypnotic","Feminino","100ml"],
+  ["012","La Vie Est Belle","Feminino","80ml"],
+  ["105","Lady Million","Feminino","80ml"],
+  ["126","Good Girl","Feminino","80ml"],
+  ["136","Scandal","Feminino","80ml"],
+  ["177","Chloé","Feminino","80ml"],
+  ["238","Idôle","Feminino","80ml"],
+  ["001","Chanel Allure Sport","Masculino","100ml",null,"g-001"],
+  ["181","Bad Boy","Masculino","100ml","Menino Mau","g-181"],
+  ["116","Invictus","Masculino","100ml",null,"g-116"],
+  ["008","212 VIP Men","Masculino","80ml","Classic VIP","g-008"],
+  // Body splash 250ml: [código ou "", inspiração, para quem, tamanho, nome, foto, "splash"]
+  ["151","Delina","Feminino","250ml","Diana","bs-diana-151","splash"],
+  ["126","Good Girl","Feminino","250ml","Beauty Girl","bs-beauty-girl-126","splash"],
+  ["012","La Vie Est Belle","Feminino","250ml","C'est La Vie","bs-cest-la-vie-012","splash"],
+  ["021","Chanel Coco","Feminino","250ml","Dream By Coconut","bs-dream-coconut-021","splash"],
+  ["105","Lady Million","Feminino","250ml","Gold Diamond","bs-gold-diamond-105","splash"],
+  ["177","Chloé","Feminino","250ml","Khloe","bs-khloe-177","splash"],
+  ["087","Olympéa","Feminino","250ml","Only You","bs-only-you-087","splash"],
+  ["034","212 VIP Rosé","Feminino","250ml","Rose Lady","bs-rose-lady-034","splash"],
+  ["402","Erba Pura","Compartilhável","250ml","Pure","bs-pure-402","splash"],
+  ["100","Sauvage","Masculino","250ml","Savage","bs-savage-100","splash"],
+  ["116","Invictus","Masculino","250ml","Winner","bs-winner-116","splash"],
+  ["445","Prada Paradoxe","Feminino","250ml","Paradigm","bs-paradigm-445","splash"],
+  ["477",null,"Feminino","250ml","Borboleta","bs-borboleta-477","splash"],
+  ["483",null,"Feminino","250ml","Chance Purple","bs-chance-purple-483","splash"],
+  ["496",null,"Feminino","250ml","Rosy Glow","bs-rosy-glow-496","splash"],
+  ["","Victoria's Secret Bare Vanilla","Feminino","250ml","Dream Bare Vanilla","bs-bare-vanilla","splash"],
+  ["","Victoria's Secret Coconut Passion","Feminino","250ml","Dream Coconut Passion","bs-coconut-passion","splash"],
+  ["","Victoria's Secret Love Spell","Feminino","250ml","Dream Love Spell","bs-love-spell","splash"],
+  ["","Victoria's Secret Pear Glacé","Feminino","250ml","Dream Pear Glacé","bs-pear-glace","splash"],
+  ["","Victoria's Secret Pure Seduction","Feminino","250ml","Dream Pure Seduction","bs-pure-seduction","splash"],
+  ["","Victoria's Secret Strawberries & Champagne","Feminino","250ml","Dream Strawberries & Champagne","bs-strawberries-champagne","splash"],
+  ["","Victoria's Secret Velvet Petals","Feminino","250ml","Dream Velvet Petals","bs-velvet-petals","splash"],
+  ["","Victoria's Secret Love Spell Shimmer","Feminino","250ml","Shimmer Dream Love Spell","bs-shimmer-love-spell","splash"],
+  ["","Victoria's Secret Strawberries & Champagne Shimmer","Feminino","250ml","Shimmer Dream Strawberries","bs-shimmer-strawberries","splash"]
+];
+const BRAND_COLLECTION = [
+  // Masculinas dos prints do Ednando (2026-10-27)
+  ["170", "Dylan Blue Pour Homme", "Masculino"],
+  ["156", "Classic Men S", "Masculino"],
+  ["083", "Montblanc Legend Spirit", "Masculino"],
+  ["004", "X Men", "Masculino"],
+  ["032", "212 Men Club", "Masculino"],
+  ["018", "Just", "Masculino"],
+  ["220", "Acqua di Giò Absolu", "Masculino"],
+  ["172", "Blue Tea", "Masculino"],
+  ["202", "XS", "Masculino"],
+  ["423", "Invictus Victory Elixir", "Masculino"],
+  ["321", "Scandal Pour Homme", "Masculino"],
+  ["082", "Fahrenheit", "Masculino"],
+  ["264", "Lacoste L'Homme", "Masculino"],
+  ["106", "Versace Pour Homme", "Masculino"],
+  ["091", "Euphoria Men", "Masculino"],
+  ["224", "Dolce & Gabbana", "Masculino"],
+  ["427", "Robotic", "Masculino"],
+  ["143", "Tom Ford For Men", "Masculino"],
+  ["447", "Imagination", "Masculino"],
+  ["376", "La Baux", "Masculino"],
+  ["443", "Bad Boy Elixir", "Masculino"],
+  ["436", "Ombre Noir", "Compartilhável"],
+  ["420", "D'or Etoile (infantil)", "Compartilhável"],
+  ["444", "Fata", "Compartilhável"],
+  ["214", "Invictus", "Masculino"],
+  ["242", "Versace Eros", "Masculino"],
+  ["175", "Aztec Men", "Masculino"],
+  ["084", "Montblanc Legend", "Masculino"],
+  ["167", "Bvlgari Aqva", "Masculino"],
+  ["079", "212 VIP Men Wild Party", "Masculino"],
+  ["028", "Hugo Boss", "Masculino"],
+  ["285", "Joop Homme", "Masculino"],
+  // Femininas dos prints do Ednando (2026-10-27)
+  ["391", "Born in Roma", "Feminino"],
+  ["504", "Ursinho Pistachio Crush", "Feminino"],
+  ["506", "Ursinho Mango Tango", "Feminino"],
+  ["507", "Ursinho Marshmallow", "Feminino"],
+  ["508", "Ursinho Fruity Fizz", "Feminino"],
+  ["510", "Ursinho Cherry Bubbles", "Feminino"],
+  ["045", "Burberry Body", "Feminino"],
+  ["234", "Tweet Baby", "Feminino"],
+  ["193", "Good Girl Velvet", "Feminino"],
+  ["267", "Good Girl Supreme", "Feminino"],
+  ["322", "Very Good Girl Elixir", "Feminino"],
+  ["477", "Borboleta", "Feminino"],
+  ["333", "Absolut", "Compartilhável"],
+  ["465", "By Sabah", "Feminino"],
+  ["272", "Lancôme Miracle", "Feminino"],
+  ["270", "Tom Ford Lost Cherry", "Feminino"],
+  ["287", "Nº 287", "Feminino"],
+  ["292", "La Vie Est Belle", "Feminino"],
+  ["312", "Floral Fresh", "Feminino"],
+  ["324", "Bella", "Feminino"],
+  ["335", "My Way Floral", "Feminino"],
+  ["356", "Jade White", "Feminino"],
+  ["366", "Angel Elixir", "Feminino"],
+  ["369", "Cherry Bolt", "Compartilhável"],
+  ["371", "Fantasy Naked", "Feminino"],
+  ["373", "Queen", "Feminino"],
+  ["375", "Bellaza", "Feminino"],
+  ["377", "Alexia", "Compartilhável"],
+  ["137", "Gucci Bloom", "Feminino"],
+  ["138", "Love Love", "Feminino"],
+  ["180", "Gucci Bloom Acqua di Fiori", "Feminino"],
+  ["187", "Versace Yellow Diamond", "Feminino"],
+  ["205", "Nº 205", "Feminino"],
+  ["233", "Givenchy", "Feminino"],
+  ["237", "Kenzo", "Feminino"],
+  ["239", "Untamable", "Feminino"],
+  ["246", "Her Burberry", "Feminino"],
+  ["010", "Tom Ford", "Feminino"],
+  ["011", "Angel Iced", "Feminino"],
+  ["017", "Apple", "Feminino"],
+  ["022", "Decadence", "Feminino"],
+  ["023", "Nº 023", "Feminino"],
+  ["024", "Bright Crystal", "Feminino"],
+  ["026", "Irresistible", "Feminino"],
+  ["027", "Toxic Red", "Feminino"],
+  ["030", "Bright Crystal Absolute", "Feminino"],
+  ["031", "Chanel Tender", "Feminino"],
+  ["037", "Estasy", "Feminino"],
+  ["047", "Escada Cherry in the Air", "Feminino"],
+  ["048", "Trésor Midnight Rose", "Feminino"],
+  ["052", "Addict to Blue", "Feminino"],
+  ["055", "YSL Black Opium", "Feminino"],
+  ["057", "Valentina", "Feminino"],
+  ["060", "Narciso Rodriguez For Her", "Feminino"],
+  ["061", "Addict 2", "Feminino"],
+  ["062", "Ricci Ricci Intense", "Feminino"],
+  ["074", "Si Rose Signature", "Feminino"],
+  ["076", "La Vie Intense", "Feminino"],
+  ["080", "Ange ou Démon Le Secret", "Feminino"],
+  ["094", "Valentina Poudrée", "Feminino"],
+  ["097", "Euphoria", "Feminino"],
+  ["099", "Euphoria Deep", "Feminino"],
+  ["109", "Kenzo World", "Feminino"],
+  ["133", "Eternal Lady", "Feminino"],
+  ["163", "My Dream", "Feminino"],
+  ["188", "My Way", "Feminino"],
+  ["200", "Miu Miu Rose", "Feminino"],
+  ["216", "Flower by Kenzo", "Feminino"],
+  ["225", "Bombshell", "Feminino"],
+  ["229", "Nº 229", "Feminino"],
+  ["235", "Rose", "Feminino"],
+  ["249", "Wanted Girl", "Feminino"],
+  ["289", "Rouge Royal", "Feminino"],
+  ["293", "Idôle Intense", "Feminino"],
+  ["295", "Cloud", "Feminino"],
+  ["303", "Dedication", "Feminino"],
+  ["311", "Versace Eros Femme", "Feminino"],
+  ["314", "LV On The Beach", "Feminino"],
+  ["316", "Scandal Gold", "Feminino"],
+  ["320", "Chloé Naturelle", "Feminino"],
+  ["336", "My Way Intense", "Feminino"],
+  ["340", "212 Heroine", "Feminino"],
+  ["348", "Delina Rose", "Feminino"],
+  ["365", "Famme", "Feminino"],
+  ["378", "Pink", "Feminino"],
+  ["440", "Fakhar Rose", "Feminino"],
+  ["441", "Yara", "Feminino"],
+  ["442", "Royal Amber", "Feminino"],
+  ["159", "YSL Libre", "Feminino"],
+  ["087", "Olympéa", "Feminino"],
+  ["194", "212 Sexy", "Feminino"],
+  ["259", "Ferrari Black", "Masculino"],
+  ["001", "Chanel Allure Sport", "Masculino"],
+  ["003", "CH", "Feminino"],
+  ["005", "One Million", "Masculino"],
+  ["007", "Jadore", "Feminino"],
+  ["008", "212 VIP Men", "Masculino"],
+  ["009", "212 Vip", "Feminino"],
+  ["012", "La Vie Est Belle", "Feminino"],
+  ["014", "Miss Dior Blooming", "Feminino"],
+  ["015", "Miss Dior Tradicional", "Feminino"],
+  ["019", "XS Black", "Feminino"],
+  ["020", "Hypnotic Poison Verde", "Feminino"],
+  ["021", "Chanel Coco", "Feminino"],
+  ["025", "Givenchy Eau de Moiselle Florale", "Feminino"],
+  ["029", "Nina Elixir", "Feminino"],
+  ["034", "212 Vip Rose", "Feminino"],
+  ["036", "Lacoste", "Feminino"],
+  ["039", "Chanel Chance", "Feminino"],
+  ["041", "Especially Escada", "Feminino"],
+  ["043", "Alien", "Feminino"],
+  ["046", "Nina Mademoiselle Rose", "Feminino"],
+  ["054", "Creed Aventus Black", "Masculino"],
+  ["058", "Boss Orange", "Masculino"],
+  ["063", "Si", "Feminino"],
+  ["064", "Elie Saab", "Feminino"],
+  ["065", "Angel Demon", "Feminino"],
+  ["066", "Silver Scent", "Masculino"],
+  ["069", "Trésor La Nuit", "Feminino"],
+  ["070", "Bleu de Chanel", "Masculino"],
+  ["073", "Poison Girl", "Feminino"],
+  ["078", "212 VIP Wild", "Feminino"],
+  ["085", "Dolce & Gabbana", "Feminino"],
+  ["090", "Happy Spirit", "Feminino"],
+  ["092", "YSL Mon Paris", "Feminino"],
+  ["093", "Light Blue", "Feminino"],
+  ["095", "Gucci Bloom Ambrosia", "Feminino"],
+  ["098", "Elie Saab Nuit Noor", "Feminino"],
+  ["100", "Sauvage", "Masculino"],
+  ["102", "212 Men", "Masculino"],
+  ["103", "Flowerbomb", "Feminino"],
+  ["104", "L'Amour Lalique", "Feminino"],
+  ["105", "Lady Million", "Feminino"],
+  ["113", "Mon Guerlain", "Feminino"],
+  ["115", "Miu Miu Tradicional", "Feminino"],
+  ["116", "Invictus", "Masculino"],
+  ["126", "Carolina Herrera Good Girl", "Feminino"],
+  ["128", "Tragedy of Lord George", "Masculino"],
+  ["132", "Britney Spears Fantasy", "Feminino"],
+  ["134", "Chanel Gabrielle", "Feminino"],
+  ["135", "Issey Miyake Pour Homme", "Masculino"],
+  ["136", "Scandal", "Feminino", "25ml"],
+  ["139", "Carolina Herrera Good Girl J'adore", "Feminino"],
+  ["151", "Delina", "Feminino"],
+  ["152", "Marly Meliora", "Feminino"],
+  ["153", "Jean Paul Gaultier", "Masculino"],
+  ["154", "212 Vip Black", "Masculino"],
+  ["155", "Acqua di Giò", "Masculino"],
+  ["164", "Armani Code Homme", "Masculino"],
+  ["165", "Armani Code", "Feminino"],
+  ["166", "Lancôme Trésor Tradicional", "Feminino"],
+  ["168", "Angel", "Feminino"],
+  ["169", "Pure Poison", "Feminino"],
+  ["171", "Jean Paul", "Feminino"],
+  ["174", "Polo Blue", "Masculino"],
+  ["176", "Issey Miyake", "Feminino"],
+  ["177", "Chloe", "Feminino"],
+  ["178", "Pure XS", "Masculino"],
+  ["179", "Si Passione", "Feminino"],
+  ["181", "Bad Boy", "Masculino"],
+  ["182", "Jaguar Black", "Masculino"],
+  ["183", "Eau de Parfum for Women", "Feminino"],
+  ["190", "Animale", "Masculino"],
+  ["191", "Lady Million Lucky", "Feminino"],
+  ["192", "One Million Lucky", "Masculino"],
+  ["197", "Alien Flora Rose", "Feminino"],
+  ["203", "Trésor La Nuit La Folie", "Feminino"],
+  ["210", "Black XS", "Feminino"],
+  ["230", "Jimmy Choo", "Feminino"],
+  ["236", "Kenzo L'Eau par Kenzo pour Homme", "Masculino"],
+  ["238", "Idole", "Feminino"],
+  ["240", "212 Tradicional", "Feminino"],
+  ["247", "Baccarat Rouge", "Feminino", "25ml"],
+  ["248", "Tom Ford Leather", "Masculino"],
+  ["250", "Azzaro Wanted", "Masculino"],
+  ["251", "Guerlain Absolue Royal", "Feminino"],
+  ["253", "La Vie Est Belle Eclat", "Feminino"],
+  ["256", "Lady Million Empire", "Feminino"],
+  ["265", "Versace Dylan", "Feminino"],
+  ["266", "Diesel Brave", "Masculino"],
+  ["269", "Chanel Chance Fraiche", "Feminino"],
+  ["279", "La Fille de Berlin Serge Lutens", "Feminino"],
+  ["283", "Angel Nova Rose", "Feminino"],
+  ["286", "Ferrari Black", "Masculino"],
+  ["288", "Tiffany", "Feminino"],
+  ["294", "L'Interdit Rouge", "Feminino"],
+  ["296", "Phantom", "Masculino"],
+  ["299", "Tom Ford Rose Prick", "Feminino"],
+  ["308", "Blue Heart", "Masculino"],
+  ["315", "Sauvage Elixir Dior", "Masculino", "25ml"],
+  ["323", "Le Male Elixir", "Masculino"],
+  ["325", "Le Male Le Parfum", "Masculino"],
+  ["329", "Fame Couture", "Feminino"],
+  ["331", "Bombshell Passion", "Feminino", "25ml"],
+  ["332", "Good Girl Glam", "Feminino"],
+  ["334", "My Way Glitter", "Feminino"],
+  ["337", "Lira", "Feminino"],
+  ["338", "Mefisto", "Masculino"],
+  ["342", "Miss Rose Essence", "Feminino"],
+  ["343", "Chanel N°1 L'Eau Rouge", "Feminino"],
+  ["346", "Layton Parfums de Marly", "Masculino"],
+  ["347", "212 Heroes Skateboard", "Masculino", "25ml"],
+  ["349", "Olympea Solar", "Feminino", "25ml"],
+  ["350", "Invictus Platinum", "Masculino"],
+  ["351", "Dylan Turquoise", "Feminino"],
+  ["357", "Good Girl Midnight", "Feminino"],
+  ["360", "Armani Code Parfum", "Masculino"],
+  ["361", "Libre Intense", "Feminino"],
+  ["364", "D&G The Only One", "Feminino"],
+  ["367", "Valaya", "Feminino"],
+  ["368", "Tom Ford Cherry Smoke", "Compartilhável"],
+  ["370", "Versace Purple", "Feminino"],
+  ["374", "Black Opium Le Parfum", "Feminino"],
+  ["379", "Gucci Bloom Intense", "Feminino"],
+  ["380", "Baccarat Rouge Extrait", "Feminino", "25ml"],
+  ["382", "L'Interdit", "Feminino"],
+  ["385", "Wanted Girl By Night", "Feminino"],
+  ["386", "Wanted By Night", "Masculino"],
+  ["387", "The Most Wanted", "Masculino"],
+  ["393", "Rhubarbe Écarlate Hermès", "Feminino"],
+  ["394", "Toy Boy", "Masculino"],
+  ["395", "Toy Boy", "Feminino"],
+  ["396", "Toy Boy", "Feminino"],
+  ["402", "Erba Pura", "Compartilhável"],
+  ["408", "Rose Chérie Guerlain", "Feminino"],
+  ["409", "Bouquet Idéale", "Feminino"],
+  ["410", "Dolce & Gabbana", "Feminino"],
+  ["415", "Fame Parfum", "Feminino"],
+  ["424", "Olympea Extrait", "Feminino"],
+  ["433", "YSL MYSLF", "Masculino"],
+  ["434", "Kilian Angels' Share", "Compartilhável"],
+  ["445", "Prada Paradoxe", "Feminino"],
+  ["613", "Lazy Morning", "Compartilhável"],
+  ["616", "By The Bonfire", "Feminino"],
+  ["634", "Le Labo Another", "Feminino"],
+  ["A001", "Asad", "Masculino", "25ml"],
+  ["A006", "Fakhar Rose", "Feminino", "25ml"],
+  ["A008", "Fakhar Gold", "Compartilhável", "25ml"],
+  ["A024", "Royal Amber", "Compartilhável", "25ml"],
+  ["A033", "Yara Candy", "Feminino", "25ml"],
+  ["A034", "Asad Bourbon", "Masculino", "25ml"],
+  ["A018", "Musamam White", "Compartilhável", "25ml"]
+];
+const bcItem = (linha, cod, insp, publico, tam, apelido) => PERFUMES.push({
+  id:(linha==="mini"?"mini-":"bc-")+cod.toLowerCase(), linha, cod, top:MAIS_VENDIDOS.includes(cod), arabe:cod[0]==="A", foto:FOTO[cod] ? imgSrc(FOTO[cod]) : null, nome:"Nº "+cod, inspirado:insp, apelido, marca:cod[0]==="A" ? "Arabic" : "Brand Collection", publico, tam,
+  conc:"Eau de Parfum", preco:null, familias:[], ocasiao:[], tracos:[linha==="mini"?"Miniatura":"Frasco "+tam, cod[0]==="A" ? "Arabic" : "Brand Collection", publico], notas:[],
+  resumo: insp ? `Fragrância original da marca ${cod[0]==="A" ? "Arabic" : "Brand Collection"}, inspirada no ${insp}. Mesma proposta de cheiro por um preço acessível.`
+    : `Miniatura da linha árabe, original da marca Arabic. Perfume de inspiração árabe por um preço acessível.`
+});
+// Ordem: linha árabe (Arabic Collection) primeiro, depois os mais vendidos, depois o resto pelo número.
+const TAM_ARABE = {}; // ex.: {"A001":"30ml"}
+const ordemBC = c => (c[0]==="A" ? 0 : MAIS_VENDIDOS.includes(c) ? 1 : FOTO[c] ? 2 : 3);
+const C7_EXTRA = {"_obs": "Produtos que só a C7 tem (fotos em img/c7-*.jpg). mini: [código, inspirado em, para quem, tamanho]", "mini": [["056", "Eros", "Masculino", "25ml"], ["044", "Lady Million", "Feminino", "25ml", "Private Lady"], ["013", "Ferrari Black", "Masculino", "25ml", "Premium Black"], ["033", "Britney Spears Fantasy", "Feminino", "25ml", "Fantasy"], ["435", "Burberry Goddess", "Feminino", "25ml", "Goodness"], ["006", "Good Girl", "Feminino", "25ml"], ["297", "Very Good Girl", "Feminino", "25ml"], ["173", "Good Girl", "Feminino", "25ml", "High Heel Night"], ["8127", "Jean Paul Gaultier Classique", "Feminino", "30ml"], ["866", "Baccarat Rouge Extrait", "Feminino", "30ml"], ["881", "My Way", "Feminino", "30ml"], ["860", "My Way Floral", "Feminino", "30ml"], ["880", "My Way Intense", "Feminino", "30ml"]], "foto": {"056": "c7-056.png", "044": "c7-044.png", "013": "c7-013.png", "033": "c7-033.png", "435": "c7-435.png", "006": "c7-006.png", "297": "c7-297.png", "173": "c7-173.png", "8127": "c7-8127.png", "866": "c7-866.png", "881": "c7-881.png", "860": "c7-860.png", "880": "c7-880.png", "tx-pasta-isabelle-la-belle-sabah-delilah": "c7-pasta-sabah-delilah.png", "tx-pasta-isabelle-la-belle-sabah-tradicional": "c7-pasta-sabah-tradicional.png", "tx-pasta-isabelle-la-belle-atheeri": "c7-pasta-atheeri.png", "tx-pasta-isabelle-la-belle-veneno-bianco": "c7-pasta-veneno-bianco.png", "tx-pasta-isabelle-la-belle-pure-exclusive": "c7-pasta-pure-exclusive.png", "tx-pasta-isabelle-la-belle-alien": "c7-pasta-alien.png", "tx-pasta-isabelle-la-belle-candid": "c7-pasta-candid.png", "tx-pasta-isabelle-la-belle-vulcan-feu": "c7-pasta-vulcan-feu.png", "tx-pasta-isabelle-la-belle-asad-elixir": "c7-pasta-asad-elixir.png", "tx-pasta-isabelle-la-belle-sabah-sugar": "c7-pasta-sabah-sugar.png", "tx-pasta-isabelle-la-belle-sabah-valentine": "c7-pasta-sabah-valentine.png", "tx-pasta-isabelle-la-belle-dalila": "c7-pasta-dalila.png", "tx-pasta-isabelle-la-belle-asad-bourbon": "c7-pasta-asad-bourbon.png", "tx-pasta-isabelle-la-belle-royal-amber": "c7-pasta-royal-amber.png", "tx-pasta-isabelle-la-belle-queen-of-arabia": "c7-pasta-queen-of-arabia.png", "tx-pasta-isabelle-la-belle-angel": "c7-pasta-angel.png", "tx-pasta-isabelle-la-belle-fakhar-gold": "c7-pasta-fakhar-gold.png", "tx-pasta-isabelle-la-belle-club-de-nuit-intense-man": "c7-pasta-club-de-nuit-intense-man.png", "tx-pasta-isabelle-la-belle-dalal": "c7-pasta-dalal.png", "tx-pasta-isabelle-la-belle-fakhar-rose": "c7-pasta-fakhar-rose.png", "tx-pasta-isabelle-la-belle-yara-elixir": "c7-pasta-yara-elixir.png", "tx-hidratante-inspirado-em-importado-olympea": "c7-hid-olympea.png", "tx-inspiracao-de-importado-75-a-100ml-mrs-way": "hx-inspiracao-de-importado-mrs-way-shimmer", "tx-perfume-arabe-80-a-100ml-rose-petals": "ar-rose-petals", "tx-perfume-arabe-80-a-100ml-historic-doria": "ar-historic-doria", "tx-perfume-arabe-80-a-100ml-fakhar-gold": "st-fakhar-gold-01.jpg", "tx-perfume-arabe-80-a-100ml-fakhar-prata": "st-fakhar-prata-01.jpg", "tx-perfume-arabe-80-a-100ml-island-bliss": "ar-island-bliss", "tx-perfume-arabe-80-a-100ml-coral-blush": "ar-coral-blush", "tx-perfume-arabe-80-a-100ml-bright-peach": "ar-bright-peach", "tx-perfume-arabe-80-a-100ml-yara-moi": "st-yara-moi-01.jpg", "tx-perfume-arabe-80-a-100ml-philos-pura": "st-philos-pura-01.jpg", "tx-perfume-arabe-80-a-100ml-bronzite-nawal": "ar-nawal-bronzite", "tx-perfume-arabe-80-a-100ml-hayat": "ar-hayat", "tx-perfume-arabe-80-a-100ml-alexandrite": "ar-nawal-alexandrite", "tx-inspiracao-arabe-30ml-vulcan-feu": "mar-vulcan-feu-30ml", "tx-inspiracao-arabe-50ml-khamrah": "mar-khamrah-50ml", "396": "bcx-396", "tx-dream-brand-75-a-100ml-g-093-light-dream": "hx-dream-brand-g-093-light-blue", "tx-beauty-brand-75-a-100ml-b-042-lady-in-gold": "hx-beauty-brand-g-042-lady-million", "tx-beauty-brand-75-a-100ml-b-040-life-intensely": "hx-beauty-brand-g-040-la-vie-intense", "tx-inspiracao-de-importado-75-a-100ml-sexy-scandal": "hx-inspiracao-de-importado-sexy-scandal", "tx-inspiracao-de-importado-75-a-100ml-robozinho-tradicional-patter-": "hx-inspiracao-de-importado-phantom-robozinho-tradicional", "tx-hidratante-arabe-asad-tradicional": "hx-hidratante-arabe-asad-tradicional", "tx-hidratante-inspirado-em-importado-the-way": "hx-hidratante-inspirado-em-importado-the-way", "tx-hidratante-inspirado-em-importado-interdicted": "hx-hidratante-inspirado-em-importado-interdicted", "tx-pasta-isabelle-la-belle-hassan": "hx-pasta-isabelle-la-belle-hassan", "tx-pasta-isabelle-la-belle-la-belle-bomba": "hx-pasta-isabelle-la-belle-la-belle-bomba", "tx-body-splash-arabe-diore-fem": "hx-body-splash-arabe-isabelle-la-belle-diore-fem", "tx-body-splash-arabe-dalila-pour-femme": "hx-body-splash-arabe-isabelle-la-belle-dalila", "tx-body-splash-arabe-vulcan-feu": "hx-body-splash-arabe-isabelle-la-belle-vulcan-feu", "tx-body-splash-arabe-hawas-black-for-him": "hx-body-splash-arabe-isabelle-la-belle-hawas-black", "tx-body-splash-arabe-marshmallow-blush": "hx-body-splash-arabe-isabelle-la-belle-marshmallow-blush", "tx-body-splash-arabe-maleka": "hx-body-splash-arabe-isabelle-la-belle-club-de-nuit-maleka", "tx-body-splash-arabe-sabah-delilah": "hx-body-splash-arabe-isabelle-la-belle-sabah-delilah", "tx-body-splash-arabe-sabah-sugar": "hx-body-splash-arabe-isabelle-la-belle-sabah-sugar", "tx-body-splash-arabe-sabah-valentine": "hx-body-splash-arabe-isabelle-la-belle-sabah-valentine", "tx-perfume-arabe-80-a-100ml-dalal": "st-dalal-01.jpg", "tx-perfume-arabe-80-a-100ml-musamam-white-intense": "c7-ar2-musamam.png", "tx-perfume-arabe-80-a-100ml-encode-mountain": "c7-ar2-encode.png", "tx-perfume-arabe-80-a-100ml-narissa-for-her": "c7-ar2-narissa.png", "tx-body-splash-arabe-vanilla-shimmer": "c7-bs3-vanilla-shimmer.png", "tx-body-splash-arabe-yara-shimmer": "c7-bs3-yara-shimmer.png", "tx-body-splash-arabe-sabah-tradicional-shimmer": "c7-bs3-sabah-trad-shimmer.png", "tx-body-splash-arabe-sabah-tradicional": "c7-bs3-sabah-trad.png", "tx-body-splash-arabe-fakhar-black": "c7-bs3-fakhar-black.png", "tx-body-splash-arabe-yara-moi": "c7-bs3-yara-moi.png", "tx-body-splash-arabe-asad-tradicional": "c7-bs3-asad.png", "tx-body-splash-brand-collection-n-136-escandal": "c7-bs3-escandal-136.png", "tx-body-splash-arabe-royal-amber": "c7-bs3-royal-amber.png", "tx-body-splash-arabe-afeef": "c7-bs3-afeef.png", "tx-body-splash-arabe-amber-rouge": "c7-bs3-amber-rouge.png", "tx-perfume-arabe-80-a-100ml-asad-zanzibar": "st-asad-zanzibar-01.jpg", "tx-perfume-arabe-80-a-100ml-yara-candy": "st-yara-candy-01.jpg", "tx-perfume-arabe-80-a-100ml-fakhar-rose": "st-fakhar-rose-01.jpg", "tx-perfume-arabe-80-a-100ml-teriaq": "st-teriaq-01.jpg", "tx-perfume-arabe-80-a-100ml-la-rouge-baroque": "st-la-rouge-baroque-01.jpg", "tx-perfume-arabe-80-a-100ml-abyat": "st-abyat-01.jpg", "tx-perfume-arabe-80-a-100ml-princess-of-arabia": "c7-ar4-princess-of-arabia.png", "tx-perfume-arabe-80-a-100ml-rayhaan-jungle-vibe": "c7-ar4-jungle-vibe.png", "tx-perfume-arabe-80-a-100ml-hawas-ice": "st-hawas-ice-01.jpg", "tx-perfume-arabe-80-a-100ml-attar-al-wesal": "st-attar-al-wesal-01.jpg", "tx-perfume-arabe-80-a-100ml-9pm-pour-femme": "c7-ar4-9pm.png", "tx-perfume-arabe-80-a-100ml-sabah-sugar": "st-sabah-sugar-01.jpg", "tx-perfume-arabe-80-a-100ml-durrat-al-aroos": "st-durrat-al-aroos-01.jpg", "tx-perfume-arabe-80-a-100ml-club-de-nuit-woman": "st-cdn-woman-01.jpg", "tx-inspiracao-arabe-50ml-club-de-nuit-iconic": "c7-cdn-iconic.png", "tx-perfume-arabe-80-a-100ml-shagaf-al-ward": "st-shagaf-al-ward-01.jpg", "tx-perfume-arabe-80-a-100ml-asad-zanzibar-limited-edition": "st-asad-zanzibar-le-01.jpg", "tx-perfume-arabe-80-a-100ml-yara-elixir": "st-yara-elixir-01.jpg"}, "notas": {"Eros": ["Frescos,Amadeirados", "Hortelã,Maçã verde,Limão,Fava tonka,Baunilha,Cedro"], "Burberry Goddess": ["Doces,Orientais", "Lavanda,Baunilha,Gengibre,Cacau"]}, "marca": {"8127": "Onlyou", "866": "Onlyou", "881": "Onlyou", "860": "Onlyou", "880": "Onlyou"}, "texto": [{"linha": "arabe", "tag": "Perfume árabe · 80 a 100ml", "rotulo": "perfume árabe", "itens": [["Rose Petals", 130, 180], ["Musamam White Intense", 280, 330], ["Dalal", 300], ["Sabah Sugar", 140, 180], ["Club de Nuit Woman", 200, 250], ["Historic Doria", 260, 300], ["Durrat Al Aroos", 140], ["Fakhar Gold", 200, 250], ["Fakhar Prata", 200, 250], ["Island Bliss", 400], ["Fakhar Rose", 225, 250], ["Hawas Ice", 230, 280], ["Rayhaan Jungle Vibe", 230, 280], ["Attar Al Wesal", 160, 200], ["9PM Pour Femme", 200, 230], ["Encode Mountain", 130, 180], ["Coral Blush", 130, 180], ["Narissa for Her", 130, 180], ["Bright Peach", 130, 180], ["Asad Zanzibar Limited Edition", 180, 220], ["Asad Zanzibar", 180, 220], ["Yara Moi", 160], ["Yara Candy", 190, 250], ["Yara Elixir", 330, 350], ["Philos Pura", 170, 200], ["Abyat", 130, 180], ["La Rouge Baroque", 130, 180], ["Teriaq", 200, 230], ["Shagaf Al Ward", 150, 180], ["Bronzite Nawal", 130, 180], ["Alexandrite", 130, 180], ["Hayat", 130, 180], ["Princess of Arabia", 150, 170]]}, {"linha": "miniar", "tag": "Inspiração árabe · 30ml", "rotulo": "inspiração árabe", "at": 70, "vj": 90, "itens": ["Vulcan Bale", "Vulcan Feu"]}, {"linha": "miniar", "tag": "Inspiração árabe · 50ml", "rotulo": "inspiração árabe", "at": 90, "vj": 100, "itens": ["Khamrah", "Club de Nuit Iconic", "Club de Nuit Maleka", "Club de Nuit Woman", "Yara Elixir"]}, {"linha": "mini", "tag": "Miniatura · 25ml", "rotulo": "inspirado em", "at": 30, "vj": 45, "itens": ["Good Girl Blush"]}, {"linha": "brand", "tag": "Inspiração de importado · 75 a 100ml", "rotulo": "inspirado em", "itens": [["212 Rose", 100], ["212 Vermelho", 100], ["212 VIP Rosé", 100], ["Sexy Scandal", 120], ["Blooming Passion", 100], ["212 VIP Wild Party", 100], ["La Nuit Sparkle", 100], ["Robozinho tradicional (Patter)", 120], ["212 Prata", 120], ["Mrs Way Shimmer", 100], ["Mrs Way", 100]]}, {"linha": "brand", "tag": "Beauty Brand · 75 a 100ml", "rotulo": "Beauty Brand", "itens": [["B-044 Private Lady", 100], ["B-043 Luck Lady", 100], ["B-040 Life Intensely", 100], ["B-035 Luck Edition", 150], ["B-042 Lady in Gold", 120], ["B-038 Gold Versant", 120], ["B-037 Floral Rosé", 120], ["B-052 Sauvage", 120]]}, {"linha": "brand", "tag": "Dream Brand · 75 a 100ml", "rotulo": "Dream Brand", "itens": [["G-093 Light Dream", 150]]}, {"linha": "brand", "tag": "Body Splash Brand Collection", "rotulo": "body splash", "at": 60, "vj": 80, "itens": ["Nº 136 Escandal"]}, {"linha": "cosm", "tag": "Body splash árabe", "rotulo": "body splash", "at": 70, "vj": 90, "itens": ["Hawas Black for Him", "Fakhar Black", "Yara Moi", "Asad Tradicional", "Fakhar Rose", "Vulcan Feu", "Marshmallow Blush", "Vanilla Shimmer", "Yara Shimmer", "Dalila Pour Femme", "Sabah Delilah", "Diore Fem", "Sabah Sugar", "Sabah Valentine", "Sabah Tradicional Shimmer", "Sabah Tradicional", "Afeef", "Amber Rouge", "Royal Amber", "Maleka"]}, {"linha": "pasta", "tag": "Pasta Isabelle La Belle", "rotulo": "fragrância · 200g", "unico": 150, "itens": ["Yara Elixir", "Sabah Sugar", "Sabah Valentine", "Sabah Tradicional", "Asad Bourbon", "Atheeri", "Candid", "Hassan", "Alien", "La Belle Bomba", "Pure Exclusive", "Fakhar Gold", "Fakhar Rose", "Asad Elixir", "Angel", "Club de Nuit Intense Man", "Sabah Delilah", "Vulcan Feu", "Veneno Bianco", "Queen of Arabia", "Dalila", "Royal Amber", "Dalal"]}, {"linha": "cosm", "tag": "Decant Isabelle La Belle · 15ml", "rotulo": "fragrância", "unico": 25, "itens": ["Club de Nuit Intense Man", "Salvo", "King"]}, {"linha": "cosm", "tag": "Hidratante árabe", "rotulo": "fragrância", "at": 70, "vj": 90, "itens": ["Dalila", "Asad Tradicional", "Sabah Tradicional", "Fakhar Rose", "Yara Tradicional", "Yara Elixir"]}, {"linha": "cosm", "tag": "Hidratante inspirado em importado", "rotulo": "inspirado em", "at": 55, "vj": 75, "itens": ["Olympéa", "The Way", "Alien", "Interdicted"]}, {"linha": "cosm", "tag": "Gloss", "rotulo": "", "itens": [["Kit 3 Francine Love Liner", 30], ["Lip Honey (gloss de mel)", 10], ["Lip Bunny (gloss de chocolate)", 10]]}], "galeria": {"bc-bs-coconut-passion": ["hx-body-splash-inspirado-em-victoria-s-secret-coconut-passion", "c7-x-coconut-passion.png"], "bc-bs-pure-seduction": ["hx-body-splash-inspirado-em-victoria-s-secret-pure-seduction", "c7-x-pure-seduction.png"], "bc-bs-strawberries-champagne": ["hx-body-splash-inspirado-em-victoria-s-secret-strawberries-champagne", "c7-x-strawberries.png"], "tx-perfume-arabe-80-a-100ml-coral-blush": ["c7-ar2-coral-blush", "c7-ar4-x-coral-blush.png"], "tx-perfume-arabe-80-a-100ml-rose-petals": ["c7-ar2-rose-petals", "c7-ar4-x-rose-petals.png"], "tx-body-splash-arabe-vulcan-feu": ["c7-x-vulcan-feu.png"], "tx-body-splash-arabe-dalila-pour-femme": ["c7-x-dalila.png"], "tx-body-splash-arabe-marshmallow-blush": ["c7-x-marshmallow.png"], "tx-body-splash-arabe-diore-fem": ["c7-x-diore.png"], "tx-body-splash-arabe-hawas-black-for-him": ["c7-x-hawas-black.png"], "tx-body-splash-arabe-maleka": ["c7-x-maleka.png"], "bc-bs-pure-402": ["c7-x-pure-402.png"], "bc-bs-love-spell": ["c7-x-love-spell.png"], "bc-bs-only-you-087": ["c7-x-only-087.png"], "bc-bs-rose-lady-034": ["c7-x-rose-lady-034.png"], "bc-bs-bare-vanilla": ["c7-x-bare-vanilla.png"], "tx-perfume-arabe-80-a-100ml-yara-moi": ["st-yara-moi-02.jpg", "ar-yara-moi", "c7-x-yara-moi-100.png", "c7-ar3-x-yara-moi.png"], "yara-tous": ["c7-x-yara-tous.png", "st-yara-tous-01.jpg", "st-yara-tous-02.jpg"], "yara": ["c7-x-yara.png", "st-yara-01.jpg", "st-yara-02.jpg"], "tx-perfume-arabe-80-a-100ml-fakhar-prata": ["st-fakhar-prata-02.jpg", "ar-fakhar-platin", "c7-x-fakhar-prata.png"], "tx-perfume-arabe-80-a-100ml-fakhar-gold": ["st-fakhar-gold-02.jpg", "ar-fakhar-gold", "c7-ar3-x-fakhar-gold.png"], "tx-perfume-arabe-80-a-100ml-philos-pura": ["st-philos-pura-02.jpg", "ar-philos-pura", "c7-ar3-x-philos-pura.png"], "khamrah": ["c7-ar3-x-khamrah.png", "st-khamrah-01.jpg", "st-khamrah-02.jpg"], "fakhar-black": ["c7-ar3-x-fakhar-black.png", "dupe-fakhar-black.jpg", "st-fakhar-black-01.jpg", "st-fakhar-black-02.jpg"], "tx-perfume-arabe-80-a-100ml-alexandrite": ["c7-ar3-x-nawal-alexandrite.png"], "tx-perfume-arabe-80-a-100ml-bronzite-nawal": ["c7-ar3-x-nawal-bronzite.png"], "asad": ["c7-ar3-x-asad.png", "st-asad-01.jpg", "st-asad-02.jpg"], "tx-perfume-arabe-80-a-100ml-hayat": ["c7-ar3-x-hayat.png"], "tx-perfume-arabe-80-a-100ml-narissa-for-her": ["c7-ar4-x-narissa.png"], "tx-perfume-arabe-80-a-100ml-bright-peach": ["c7-ar4-x-bright-peach.png"], "tx-perfume-arabe-80-a-100ml-encode-mountain": ["c7-ar4-x-encode.png"], "tx-perfume-arabe-80-a-100ml-musamam-white-intense": ["c7-ar4-x-musamam.png", "dupe-musamam.jpg"], "tx-perfume-arabe-80-a-100ml-historic-doria": ["c7-ar4-x-historic-doria.png"], "tx-perfume-arabe-80-a-100ml-dalal": ["st-dalal-02.jpg", "c7-ar2-dalal.png", "c7-ar4-x-dalal.png"], "asad-bourbon": ["dupe-asad-bourbon.jpg", "st-asad-bourbon-01.jpg", "st-asad-bourbon-02.jpg"], "cdnim": ["dupe-cdnim.jpg", "st-cdnim-01.jpg", "st-cdnim-02.jpg"], "tx-perfume-arabe-80-a-100ml-fakhar-rose": ["st-fakhar-rose-02.jpg", "c7-ar3-fakhar-rose.png", "dupe-fakhar-rose.jpg"], "tx-inspiracao-arabe-30ml-vulcan-feu": ["dupe-vulcan-feu.jpg"], "tx-inspiracao-arabe-50ml-club-de-nuit-iconic": ["dupe-iconic.jpg"], "tx-perfume-arabe-80-a-100ml-shagaf-al-ward": ["st-shagaf-al-ward-02.jpg", "c7-shagaf.png", "dupe-shagaf.jpg"], "tx-perfume-arabe-80-a-100ml-asad-zanzibar-limited-edition": ["st-asad-zanzibar-le-02.jpg"], "tx-perfume-arabe-80-a-100ml-abyat": ["st-abyat-02.jpg", "c7-ar3-abyat.png"], "tx-perfume-arabe-80-a-100ml-asad-zanzibar": ["st-asad-zanzibar-02.jpg", "c7-ar3-asad-zanzibar.png"], "tx-perfume-arabe-80-a-100ml-attar-al-wesal": ["st-attar-al-wesal-02.jpg", "c7-ar4-attar-al-wesal.png"], "tx-perfume-arabe-80-a-100ml-club-de-nuit-woman": ["st-cdn-woman-02.jpg", "c7-ar4-cdn-woman.png"], "tx-perfume-arabe-80-a-100ml-durrat-al-aroos": ["st-durrat-al-aroos-02.jpg", "c7-ar4-durrat-al-aroos.png"], "tx-perfume-arabe-80-a-100ml-la-rouge-baroque": ["st-la-rouge-baroque-02.jpg", "c7-ar3-la-rouge-baroque.png"], "tx-perfume-arabe-80-a-100ml-hawas-ice": ["st-hawas-ice-02.jpg", "c7-ar4-hawas-ice.png"], "tx-perfume-arabe-80-a-100ml-sabah-sugar": ["st-sabah-sugar-02.jpg", "c7-ar4-sabah-sugar.png"], "tx-perfume-arabe-80-a-100ml-teriaq": ["st-teriaq-02.jpg", "c7-ar3-teriaq.png"], "tx-perfume-arabe-80-a-100ml-yara-candy": ["st-yara-candy-02.jpg", "c7-ar3-yara-candy.png"], "tx-perfume-arabe-80-a-100ml-yara-elixir": ["st-yara-elixir-02.jpg"]}};
+BRAND_COLLECTION.push(...C7_EXTRA.mini); Object.assign(FOTO, C7_EXTRA.foto);
+ARABIC_COLLECTION.forEach(([cod, nome, publico, insp]) => BRAND_COLLECTION.push([cod, insp, publico, "25ml", nome]));
+BRAND_COLLECTION.sort((a,b)=>ordemBC(a[0])-ordemBC(b[0]) || a[0].localeCompare(b[0])).forEach(([cod, insp, publico, , apelido]) =>
+  bcItem("mini", cod, insp, publico, cod[0]==="A" ? (TAM_ARABE[cod] || null) : "25ml", apelido));
+// Ednando (2026-10-27): toda miniatura Brand Collection é 25ml. As árabes são até 50ml (30 ou 50ml): só mostra quando o print disser, em TAM_ARABE.
+FRASCO_GRANDE.forEach(([cod, insp, publico, tam, apelido, foto, tipo]) => {
+  bcItem("brand", cod, insp, publico, tam, apelido || undefined);
+  const p = PERFUMES[PERFUMES.length-1];
+  if (foto) { p.id = "bc-"+foto; p.foto = `img/${foto}.jpg`; }
+  if (tipo==="splash") {
+    p.splash = true; p.conc = "Body Splash"; p.tracos = ["Body Splash "+tam, "Brand Collection", publico];
+    p.resumo = `Body splash ${tam} da marca Brand Collection${insp ? `, inspirado no ${insp}` : ""}. Perfuma de leve e dá para usar o dia todo.`;
+  }
+});
+const FAMILIAS = ["Todas","Amadeirados","Cítricos","Frescos","Doces","Orientais","Florais","Frutados"];
+const RAPIDO = [{id:"Dia",t:"Para usar de dia"},{id:"Noite",t:"Para a noite"},{id:"Calor",t:"Para o calor"},{id:"Frio",t:"Para o frio"},{id:"Presente",t:"Para presente"}];
+const PUBLICO = ["Masculino","Feminino","Compartilhável"];
+const NOTAS_POP = ["Baunilha","Oud","Âmbar","Canela","Bergamota","Abacaxi","Maçã","Rosa","Jasmim","Cacau","Coco","Patchouli"];
+
+/* ============ daqui para baixo não precisa editar ============ */
+const $ = s => document.querySelector(s);
+const state = { linha:"todos", fam:"Todas", q:"", rap:null, pub:null, nota:null };
+const norm = s => s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
+const brl = v => v.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+const waLink = msg => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
+const notasDe = p => p.notas || [...p.topo,...p.coracao,...p.fundo];
+const fotos = p => [...(p.fotos || [`img/${p.id}.jpg`,`img/${p.id}-2.jpg`,`img/${p.id}-3.jpg`]), ...((C7_EXTRA.galeria||{})[p.id]||[]).map(imgSrc)];
+const waIcon = $("#float svg").outerHTML;
+const BC = p => p.linha==="brand" || p.linha==="mini";
+/* NOTAS_INSP: família e notas do perfume em que cada miniatura / frasco Brand Collection se inspira.
+   Assim os filtros de família e de nota e a busca também trazem as miniaturas.
+   "Inspiração": ["Família,Família", "nota, nota, ..."]. Ocasião é deduzida da família. */
+const NOTAS_INSP = {
+  "One Million":["Amadeirados,Orientais","Toranja,Hortelã,Mandarina,Canela,Rosa,Couro,Âmbar,Patchouli"],
+  "Jadore":["Florais,Frutados","Pera,Bergamota,Jasmim,Rosa,Ylang-ylang,Almíscar,Baunilha"],
+  "Miss Dior Blooming":["Florais","Peônia,Rosa,Mandarina,Almíscar"],
+  "Miss Dior Tradicional":["Florais,Frutados","Mandarina,Rosa,Peônia,Patchouli,Almíscar"],
+  "Light Blue":["Frescos,Cítricos","Limão,Maçã,Bambu,Jasmim,Cedro,Almíscar"],
+  "Sauvage":["Frescos,Amadeirados","Bergamota,Pimenta,Lavanda,Ambroxan,Cedro"],
+  "Issey Miyake":["Frescos,Florais","Lótus,Notas aquáticas,Melão,Lírio,Almíscar"],
+  "Scandal":["Doces,Florais","Mel,Laranja,Gardênia,Jasmim,Patchouli"],
+  "Delina":["Florais,Frutados","Lichia,Ruibarbo,Rosa,Peônia,Baunilha,Almíscar"],
+  "212 Vip Black":["Orientais,Amadeirados","Absinto,Anis,Lavanda,Baunilha,Almíscar"],
+  "YSL Libre":["Florais,Orientais","Lavanda,Mandarina,Flor de laranjeira,Jasmim,Baunilha,Âmbar"],
+  "Chloé":["Florais","Peônia,Lichia,Rosa,Magnólia,Âmbar,Cedro"],
+  "Chanel Chance Fraiche":["Frescos,Cítricos,Florais","Limão,Cidra,Jasmim,Pimenta-rosa,Cedro,Almíscar"],
+  "Tiffany":["Florais","Mandarina,Íris,Pimenta-rosa,Almíscar,Patchouli"],
+  "Valaya":["Florais","Bergamota,Mandarina,Néroli,Flor de laranjeira,Almíscar,Baunilha"],
+  "Gucci Bloom":["Florais","Tuberosa,Jasmim,Íris,Almíscar"],
+  "Erba Pura":["Frutados,Doces","Laranja,Limão,Frutas vermelhas,Baunilha,Âmbar,Almíscar"],
+  "YSL MYSLF":["Amadeirados,Florais","Bergamota,Flor de laranjeira,Patchouli,Ambroxan"],
+  "Prada Paradoxe":["Florais,Orientais","Pera,Bergamota,Néroli,Jasmim,Âmbar,Almíscar,Baunilha"],
+  "CH":["Florais","Bergamota,Jasmim,Rosa,Sândalo,Almíscar"],
+  "212 Vip":["Doces,Orientais","Rum,Maracujá,Gardênia,Almíscar,Baunilha"],
+  "212 Vip Rose":["Frutados,Florais","Champanhe,Pêssego,Pimenta-rosa,Flor de laranjeira,Almíscar"],
+  "Tom Ford":["Orientais","Trufa,Orquídea negra,Patchouli,Baunilha,Incenso"],
+  "Angel Iced":["Doces","Maçã,Pera,Baunilha,Patchouli,Caramelo"],
+  "La Vie Est Belle":["Doces,Florais","Pera,Groselha,Íris,Jasmim,Pralinê,Baunilha,Patchouli"],
+  "Apple":["Frescos,Frutados","Maçã,Pepino,Toranja,Magnólia,Sândalo"],
+  "Black XS":["Orientais,Doces","Cereja,Pimenta-rosa,Cacau,Baunilha,Patchouli"],
+  "Hypnotic Poison":["Orientais,Doces","Amêndoa,Baunilha,Jasmim,Coco,Almíscar"],
+  "Chanel Coco":["Orientais","Cravo,Rosa,Âmbar,Baunilha,Patchouli"],
+  "Decadence":["Orientais,Florais","Ameixa,Açafrão,Íris,Rosa,Âmbar,Vetiver"],
+  "Bright Crystal":["Florais,Frutados","Romã,Yuzu,Peônia,Lótus,Âmbar,Almíscar"],
+  "Irresistible":["Florais,Frutados","Pera,Rosa,Almíscar,Cedro"],
+  "Nina Elixir":["Frutados,Doces","Maçã,Mandarina,Pralinê,Baunilha,Almíscar"],
+  "Chanel Tender":["Florais,Frutados","Marmelo,Toranja,Jasmim,Almíscar"],
+  "Chanel Chance":["Florais,Orientais","Pimenta-rosa,Jasmim,Patchouli,Almíscar,Baunilha"],
+  "Alien":["Orientais,Amadeirados","Jasmim,Âmbar,Madeira de caxemira"],
+  "Burberry Body":["Florais","Absinto,Pêssego,Rosa,Íris,Sândalo,Almíscar,Baunilha"],
+  "Escada Cherry in the Air":["Frutados,Doces","Cereja,Marshmallow,Caramelo,Almíscar"],
+  "Trésor Midnight Rose":["Florais,Orientais","Framboesa,Rosa,Pimenta-rosa,Baunilha,Almíscar"],
+  "YSL Black Opium":["Doces,Orientais","Café,Baunilha,Pera,Jasmim,Patchouli"],
+  "Valentina":["Florais,Frutados","Bergamota,Morango,Tuberosa,Jasmim,Cedro,Baunilha"],
+  "Narciso Rodriguez For Her":["Florais","Rosa,Pêssego,Almíscar,Âmbar,Patchouli"],
+  "Addict 2":["Frutados,Florais","Toranja,Frésia,Jasmim,Almíscar"],
+  "Ricci Ricci":["Florais,Frutados","Ruibarbo,Bergamota,Rosa,Tuberosa,Patchouli"],
+  "Si":["Frutados,Orientais","Cassis,Rosa,Baunilha,Patchouli,Almíscar"],
+  "Elie Saab":["Florais","Flor de laranjeira,Jasmim,Mel,Patchouli,Cedro"],
+  "Angel Demon":["Orientais","Mandarina,Açafrão,Lírio,Orquídea,Baunilha,Fava tonka"],
+  "Ange ou Démon Le Secret":["Florais","Cranberry,Chá,Jasmim,Patchouli"],
+  "Trésor La Nuit":["Doces,Orientais","Pera,Framboesa,Café,Rosa,Baunilha,Pralinê,Patchouli"],
+  "Poison Girl":["Doces,Orientais","Laranja,Rosa,Amêndoa,Baunilha,Fava tonka"],
+  "Olympéa":["Orientais,Doces","Jasmim,Mandarina,Baunilha,Âmbar,Sândalo"],
+  "YSL Mon Paris":["Frutados,Doces","Morango,Framboesa,Pera,Peônia,Patchouli,Almíscar"],
+  "Valentina Poudrée":["Florais","Bergamota,Flor de laranjeira,Íris,Almíscar"],
+  "Euphoria":["Orientais,Frutados","Romã,Caqui,Orquídea,Lótus,Âmbar"],
+  "Lady Million":["Florais,Frutados","Framboesa,Néroli,Limão,Jasmim,Flor de laranjeira,Mel,Patchouli"],
+  "Lady Million Lucky":["Frutados,Doces","Ameixa,Groselha,Avelã,Mel,Patchouli"],
+  "Kenzo World":["Florais","Peônia,Jasmim,Almíscar"],
+  "Mon Guerlain":["Orientais,Florais","Lavanda,Bergamota,Íris,Jasmim,Baunilha,Sândalo"],
+  "Miu Miu":["Florais","Lírio do vale,Rosa,Almíscar"],
+  "Good Girl":["Orientais,Doces","Amêndoa,Café,Tuberosa,Jasmim,Cacau,Fava tonka"],
+  "Good Girl Supreme":["Florais,Doces","Frutas vermelhas,Tuberosa,Jasmim,Fava tonka,Baunilha"],
+  "Very Good Girl Elixir":["Doces,Orientais","Groselha,Rosa,Baunilha"],
+  "Britney Spears Fantasy":["Doces,Frutados","Lichia,Kiwi,Marmelo,Chocolate branco,Almíscar"],
+  "Chanel Gabrielle":["Florais","Mandarina,Jasmim,Tuberosa,Ylang-ylang,Almíscar"],
+  "Marly Meliora":["Florais,Frutados","Cassis,Pera,Rosa,Framboesa,Almíscar"],
+  "Armani Code":["Orientais,Florais","Flor de laranjeira,Gengibre,Jasmim,Baunilha"],
+  "Angel":["Doces,Orientais","Melão,Bergamota,Mel,Pralinê,Baunilha,Patchouli,Chocolate"],
+  "Angel Elixir":["Doces,Florais","Pera,Rosa,Baunilha,Patchouli"],
+  "Angel Nova":["Frutados,Florais","Lichia,Framboesa,Rosa,Baunilha"],
+  "Pure Poison":["Florais","Jasmim,Flor de laranjeira,Gardênia,Sândalo,Âmbar"],
+  "Si Passione":["Frutados","Pera,Groselha,Rosa,Baunilha,Cedro"],
+  "Gucci Bloom Acqua di Fiori":["Frescos,Florais","Gálbano,Groselha,Tuberosa,Jasmim"],
+  "Versace Yellow Diamond":["Frescos,Florais","Limão,Pera,Néroli,Mimosa,Âmbar"],
+  "My Way":["Florais","Bergamota,Flor de laranjeira,Tuberosa,Jasmim,Baunilha,Cedro"],
+  "212 Sexy":["Doces,Orientais","Pimenta-rosa,Gardênia,Baunilha,Caramelo,Almíscar"],
+  "Flower by Kenzo":["Florais","Violeta,Rosa,Baunilha,Almíscar"],
+  "Bombshell":["Frutados,Florais","Maracujá,Peônia,Baunilha,Almíscar"],
+  "Jimmy Choo":["Frutados","Pera,Mandarina,Orquídea,Caramelo,Patchouli"],
+  "Idôle":["Florais","Rosa,Pera,Jasmim,Almíscar,Baunilha"],
+  "212 Tradicional":["Florais","Gardênia,Bergamota,Almíscar,Sândalo"],
+  "Her Burberry":["Frutados","Morango,Framboesa,Amora,Jasmim,Almíscar,Âmbar"],
+  "Baccarat Rouge":["Amadeirados,Orientais","Açafrão,Jasmim,Âmbar,Cedro"],
+  "Wanted Girl":["Doces,Orientais","Gengibre,Doce de leite,Flor de laranjeira,Patchouli,Fava tonka"],
+  "Versace Dylan":["Frutados","Maçã,Groselha,Pêssego,Rosa,Almíscar,Patchouli"],
+  "Dylan Turquoise":["Frescos,Frutados","Limão,Pera,Toranja,Jasmim,Almíscar"],
+  "Versace Purple":["Frutados,Florais","Pera,Bergamota,Peônia,Almíscar"],
+  "Tom Ford Lost Cherry":["Doces,Frutados","Cereja,Amêndoa,Rosa,Baunilha,Fava tonka"],
+  "Tom Ford Cherry Smoke":["Doces,Amadeirados","Cereja,Açafrão,Couro"],
+  "Lancôme Miracle":["Florais","Lichia,Frésia,Gengibre,Pimenta,Almíscar"],
+  "L'Interdit":["Florais,Orientais","Flor de laranjeira,Tuberosa,Jasmim,Patchouli,Vetiver"],
+  "Cloud":["Doces","Lavanda,Pera,Coco,Pralinê,Almíscar"],
+  "Versace Eros Femme":["Florais","Limão,Romã,Jasmim,Peônia,Sândalo,Almíscar"],
+  "LV On The Beach":["Cítricos,Frescos","Yuzu,Néroli,Pimenta-rosa"],
+  "Chloé Naturelle":["Florais","Rosa,Almíscar,Cedro"],
+  "Fame":["Florais,Frutados","Manga,Bergamota,Jasmim,Incenso,Sândalo"],
+  "Chanel N°1 L'Eau Rouge":["Frescos,Florais","Mandarina,Pimenta-rosa,Rosa,Íris,Almíscar"],
+  "Libre Intense":["Orientais","Lavanda,Flor de laranjeira,Baunilha,Fava tonka"],
+  "Born in Roma":["Florais,Doces","Groselha,Jasmim,Baunilha"],
+  "Yara":["Doces,Frutados","Orquídea,Heliotrópio,Tangerina,Baunilha,Almíscar"],
+  "Yara Candy":["Doces,Frutados","Frutas vermelhas,Baunilha,Almíscar"],
+  "Flowerbomb":["Florais,Doces","Jasmim,Rosa,Patchouli,Baunilha"],
+  "Especially Escada":["Florais","Pera,Rosa,Almíscar"],
+  "Victoria's Secret Bare Vanilla":["Doces","Baunilha,Madeira de caxemira"],
+  "Victoria's Secret Coconut Passion":["Doces","Coco,Baunilha"],
+  "Victoria's Secret Love Spell":["Frutados","Cereja,Pêssego"],
+  "Victoria's Secret Pear Glacé":["Frutados","Pera"],
+  "Victoria's Secret Pure Seduction":["Frutados","Ameixa,Frésia"],
+  "Victoria's Secret Strawberries & Champagne":["Frutados","Morango,Champanhe"],
+  "Victoria's Secret Velvet Petals":["Florais,Doces","Rosa,Amêndoa"],
+  "Ursinho Pistachio Crush":["Doces","Pistache,Baunilha"],
+  "Ursinho Mango Tango":["Frutados","Manga"],
+  "Ursinho Marshmallow":["Doces","Marshmallow,Baunilha"],
+  "Ursinho Fruity Fizz":["Frutados","Frutas vermelhas"],
+  "Ursinho Cherry Bubbles":["Frutados,Doces","Cereja"],
+  // masculinos
+  "Chanel Allure Sport":["Frescos,Cítricos","Laranja,Notas aquáticas,Cedro,Fava tonka"],
+  "Creed Aventus":["Frutados,Amadeirados","Abacaxi,Bergamota,Bétula,Almíscar"],
+  "Club de Nuit Intense Man":["Frutados,Amadeirados","Abacaxi,Limão,Bétula,Almíscar"],
+  "Bleu de Chanel":["Amadeirados,Cítricos","Toranja,Limão,Gengibre,Incenso,Cedro"],
+  "Club de Nuit Iconic":["Amadeirados,Cítricos","Toranja,Bergamota,Gengibre,Incenso,Cedro"],
+  "Boss Orange":["Frutados,Doces","Maçã,Baunilha"],
+  "Invictus":["Frescos,Amadeirados","Toranja,Notas aquáticas,Louro,Âmbar"],
+  "Acqua di Giò":["Frescos,Cítricos","Limão,Bergamota,Notas aquáticas,Jasmim,Patchouli"],
+  "Polo Blue":["Frescos","Melão,Pepino,Manjericão,Camurça"],
+  "Bad Boy":["Amadeirados,Orientais","Pimenta,Cacau,Fava tonka"],
+  "Le Male":["Orientais","Lavanda,Hortelã,Baunilha,Fava tonka"],
+  "Ferrari Black":["Frescos,Amadeirados","Bergamota,Canela,Cedro"],
+  "Wanted":["Orientais,Amadeirados","Gengibre,Canela,Cardamomo,Fava tonka"],
+  "Sauvage Elixir":["Orientais","Canela,Noz-moscada,Lavanda,Alcaçuz,Âmbar"],
+  "Phantom":["Frescos","Lavanda,Limão,Baunilha"],
+  "Layton":["Orientais","Maçã,Lavanda,Baunilha,Cardamomo"],
+  "D&G The Only One":["Doces","Violeta,Café,Baunilha"],
+  "Toy Boy":["Amadeirados","Pera,Rosa,Pimenta"],
+  "Angels' Share":["Doces","Conhaque,Canela,Baunilha,Fava tonka"],
+  "212 Men":["Frescos","Toranja,Gengibre,Almíscar"],
+  "One Million Lucky":["Doces","Avelã,Ameixa,Mel"],
+  "9PM":["Doces,Orientais","Maçã,Canela,Lavanda,Baunilha"],
+  "Rhubarbe Écarlate":["Frescos,Frutados","Ruibarbo,Almíscar"],
+  "Tragedy of Lord George":["Amadeirados","Conhaque,Fava tonka"],
+  "By The Bonfire":["Amadeirados","Madeira defumada,Baunilha,Castanha"],
+  "Le Labo Another":["Amadeirados","Ambroxan,Almíscar"],
+  "Pure XS":["Orientais,Doces","Gengibre,Baunilha,Couro,Canela"],
+  "Lancôme Trésor":["Florais,Orientais","Pêssego,Rosa,Damasco,Baunilha"],
+  "Tom Ford Rose Prick":["Florais","Rosa,Cúrcuma,Patchouli"],
+  "Lazy Morning":["Florais,Frescos","Lírio do vale,Pera,Almíscar"],
+  "Lacoste":["Frescos","Toranja,Alecrim,Cedro"],
+  "212 VIP Men":["Orientais,Doces","Limão,Gengibre,Hortelã,Couro,Âmbar"],
+  "Armani Code Homme":["Orientais","Bergamota,Anis,Couro,Fava tonka"],
+  "Issey Miyake Pour Homme":["Frescos,Cítricos","Yuzu,Limão,Noz-moscada,Vetiver"],
+  "Versace Eros":["Frescos,Doces","Hortelã,Maçã,Limão,Fava tonka,Baunilha"],
+  "Montblanc Legend":["Frescos","Bergamota,Lavanda,Abacaxi,Fava tonka"],
+  "Bvlgari Aqva":["Frescos","Mandarina,Notas aquáticas,Alecrim,Cedro"],
+  "Hugo Boss":["Frescos","Maçã,Hortelã,Lavanda,Pinho"],
+  "Joop Homme":["Orientais,Doces","Canela,Baunilha,Mel,Sândalo"],
+  "Dylan Blue Pour Homme":["Frescos,Amadeirados","Bergamota,Toranja,Folha de figo,Pimenta,Incenso,Almíscar"],
+  "Fahrenheit":["Amadeirados","Violeta,Couro,Noz-moscada,Mandarina"],
+  "Lacoste L'Homme":["Frescos,Cítricos","Mandarina,Gengibre,Cardamomo"],
+  "Versace Pour Homme":["Frescos,Cítricos","Limão,Néroli,Cedro,Fava tonka"],
+  "Euphoria Men":["Amadeirados","Pimenta,Gengibre,Âmbar,Patchouli"],
+  "Tom Ford For Men":["Amadeirados,Cítricos","Mandarina,Gengibre,Violeta,Âmbar,Couro"],
+  "Imagination":["Cítricos,Frescos","Cidra,Bergamota,Gengibre,Chá preto,Âmbar"],
+  "Scandal Pour Homme":["Doces","Caramelo,Sálvia,Fava tonka"]
+};
+// Variações que usam as notas do perfume base
+const BASE_INSP = [["Chloe","Chloé"],["Idole","Idôle"],["Idôle Intense","Idôle"],["Dior Hypnotic","Hypnotic Poison"],["Hypnotic Poison Verde","Hypnotic Poison"],
+  ["XS Black","Black XS"],["Carolina Herrera Good Girl","Good Girl"],["Good Girl","Good Girl"],["Scandal Gold","Scandal"],["212 VIP Rosé","212 Vip Rose"],
+  ["Olympea","Olympéa"],["Lady Million","Lady Million"],["La Vie","La Vie Est Belle"],["Black Opium","YSL Black Opium"],["My Way","My Way"],
+  ["Miu Miu","Miu Miu"],["Gucci Bloom","Gucci Bloom"],["Angel Nova","Angel Nova"],["Fame","Fame"],["L'Interdit","L'Interdit"],["Versace Dylan","Versace Dylan"],
+  ["Bright Crystal","Bright Crystal"],["Euphoria","Euphoria"],["Si ","Si"],["Armani Code","Armani Code"],["Le Male","Le Male"],["Jean Paul Gaultier","Le Male"],
+  ["Wanted","Wanted"],["Invictus","Invictus"],["Baccarat Rouge","Baccarat Rouge"],["Creed Aventus","Creed Aventus"],["Layton","Layton"],["Kilian Angels","Angels' Share"],
+  ["Trésor La Nuit","Trésor La Nuit"],["Tom Ford Lost Cherry","Tom Ford Lost Cherry"],["Victoria's Secret Love Spell","Victoria's Secret Love Spell"],
+  ["Victoria's Secret Strawberries","Victoria's Secret Strawberries & Champagne"],["Libre Intense","Libre Intense"],["YSL Libre","YSL Libre"],["Sauvage Elixir","Sauvage Elixir"],["Delina","Delina"],["Montblanc Legend","Montblanc Legend"],["Acqua di Giò","Acqua di Giò"],["Bad Boy","Bad Boy"],["212 VIP Men","212 VIP Men"],["Azzaro Wanted","Wanted"],["The Most Wanted","Wanted"],["Rhubarbe","Rhubarbe Écarlate"],["Ricci Ricci","Ricci Ricci"],["Lancôme Trésor","Lancôme Trésor"]];
+const OCASIAO_FAM = {Frescos:["Dia","Calor"], Cítricos:["Dia","Calor"], Florais:["Dia","Presente"], Frutados:["Dia","Presente"], Doces:["Noite","Frio","Presente"], Orientais:["Noite","Frio"], Amadeirados:["Noite","Frio"]};
+const notasInsp = p => {
+  const ks = [p.inspirado, p.apelido].filter(Boolean);
+  for (const k of ks) if (NOTAS_INSP[k]) return NOTAS_INSP[k];
+  for (const k of ks) { const b = BASE_INSP.find(([pre]) => k.startsWith(pre)); if (b && NOTAS_INSP[b[1]]) return NOTAS_INSP[b[1]]; }
+  // miniaturas árabes com o mesmo nome de um frasco árabe do catálogo: usam as notas dele
+  const ar = PERFUMES.find(x => x.linha==="arabe" && ks.includes(x.nome));
+  return ar ? [ar.familias.join(","), notasDe(ar).join(","), ar.ocasiao] : null;
+};
+C7_EXTRA.mini.forEach(([cod, insp, , tam]) => { const p = PERFUMES.find(x => x.id === "mini-"+cod.toLowerCase()); if (!p) return; p.tam = tam; const m = (C7_EXTRA.marca||{})[cod]; if (m) { p.marca = m; p.apelido = undefined; p.tracos[1] = m; p.resumo = `Fragrância original da marca ${m}, inspirada no ${insp}. Mesma proposta de cheiro por um preço acessível.`; } });
+Object.assign(NOTAS_INSP, C7_EXTRA.notas);
+PERFUMES.filter(p => BC(p) && !p.notas.length).forEach(p => {
+  const n = notasInsp(p); if (!n) return;
+  p.familias = n[0].split(","); p.notas = n[1].split(",");
+  p.ocasiao = n[2] || [...new Set(p.familias.flatMap(f => OCASIAO_FAM[f] || []))];
+});
+const descr = p => BC(p) ? `${p.marca}${p.cod?" nº "+p.cod:""}${p.linha==="mini"?" miniatura":""}${p.splash?" body splash":""}${p.tam?", "+p.tam:""}${p.apelido?" "+p.apelido:""}${p.inspirado?` (inspirado em ${p.inspirado})`:""}` : `${p.nome} (${p.marca}${p.ml ? ", "+p.ml+"ml" : ""})`;
+const ORIGEM = {arabe:"Árabe", importado:"Importado", brand:"Brand Collection", mini:"Miniatura"};
+
+function filtrar(){
+  const q = norm(state.q.trim());
+  return PERFUMES.filter(p =>
+    !(ESCONDER_IMPORTADOS && p.linha==="importado") &&
+    !(ESCONDER_FRASCOS && p.linha==="brand") &&
+    !(MINI_SO_FOCO && p.linha==="mini" && !p.arabe && !p.top && !p.foto && !p.texto && !(p.at || p.unico)) &&
+    (state.linha==="todos" ? !["cosm","pasta"].includes(p.linha) : (state.linha==="miniar" ? p.linha==="mini" && p.arabe : state.linha==="mini" ? p.linha==="mini" && !p.arabe : p.linha===state.linha)) &&
+    (state.fam==="Todas" || p.familias.includes(state.fam)) &&
+    (!state.rap || p.ocasiao.includes(state.rap)) &&
+    (!state.pub || p.publico===state.pub || (p.publico==="Compartilhável" && state.pub!=="Compartilhável")) &&
+    (!state.nota || notasDe(p).some(n => norm(n).includes(norm(state.nota)))) &&
+    (!q || norm([p.nome,p.marca,p.inspirado||"",p.apelido||"",p.cod||"",...notasDe(p),...p.familias,...p.tracos].join(" ")).includes(q))
+  );
+}
+
+const AVISO = {
+  miniar: `<b>MINIATURAS ÁRABES · ATÉ 50ML</b><span class="faixa">Atacado a partir de R$ 60 (4 peças ou mais) · Varejo a partir de R$ 80</span><p>Miniaturas da marca <b>Arabic</b>, de inspiração árabe e originais da marca. Cada uma mostra o número e o nome da caixa. Procura outra? Chame no WhatsApp.</p>`,
+  mini: `<b>MINIATURAS BRAND COLLECTION · 25ML</b><span class="faixa">Atacado de R$ 47 a R$ 65 (4 peças ou mais) · Varejo de R$ 65 a R$ 85</span><p>Miniaturas inspiradas nos perfumes de sucesso, originais da marca <b>Brand Collection</b>. Primeiro as <b>mais vendidas</b>. Escolha feminino ou masculino. Cada uma mostra o número e o perfume em que é inspirada. Procura outra? Chame no WhatsApp.</p>`,
+  brand: `<b>BRAND COLLECTION · ACIMA DE 50ML</b><p>Frascos grandes e body splash, inspirados nos perfumes de sucesso e originais da marca Brand Collection. Procura outro? Chame no WhatsApp.</p>`,
+  pasta: `<b>PASTAS CORPORAIS ISABELLE LA BELLE</b><span class="faixa">R$ 150 cada</span><p>Procura outra fragrância? Chame no WhatsApp.</p>`,
+  cosm: `<b>BODY SPLASH, HIDRATANTES, DECANTS E GLOSS</b><span class="faixa">Atacado a partir de 4 peças</span><p>Procura outro? Chame no WhatsApp.</p>`,
+  arabe: `<b>PERFUMES ÁRABES · 100% ORIGINAIS</b><p>Lacrados de fábrica, direto dos Emirados Árabes.</p>`
+};
+const PRECOS_C7 = {"cdnim": {"at": 235, "vj": 270}, "fakhar-black": {"at": 250, "vj": 280}, "asad-bourbon": {"at": 270, "vj": 300}, "asad": {"unico": 200}, "yara-tous": {"at": 180, "vj": 230}, "yara": {"unico": 180}, "khamrah": {"at": 240, "vj": 300}, "mini-a001": {"at": 60, "vj": 80}, "mini-a002": {"at": 60, "vj": 80}, "mini-a003": {"at": 60, "vj": 80}, "mini-a009": {"at": 60, "vj": 80}, "mini-a010": {"at": 60, "vj": 80}, "mini-a011": {"at": 60, "vj": 80}, "mini-a012": {"at": 60, "vj": 80}, "mini-a027": {"at": 60, "vj": 80}, "mini-a029": {"at": 60, "vj": 80}, "mini-a031": {"at": 60, "vj": 80}, "mini-a032": {"at": 60, "vj": 80}, "mini-a024": {"at": 65, "vj": 85}, "mini-a040": {"at": 65, "vj": 85}, "mini-a006": {"at": 70, "vj": 90}, "mini-a008": {"at": 70, "vj": 90}, "mini-a034": {"at": 70, "vj": 90}, "mini-371": {"at": 47, "vj": 65}, "mini-034": {"at": 47, "vj": 65}, "mini-021": {"at": 47, "vj": 65}, "mini-012": {"at": 47, "vj": 65}, "mini-136": {"at": 47, "vj": 65}, "mini-356": {"at": 47, "vj": 65}, "mini-087": {"at": 47, "vj": 65}, "mini-005": {"at": 47, "vj": 65}, "mini-116": {"at": 47, "vj": 65}, "mini-003": {"at": 55, "vj": 75}, "mini-361": {"at": 55, "vj": 75}, "mini-477": {"at": 55, "vj": 75}, "mini-234": {"at": 55, "vj": 75}, "mini-365": {"at": 55, "vj": 75}, "mini-378": {"at": 55, "vj": 75}, "mini-391": {"at": 55, "vj": 75}, "mini-063": {"at": 55, "vj": 75}, "mini-324": {"at": 55, "vj": 75}, "mini-205": {"at": 55, "vj": 75}, "mini-303": {"at": 55, "vj": 75}, "mini-093": {"at": 55, "vj": 75}, "mini-265": {"at": 55, "vj": 75}, "mini-370": {"at": 55, "vj": 75}, "mini-351": {"at": 55, "vj": 75}, "mini-424": {"at": 55, "vj": 75}, "mini-349": {"at": 55, "vj": 75}, "mini-382": {"at": 55, "vj": 75}, "mini-283": {"at": 55, "vj": 75}, "mini-027": {"at": 55, "vj": 75}, "mini-163": {"at": 55, "vj": 75}, "mini-249": {"at": 55, "vj": 75}, "mini-396": {"at": 55, "vj": 75}, "mini-376": {"at": 55, "vj": 75}, "mini-153": {"at": 55, "vj": 75}, "mini-387": {"at": 55, "vj": 75}, "mini-402": {"at": 55, "vj": 75}, "mini-155": {"at": 55, "vj": 75}, "mini-135": {"at": 55, "vj": 75}, "mini-440": {"at": 55, "vj": 75}, "mini-427": {"at": 55, "vj": 75}, "mini-296": {"at": 55, "vj": 75}, "mini-433": {"at": 55, "vj": 75}, "mini-054": {"at": 55, "vj": 75}, "mini-315": {"at": 55, "vj": 75}, "mini-386": {"at": 55, "vj": 75}, "mini-423": {"at": 55, "vj": 75}, "mini-250": {"at": 55, "vj": 75}, "mini-102": {"at": 55, "vj": 75}, "mini-347": {"at": 55, "vj": 75}, "mini-202": {"at": 55, "vj": 75}, "mini-321": {"at": 55, "vj": 75}, "mini-267": {"at": 65, "vj": 85}, "mini-357": {"at": 65, "vj": 85}, "mini-322": {"at": 65, "vj": 85}, "mini-047": {"at": 65, "vj": 85}, "mini-443": {"at": 65, "vj": 85}, "mini-325": {"at": 65, "vj": 85}, "mini-323": {"at": 65, "vj": 85}, "bc-g-008": {"unico": 150}, "bc-g-402": {"unico": 150}, "bc-g-477": {"unico": 170}, "mini-043": {"at": 47, "vj": 65}, "mini-028": {"at": 47, "vj": 65}, "mini-029": {"at": 47, "vj": 65}, "mini-052": {"at": 47, "vj": 65}, "mini-057": {"at": 47, "vj": 65}, "mini-194": {"at": 47, "vj": 65}, "mini-024": {"at": 55, "vj": 75}, "mini-026": {"at": 55, "vj": 75}, "mini-174": {"at": 55, "vj": 75}, "mini-154": {"at": 55, "vj": 75}, "mini-126": {"at": 65, "vj": 85}, "mini-056": {"at": 47, "vj": 65}, "mini-044": {"at": 47, "vj": 65}, "mini-013": {"at": 47, "vj": 65}, "mini-033": {"at": 47, "vj": 65}, "mini-006": {"at": 47, "vj": 65}, "mini-435": {"at": 55, "vj": 75}, "mini-297": {"at": 65, "vj": 85}, "mini-173": {"at": 65, "vj": 85}, "mini-8127": {"at": 25, "vj": 35}, "mini-866": {"at": 25, "vj": 35}, "mini-881": {"at": 25, "vj": 35}, "mini-860": {"at": 25, "vj": 35}, "mini-880": {"at": 25, "vj": 35}, "bc-bs-pure-402": {"at": 60, "vj": 80}, "bc-bs-winner-116": {"at": 60, "vj": 80}, "bc-bs-rose-lady-034": {"at": 60, "vj": 80}, "bc-bs-only-you-087": {"at": 60, "vj": 80}, "bc-bs-pure-seduction": {"at": 15, "vj": 20}, "bc-bs-strawberries-champagne": {"at": 15, "vj": 20}, "bc-bs-coconut-passion": {"at": 15, "vj": 20}, "bc-bs-love-spell": {"at": 15, "vj": 20}, "bc-bs-bare-vanilla": {"at": 15, "vj": 20}};
+PERFUMES.forEach(p => { const v = PRECOS_C7[p.id]; if (v) Object.assign(p, {at:v.at, vj:v.vj, unico:v.unico}); });
+const temPreco = p => p.at || p.unico;
+const temFoto = p => (p.texto || BC(p)) ? !!p.foto : true;
+const ordemCard = p => !!temPreco(p)*2 + temFoto(p);
+const precoCard = p => p.at
+  ? `<div class="precos"><span class="pr at"><small>Atacado</small><b>${brl(p.at)}</b></span><span class="pr vj"><small>Varejo</small><b>${brl(p.vj)}</b></span></div><span class="precos-nota">Atacado a partir de 4 peças</span>`
+  : p.unico ? `<div class="precos um"><span class="pr vj"><small>Preço</small><b>${brl(p.unico)}</b></span></div>`
+  : `<span class="price ask repo">Sob consulta · em reposição</span>`;
+const waConsulta = p => waLink(`Olá, C7 Perfumaria! O ${descr(p)} está disponível? Quero saber o valor.`);
+const precoFicha = p => p.at
+  ? `<div><dt>Atacado (4+ peças)</dt><dd><b>${brl(p.at)}</b></dd></div><div><dt>Varejo</dt><dd><b>${brl(p.vj)}</b></dd></div>`
+  : `<div><dt>Preço</dt><dd>${p.unico ? `<b>${brl(p.unico)}</b>` : "Em reposição · consulte a disponibilidade"}</dd></div>`;
+function soComPreco(){ for (let i = PERFUMES.length - 1; i >= 0; i--) if (!temPreco(PERFUMES[i])) PERFUMES.splice(i, 1); }
+function render(){ soComPreco();
+  document.querySelectorAll("[data-l]").forEach(b => b.setAttribute("aria-pressed", b.dataset.l===state.linha));
+  document.querySelectorAll("[data-f]").forEach(b => b.setAttribute("aria-pressed", b.dataset.f===state.fam));
+  document.querySelectorAll("[data-r]").forEach(b => b.setAttribute("aria-pressed", b.dataset.r===state.rap));
+  document.querySelectorAll("[data-p]").forEach(b => b.setAttribute("aria-pressed", b.dataset.p===state.pub));
+  document.querySelectorAll("[data-n]").forEach(b => b.setAttribute("aria-pressed", b.dataset.n===state.nota));
+  const list = filtrar().sort((a,b) => ordemCard(b) - ordemCard(a));
+  $("#count").textContent = list.length === 1 ? "1 perfume" : `${list.length} perfumes`;
+  $("#limpar").hidden = !(state.fam!=="Todas" || state.rap || state.pub || state.nota || state.q);
+  const filtroSexo = (state.linha==="cosm" || state.linha==="pasta") ? "" : (state.linha==="mini" || state.linha==="miniar" || state.linha==="brand")
+    ? `<div class="sexo">${["Feminino","Masculino"].map(x=>`<button class="qbtn" data-p="${x}" aria-pressed="${state.pub===x}">${x}</button>`).join("")}</div>` : "";
+  const aviso = AVISO[state.linha] ? `<div class="aviso">${AVISO[state.linha]}${filtroSexo}</div>` : "";
+  $("#grid").innerHTML = aviso + (list.length ? list.map(p => p.texto ? cardTexto(p) : BC(p) ? cardBrand(p) : `
+    <article class="card">
+      <div class="shot" data-i="${p.id}" role="button" tabindex="0" aria-label="Ver detalhes do ${p.nome}">
+        <div class="track">${fotos(p).map((f,k)=>`<img src="${f}" alt="${p.nome}, foto ${k+1}" loading="lazy">`).join("")}</div>
+        <span class="badge">${p.publico}</span><span class="badge orig">${ORIGEM[p.linha]}</span>
+        <span class="dots">${fotos(p).map((_,k)=>`<i class="${k?"":"on"}"></i>`).join("")}</span>
+        <button class="nav prev" data-nav="-1" aria-label="Foto anterior">‹</button><button class="nav next" data-nav="1" aria-label="Próxima foto">›</button>
+      </div>
+      <div class="body">
+        <span class="maker">${p.marca}</span>
+        <h2 class="name">${p.nome}</h2>
+        <p class="cheira"><b>Cheira a:</b> ${(p.notas || [...p.topo.slice(0,2),...p.fundo.slice(0,2)]).slice(0,4).join(", ")}</p>
+        <div class="fams">${p.familias.map(f=>`<span class="fam">${f}</span>`).join("")}</div>
+        ${precoCard(p)}
+        <button class="more" data-i="${p.id}">Ver notas e detalhes</button>
+        <a class="wa" target="_blank" rel="noopener" href="${temPreco(p) ? waLink(`Olá, C7 Perfumaria! Tenho interesse no ${descr(p)}. Está disponível?`) : waConsulta(p)}">${waIcon}${temPreco(p) ? "Comprar no WhatsApp" : "Consultar disponibilidade"}</a>
+      </div>
+    </article>`).join("") : `<p class="empty">Nenhum perfume com esse filtro. Tente outra nota ou chame no WhatsApp que indicamos um parecido.</p>`);
+}
+
+C7_EXTRA.texto.forEach(g => g.itens.forEach(it => {
+  const [n, a, b] = Array.isArray(it) ? it : [it];
+  const at = b ? a : a ? undefined : g.at, vj = b ? b : a ? undefined : g.vj, unico = a && !b ? a : g.unico;
+  const id = "tx-" + norm(g.tag+"-"+n).replace(/[^a-z0-9]+/g,"-");
+  PERFUMES.push({ id, texto:true, linha:g.linha==="miniar" ? "mini" : g.linha, arabe:g.linha==="miniar", tag:g.tag, rotulo:g.rotulo, nome:n, marca:g.tag, publico:"Compartilhável", preco:null,
+    foto:(C7_EXTRA.foto||{})[id] ? imgSrc(C7_EXTRA.foto[id]) : null, familias:[], ocasiao:[], tracos:[g.tag], notas:[], at, vj, unico });
+}));
+function cardTexto(p){
+  return `<article class="card bc">
+      <div class="shot tile u${p.foto ? " ph" : ""}">
+        ${galeria(p)}
+        <span class="badge">${p.tag}</span>
+        ${p.foto ? "" : `<span class="tl-insp">${p.rotulo}</span><span class="tl-name">${p.nome}</span>`}
+      </div>
+      <div class="body">
+        <span class="maker">${p.tag}</span>
+        <h2 class="name">${p.nome}</h2>
+        ${precoCard(p)}
+        <a class="wa" target="_blank" rel="noopener" href="${waLink(`Olá, C7 Perfumaria! Tenho interesse no(a) ${p.tag}: ${p.nome}. Está disponível?`)}">${waIcon}Comprar no WhatsApp</a>
+      </div>
+    </article>`;
+}
+const galeria = p => {
+  if (!p.foto) return "";
+  const fs = [p.foto, ...((C7_EXTRA.galeria||{})[p.id]||[]).map(imgSrc)];
+  return fs.length < 2 ? `<img src="${p.foto}" alt="" loading="lazy">`
+    : `<div class="track">${fs.map((f,k)=>`<img src="${f}" alt="foto ${k+1}" loading="lazy">`).join("")}</div><span class="dots">${fs.map((_,k)=>`<i class="${k?"":"on"}"></i>`).join("")}</span>`;
+};
+function cardBrand(p){
+  return `<article class="card bc">
+      <div class="shot tile ${p.foto?"ph ":""}${p.publico==="Feminino"?"f":p.publico==="Masculino"?"m":"u"}" data-i="${p.id}" role="button" tabindex="0" aria-label="Ver detalhes do ${descr(p)}">
+        ${galeria(p)}
+        <span class="badge${p.arabe||p.top?" hot":""}">${p.arabe ? "Linha árabe" : p.splash ? "Body Splash" : p.top ? "Mais vendido" : p.linha==="mini" ? "Miniatura" : p.publico}</span>
+        <span class="tl-brand">${p.marca}</span>
+        ${p.cod ? `<span class="tl-num${p.cod.length>3?" long":""}">${p.cod}</span>` : ""}
+        <span class="tl-insp">${p.inspirado ? "inspirado em" : p.splash ? "Body Splash" : "Linha árabe"}</span>
+        <span class="tl-name">${p.inspirado || p.apelido}</span>
+        ${p.tam ? `<span class="tl-tam">${p.tam.replace(" ou tubete "," · ")}</span>` : ""}
+      </div>
+      <div class="body">
+        <span class="maker">${p.marca}${p.cod ? " · Nº "+p.cod : ""}</span>
+        <h2 class="name">${p.apelido || p.inspirado}</h2>
+        <p class="cheira">${p.inspirado ? (p.apelido ? `Inspirado em ${p.inspirado}. ` : "") + `Original da marca ${p.marca}, inspirado no perfume famoso.` : p.splash ? "Body splash original da marca Brand Collection." : "Inspiração árabe, original da marca Arabic."}</p>
+        ${precoCard(p)}
+        <button class="more" data-i="${p.id}">Ver detalhes</button>
+        <a class="wa" target="_blank" rel="noopener" href="${temPreco(p) ? waLink(`Olá, C7 Perfumaria! Tenho interesse no ${descr(p)}. Está disponível?`) : waConsulta(p)}">${waIcon}${temPreco(p) ? "Comprar no WhatsApp" : "Consultar disponibilidade"}</a>
+      </div>
+    </article>`;
+}
+function abrirBrand(p){
+  $("#sheet").innerHTML = `
+    <button class="x" id="fechar" aria-label="Fechar">×</button>
+    <div class="sheet-head"><div><span class="maker">${p.marca}${p.cod ? " · Nº "+p.cod : ""}</span><h3 id="sheetTitle">${p.inspirado ? "Inspirado em "+p.inspirado : p.apelido}</h3>
+      <div class="traits">${p.tracos.map(t=>`<span class="trait">${t}</span>`).join("")}</div></div></div>
+    ${p.foto ? `<img src="${p.foto}" alt="Foto ilustrativa" style="width:min(64%,260px);height:auto;border-radius:12px;align-self:center">` : ""}
+    <p style="margin:0">${p.resumo}</p>
+    <dl class="facts">
+      ${p.cod ? `<div><dt>Código</dt><dd>Nº ${p.cod}</dd></div>` : ""}
+      <div><dt>Para quem</dt><dd>${p.publico}</dd></div>
+      ${p.apelido ? `<div><dt>Nome</dt><dd>${p.apelido}</dd></div>` : ""}
+      ${p.inspirado ? `<div><dt>Inspirado em</dt><dd>${p.inspirado}</dd></div>` : `<div><dt>Linha</dt><dd>${p.splash ? "Body Splash" : "Árabe"}</dd></div>`}
+      ${p.notas.length ? `<div><dt>Família</dt><dd>${p.familias.join(", ")}</dd></div><div><dt>Notas${p.inspirado ? " (do perfume inspirador)" : ""}</dt><dd>${p.notas.join(", ")}</dd></div>` : ""}
+      <div><dt>Marca</dt><dd>${p.marca} · original da marca</dd></div>
+      ${p.tam ? `<div><dt>Conteúdo</dt><dd>${p.tam}</dd></div>` : ""}
+      ${precoFicha(p)}
+    </dl>
+    <a class="wa" target="_blank" rel="noopener" href="${temPreco(p) ? waLink(`Olá, C7 Perfumaria! Quero o ${descr(p)}. Como faço o pedido?`) : waConsulta(p)}">${waIcon}${temPreco(p) ? "Comprar no WhatsApp" : "Consultar disponibilidade no WhatsApp"}</a>
+    <a class="send" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(`Olha esse perfume da C7 Perfumaria: *${p.marca}${p.cod?" nº "+p.cod:""}${p.splash?" body splash":""}${p.apelido?" "+p.apelido:""}*${p.inspirado?`, inspirado em ${p.inspirado}`:p.splash?"":", linha árabe"}. Original da marca ${p.marca}. Veja aqui: ${LINK_SITE}#${p.id}`)}">Enviar este perfume para um cliente</a>`;
+  $("#sheet").hidden = false; $("#sheetBg").hidden = false;
+  $("#fechar").focus();
+}
+function abrir(id){
+  const p = PERFUMES.find(x => x.id===id);
+  if (BC(p)) return abrirBrand(p);
+  const notasHTML = p.notas
+    ? `<div><h4>Cheira a</h4><div class="notechips">${p.notas.map(n=>`<span>${n}</span>`).join("")}</div></div>`
+    : `<div><h4>Pirâmide olfativa</h4><div class="pyr">
+        <div class="tier"><b>Topo</b><span>${p.topo.join(", ")}<em>O que você sente nos primeiros minutos</em></span></div>
+        <div class="tier"><b>Corpo</b><span>${p.coracao.join(", ")}<em>A alma do perfume, depois de uns 30 minutos</em></span></div>
+        <div class="tier"><b>Fundo</b><span>${p.fundo.join(", ")}<em>O que fica na pele e na roupa</em></span></div>
+      </div></div>`;
+  $("#sheet").innerHTML = `
+    <button class="x" id="fechar" aria-label="Fechar">×</button>
+    <div class="sheet-head">
+      <div><span class="maker">${p.marca}</span><h3 id="sheetTitle">${p.nome}</h3>
+        <div class="traits">${p.tracos.map(t=>`<span class="trait">${t}</span>`).join("")}</div></div>
+    </div>
+    <div class="gal">${fotos(p).map((f,k)=>`<img src="${f}" alt="${p.nome}, foto ${k+1}">`).join("")}</div>
+    <p style="margin:0">${p.resumo}</p>
+    ${notasHTML}
+    <dl class="facts">
+      <div><dt>Famílias</dt><dd>${p.familias.join(" · ")}</dd></div>
+      <div><dt>Para quem</dt><dd>${p.publico}</dd></div>
+      <div><dt>Concentração</dt><dd>${p.conc}</dd></div>
+      ${p.ml ? `<div><dt>Conteúdo</dt><dd>${p.ml} ml</dd></div>` : ""}
+      ${p.duracao ? `<div><dt>Duração</dt><dd>${p.duracao}</dd></div><div><dt>Projeção</dt><dd>${p.projecao}</dd></div>` : ""}
+      <div><dt>Ocasião</dt><dd>${(p.momentos || p.ocasiao.filter(o=>o!=="Presente")).join(" · ")}</dd></div>
+      <div><dt>Origem</dt><dd>${p.linha==="arabe" ? "Emirados Árabes" : "Importado"} · Original</dd></div>
+      ${precoFicha(p)}
+    </dl>
+    <a class="wa" target="_blank" rel="noopener" href="${temPreco(p) ? waLink(`Olá, C7 Perfumaria! Quero o ${descr(p)}. Como faço o pedido?`) : waConsulta(p)}">${waIcon}${temPreco(p) ? `Comprar o ${p.nome} no WhatsApp` : "Consultar disponibilidade no WhatsApp"}</a>
+    <a class="send" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(`Olha esse perfume da C7 Perfumaria: *${p.nome}* (${p.marca}). Cheira a ${notasDe(p).slice(0,4).join(', ').toLowerCase()}. 100% original. Veja aqui: ${LINK_SITE}#${p.id}`)}">Enviar este perfume para um cliente</a>
+    <a class="mini-link" target="_blank" rel="noopener" href="${waLink(`Olá, C7 Perfumaria! Vocês têm miniatura do ${p.nome} (${p.marca})?`)}">Tem miniatura? Perguntar no WhatsApp</a>`;
+  $("#sheet").hidden = false; $("#sheetBg").hidden = false;
+  $("#fechar").focus();
+}
+function fechar(){ $("#sheet").hidden = true; $("#sheetBg").hidden = true; }
+
+$("#seg").innerHTML = LINHAS.map(l=>`<button data-l="${l.id}">${l.t}</button>`).join("");
+$("#tabs").innerHTML = FAMILIAS.map(f=>`<button class="tab" data-f="${f}">${f}</button>`).join("");
+$("#quick").innerHTML = RAPIDO.map(r=>`<button class="qbtn" data-r="${r.id}">${r.t}</button>`).join("");
+$("#pub").innerHTML = PUBLICO.map(p=>`<button class="qbtn" data-p="${p}">${p}</button>`).join("");
+$("#notes").innerHTML = NOTAS_POP.map(n=>`<button class="npill" data-n="${n}">${n}</button>`).join("");
+$("#ctaAtacado").href = waLink("Olá, C7 Perfumaria! Quero saber os preços de atacado.");
+$("#ctaLoja").href = waLink("Olá, C7 Perfumaria! Qual o endereço da loja em Bangu e o horário de funcionamento?");
+$("#ctaKit").href = waLink("Olá, C7 Perfumaria! Quero saber dos kits para revendedores.");
+$("#float").href =waLink("Olá, C7 Perfumaria! Quero ajuda para escolher um perfume.");
+$("#wa-text").textContent = "WhatsApp: " + WHATSAPP.replace(/^55(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3");
+
+document.addEventListener("click", e => {
+  const nav = e.target.closest("[data-nav]");
+  if(nav){ const tr = nav.parentElement.querySelector(".track"); tr.scrollBy({left: tr.clientWidth * +nav.dataset.nav, behavior:"smooth"}); return; }
+  const t = e.target.closest("button,[data-i]"); if(!t) return;
+  const d = t.dataset;
+  if(d.l){ state.linha = d.l; state.pub = null; if(d.ir) setTimeout(()=>document.querySelector(".bar").scrollIntoView({behavior:"smooth"}),0); }
+  else if(d.f){ state.fam = d.f; }
+  else if(d.r){ state.rap = state.rap===d.r ? null : d.r; }
+  else if(d.p){ state.pub = state.pub===d.p ? null : d.p; }
+  else if(d.n){ state.nota = state.nota===d.n ? null : d.n; }
+  else if(d.i){ abrir(d.i); return; }
+  else if(t.id==="fechar"){ fechar(); return; }
+  else if(t.id==="limpar"){ Object.assign(state,{fam:"Todas",rap:null,pub:null,nota:null,q:""}); $("#q").value=""; }
+  else return;
+  render();
+});
+$("#sheetBg").addEventListener("click", fechar);
+document.addEventListener("scroll", e => {
+  const tr = e.target; if(!tr.classList || !tr.classList.contains("track")) return;
+  const k = Math.round(tr.scrollLeft / tr.clientWidth);
+  tr.parentElement.querySelectorAll(".dots i").forEach((d,j) => d.classList.toggle("on", j===k));
+}, true);
+document.addEventListener("keydown", e => { const s = e.target.closest && e.target.closest(".shot"); if(s && (e.key==="Enter" || e.key===" ")){ e.preventDefault(); abrir(s.dataset.i); } });
+document.addEventListener("keydown", e => { if(e.key==="Escape") fechar(); });
+$("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
+render();
+const alvo = location.hash.slice(1);
+if (PERFUMES.some(p => p.id === alvo)) abrir(alvo);
+</script>
+
+</body>
+</html>
