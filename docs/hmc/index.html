@@ -196,6 +196,7 @@ img[src$=".webp"],img[src^="data:image/webp"]{background:var(--bg)!important;obj
 .sheet{position:fixed;left:0;right:0;bottom:0;z-index:21;max-height:90%;overflow:auto;background:var(--surface);border-radius:20px 20px 0 0;
   padding:20px max(20px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) max(20px,env(safe-area-inset-left,0px));
   max-width:640px;margin:0 auto;display:grid;gap:16px}
+.sheet[hidden],.sheet-bg[hidden]{display:none!important}
 .sheet .x{position:absolute;top:12px;right:max(12px,env(safe-area-inset-right,0px));border:0;background:var(--accent-soft);border-radius:999px;width:36px;height:36px;font-size:20px;line-height:1}
 .sheet-head{padding-right:36px}
 .sheet h3{font-family:var(--f-display);font-size:26px;margin:2px 0 6px;line-height:1.1}
@@ -1234,6 +1235,7 @@ function abrirBrand(p){
     <a class="wa" target="_blank" rel="noopener" href="${temPreco(p) ? waLink(`Olá, HMC Perfumaria! Quero o ${descr(p)}. Como faço o pedido?`) : waConsulta(p)}">${waIcon}${temPreco(p) ? "Comprar no WhatsApp" : "Consultar disponibilidade no WhatsApp"}</a>
     <a class="send" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(`Olha esse perfume da HMC Perfumaria: *${p.marca}${p.cod?" nº "+p.cod:""}${p.splash?" body splash":""}${p.apelido?" "+p.apelido:""}*${p.inspirado?`, inspirado em ${p.inspirado}`:p.splash?"":", linha árabe"}. Original da marca ${p.marca}. Veja aqui: ${LINK_SITE}#${p.id}`)}">Enviar este perfume para um cliente</a>`;
   $("#sheet").hidden = false; $("#sheetBg").hidden = false;
+  document.body.style.overflow = "hidden"; if(!(history.state && history.state.ficha)) try{ history.pushState({ficha:1}, ""); }catch(e){}
   $("#fechar").focus();
 }
 function abrir(id){
@@ -1269,9 +1271,11 @@ function abrir(id){
     <a class="send" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(`Olha esse perfume da HMC Perfumaria: *${p.nome}* (${p.marca}). Cheira a ${notasDe(p).slice(0,4).join(', ').toLowerCase()}. 100% original. Veja aqui: ${LINK_SITE}#${p.id}`)}">Enviar este perfume para um cliente</a>
     <a class="mini-link" target="_blank" rel="noopener" href="${waLink(`Olá, HMC Perfumaria! Vocês têm miniatura do ${p.nome} (${p.marca})?`)}">Tem miniatura? Perguntar no WhatsApp</a>`;
   $("#sheet").hidden = false; $("#sheetBg").hidden = false;
+  document.body.style.overflow = "hidden"; if(!(history.state && history.state.ficha)) try{ history.pushState({ficha:1}, ""); }catch(e){}
   $("#fechar").focus();
 }
-function fechar(){ $("#sheet").hidden = true; $("#sheetBg").hidden = true; }
+function fechar(){ const ab = !$("#sheet").hidden; $("#sheet").hidden = true; $("#sheetBg").hidden = true; document.body.style.overflow = ""; if(ab && history.state && history.state.ficha){ history.back(); } }
+window.addEventListener("popstate", () => { if(!$("#sheet").hidden){ $("#sheet").hidden = true; $("#sheetBg").hidden = true; document.body.style.overflow = ""; } });
 
 $("#seg").innerHTML = LINHAS.map(l=>`<button data-l="${l.id}">${l.t}</button>`).join("");
 $("#tabs").innerHTML = FAMILIAS.map(f=>`<button class="tab" data-f="${f}">${f}</button>`).join("");
