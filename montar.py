@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Monta o site do GitHub Pages (repo digital-021/perfumaria) a partir dos catálogos do projeto.
-Uso: python3 montar.py <repo>/docs  (GitHub Pages publica a pasta /docs)
+Uso: python3 montar.py <repo>/docs [hmc] [c7]  (GitHub Pages publica a pasta /docs; sem loja = as duas)
 Gera <repo>/hmc/ e <repo>/c7/ (index.html + img/ + og.jpg) e <repo>/index.html.
 Rodar de novo sempre que o HMC ou a C7 mudar, e depois fazer commit/push."""
 import json, os, re, shutil, subprocess, sys, tempfile
@@ -58,8 +58,10 @@ def montar(l, out):
 
 
 out = sys.argv[1]
+so = sys.argv[2:]  # opcional: só algumas lojas, ex.: montar.py docs hmc
 for l in LOJAS:
-    montar(l, out)
+    if not so or l["id"] in so:
+        montar(l, out)
 open(os.path.join(out, ".nojekyll"), "w").close()
 open(os.path.join(out, "index.html"), "w", encoding="utf-8").write("""<!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
