@@ -1075,6 +1075,7 @@ const PRECOS_C7 = {"cdnim": {"at": 235, "vj": 270}, "fakhar-black": {"at": 250, 
 PERFUMES.forEach(p => { const v = PRECOS_C7[p.id]; if (v) Object.assign(p, {at:v.at, vj:v.vj, unico:v.unico}); });
 const temPreco = p => p.at || p.unico;
 const temFoto = p => (p.texto || BC(p)) ? !!p.foto : true;
+const FUNDO_RANK = {"tx-perfume-arabe-80-a-100ml-bright-peach": 196.2, "tx-hidratante-inspirado-em-importado-interdicted": 190.9, "tx-hidratante-arabe-asad-tradicional": 189.9, "tx-pasta-isabelle-la-belle-la-belle-bomba": 187.6, "tx-body-splash-arabe-vulcan-feu": 187.5, "tx-hidratante-inspirado-em-importado-the-way": 187.3, "tx-body-splash-arabe-marshmallow-blush": 187.0, "tx-perfume-arabe-80-a-100ml-rose-petals": 185.7, "tx-perfume-arabe-80-a-100ml-island-bliss": 184.4, "tx-body-splash-arabe-maleka": 183.7, "tx-body-splash-arabe-diore-fem": 183.6, "tx-body-splash-arabe-sabah-delilah": 183.0, "yara": 382.8, "tx-body-splash-arabe-sabah-valentine": 182.2, "tx-pasta-isabelle-la-belle-hassan": 181.9, "tx-inspiracao-de-importado-75-a-100ml-sexy-scandal": 181.8, "tx-beauty-brand-75-a-100ml-b-040-life-intensely": 181.6, "tx-body-splash-arabe-hawas-black-for-him": 181.0, "tx-inspiracao-de-importado-75-a-100ml-robozinho-tradicional-patter-": 180.7, "tx-dream-brand-75-a-100ml-g-093-light-dream": 180.6, "tx-beauty-brand-75-a-100ml-b-042-lady-in-gold": 180.2, "tx-body-splash-arabe-dalila-pour-femme": 180.1, "tx-body-splash-arabe-sabah-sugar": 179.9, "tx-inspiracao-de-importado-75-a-100ml-mrs-way": 173.9, "tx-perfume-arabe-80-a-100ml-coral-blush": 172.7, "mini-396": 171.9, "tx-perfume-arabe-80-a-100ml-historic-doria": 168.8, "yara-tous": 367.2, "tx-inspiracao-arabe-30ml-vulcan-feu": 167.1, "tx-inspiracao-arabe-50ml-khamrah": 165.8, "tx-perfume-arabe-80-a-100ml-bronzite-nawal": 162.3, "tx-perfume-arabe-80-a-100ml-alexandrite": 156.8, "mini-a024": 153.6, "tx-perfume-arabe-80-a-100ml-hayat": 147.0, "asad": 331.6, "mini-a001": 131.6, "cdnim": 328.3, "mini-387": 126.6, "khamrah": 325.5, "asad-bourbon": 324.6, "fakhar-black": 322.7, "mini-126": 120.2};
 const ordemCard = p => !!temPreco(p)*2 + temFoto(p);
 const precoCard = p => p.at
   ? `<div class="precos"><span class="pr at"><small>Atacado</small><b>${brl(p.at)}</b></span><span class="pr vj"><small>Varejo</small><b>${brl(p.vj)}</b></span></div><span class="precos-nota">Atacado a partir de 4 peças</span>`
@@ -1091,7 +1092,7 @@ function render(){ soComPreco();
   document.querySelectorAll("[data-r]").forEach(b => b.setAttribute("aria-pressed", b.dataset.r===state.rap));
   document.querySelectorAll("[data-p]").forEach(b => b.setAttribute("aria-pressed", b.dataset.p===state.pub));
   document.querySelectorAll("[data-n]").forEach(b => b.setAttribute("aria-pressed", b.dataset.n===state.nota));
-  const list = filtrar().sort((a,b) => ordemCard(b) - ordemCard(a));
+  const list = filtrar().sort((a,b) => (ordemCard(b)*1000 + (temFoto(b) ? FUNDO_RANK[b.id]||0 : 0)) - (ordemCard(a)*1000 + (temFoto(a) ? FUNDO_RANK[a.id]||0 : 0)));
   $("#count").textContent = list.length === 1 ? "1 perfume" : `${list.length} perfumes`;
   $("#limpar").hidden = !(state.fam!=="Todas" || state.rap || state.pub || state.nota || state.q);
   const filtroSexo = (state.linha==="cosm" || state.linha==="pasta") ? "" : (state.linha==="mini" || state.linha==="miniar" || state.linha==="brand")
