@@ -226,6 +226,27 @@ details.helper[open] > summary{margin-bottom:12px}
 footer{border-top:1px solid var(--line);padding-block:24px 120px;color:var(--muted);font-size:13px}
 footer p{margin:0 0 6px;max-width:60ch}
 @media (prefers-reduced-motion:no-preference){.card{transition:transform .2s}.card:hover{transform:translateY(-2px)}}
+
+.card.cn .cheira,.card.cn .fams{display:none}
+.card.cn .tile.ph{background:#0d0b09}
+.card.cn .tile.ph::after{display:none}
+.card.cn .tile.ph .track,.card.cn .tile.ph > img{height:100%;background:#0d0b09}
+.card.cn .tile.ph .track img{object-fit:cover}
+.card.cn .tile.ph > .tl-num,.card.cn .tile.ph > .tl-name,.card.cn .tile.ph > .tl-tam{display:none}
+.card.cn .tile.ph > .dots,.card.cn .shot > .dots{bottom:4px}
+.card.cn .shot .track img{object-fit:cover}
+.card.cn .name{margin-bottom:2px}
+.vitrine{margin:18px -16px 4px;position:relative;min-width:0;max-width:calc(100% + 32px);overflow:hidden}
+.vitrine h3{font-family:var(--f-display,serif);font-size:20px;font-weight:600;color:var(--accent);margin:0 16px 10px;display:flex;align-items:center;gap:10px}
+.vitrine h3::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--accent),transparent)}
+.vit-track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 16px 6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.vit-track::-webkit-scrollbar{display:none}
+.vit-item{flex:0 0 46%;max-width:220px;scroll-snap-align:start;border:1px solid rgba(215,168,94,.45);border-radius:14px;overflow:hidden;background:#0d0b09;cursor:pointer;padding:0;color:inherit;text-align:left;font:inherit;box-shadow:0 8px 24px rgba(0,0,0,.45)}
+.vit-item img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+.vit-item span{display:block;padding:7px 10px 9px;font-size:13px;font-weight:700;color:var(--accent);border-top:1px solid rgba(215,168,94,.3)}
+.vit-item span small{display:block;font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+@media (min-width:700px){.vit-item{flex-basis:200px}.vitrine{margin:22px 0 6px}}
+.seal svg{flex:none}
 </style>
 
 <header class="wrap top">
@@ -237,12 +258,13 @@ footer p{margin:0 0 6px;max-width:60ch}
   <p class="from"><span>Perfumes árabes originais e inspirações</span> a partir de <strong>R$&nbsp;47</strong></p>
   <p class="tagline">Nosso foco são os perfumes árabes 100% originais e as inspirações dos perfumes de sucesso do momento, da Brand Collection. Escolha pela família, procure pela nota que você ama e peça direto no WhatsApp.</p>
   <button class="go" data-l="todos" data-ir="1">Ver os perfumes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg></button>
+  <section class="vitrine" id="vitrine" aria-label="Destaques"></section>
   <div class="seals">
     <span class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 3h4v4l3 3-3 3v4h-4l-3 3-3-3H5v-4l-3-3 3-3V5h4z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Árabes 100% originais</span>
-    <span class="seal">Lacrados de fábrica</span>
-    <span class="seal">Árabes direto dos Emirados</span>
-    <span class="seal">Inspirações Brand Collection</span>
-    <span class="seal">Atacado e varejo</span>
+    <span class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8-4.3-4.1 5.9-.9z"/></svg>Lacrados de fábrica</span>
+    <span class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8-4.3-4.1 5.9-.9z"/></svg>Árabes direto dos Emirados</span>
+    <span class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8-4.3-4.1 5.9-.9z"/></svg>Inspirações Brand Collection</span>
+    <span class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8-4.3-4.1 5.9-.9z"/></svg>Atacado e varejo</span>
   </div>
   <div class="info">
     <div class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Rio de Janeiro em até 12 horas</b><span>Entregamos em qualquer lugar do Rio de Janeiro.</span></div></div>
@@ -452,6 +474,8 @@ const PERFUMES = [
 
 const C7_ASSETS = {};
 const imgSrc = f => (C7_ASSETS[f] && location.protocol !== "file:") ? `/_blob/${C7_ASSETS[f]}#${f}` : /\.\w+$/.test(f) ? `img/${f}` : `img/${f}.jpg`;
+const CENARIO = {"cdnim": "cn-cdnim.jpg", "fakhar-black": "cn-fakhar-black.jpg", "asad-bourbon": "cn-asad-bourbon.jpg", "yara-tous": "cn-yara-tous.jpg", "asad": "cn-asad.jpg", "khamrah": "cn-khamrah.jpg", "yara": "cn-yara.jpg", "mini-a001": "cn-mini-a001.jpg", "mini-a002": "cn-mini-a002.jpg", "mini-a003": "cn-mini-a003.jpg", "mini-a006": "cn-mini-a006.jpg", "mini-a008": "cn-mini-a008.jpg", "mini-a009": "cn-mini-a009.jpg", "mini-a010": "cn-mini-a010.jpg", "mini-a011": "cn-mini-a011.jpg", "mini-a012": "cn-mini-a012.jpg", "mini-a024": "cn-mini-a024.jpg", "mini-a027": "cn-mini-a027.jpg", "mini-a029": "cn-mini-a029.jpg", "mini-a031": "cn-mini-a031.jpg", "mini-a032": "cn-mini-a032.jpg", "mini-a034": "cn-mini-a034.jpg", "mini-a040": "cn-mini-a040.jpg", "mini-005": "cn-mini-005.jpg", "mini-093": "cn-mini-093.jpg", "mini-135": "cn-mini-135.jpg", "mini-136": "cn-mini-136.jpg", "mini-154": "cn-mini-154.jpg", "mini-402": "cn-mini-402.jpg", "mini-433": "cn-mini-433.jpg", "mini-003": "cn-mini-003.jpg", "mini-006": "cn-mini-006.jpg", "mini-012": "cn-mini-012.jpg", "mini-013": "cn-mini-013.jpg", "mini-021": "cn-mini-021.jpg", "mini-024": "cn-mini-024.jpg", "mini-026": "cn-mini-026.jpg", "mini-027": "cn-mini-027.jpg", "mini-028": "cn-mini-028.jpg", "mini-029": "cn-mini-029.jpg", "mini-033": "cn-mini-033.jpg", "mini-034": "cn-mini-034.jpg", "mini-043": "cn-mini-043.jpg", "mini-044": "cn-mini-044.jpg", "mini-047": "cn-mini-047.jpg", "mini-052": "cn-mini-052.jpg", "mini-054": "cn-mini-054.jpg", "mini-056": "cn-mini-056.jpg", "mini-057": "cn-mini-057.jpg", "mini-063": "cn-mini-063.jpg", "mini-087": "cn-mini-087.jpg", "mini-102": "cn-mini-102.jpg", "mini-116": "cn-mini-116.jpg", "mini-126": "cn-mini-126.jpg", "mini-153": "cn-mini-153.jpg", "mini-155": "cn-mini-155.jpg", "mini-163": "cn-mini-163.jpg", "mini-173": "cn-mini-173.jpg", "mini-174": "cn-mini-174.jpg", "mini-194": "cn-mini-194.jpg", "mini-202": "cn-mini-202.jpg", "mini-205": "cn-mini-205.jpg", "mini-234": "cn-mini-234.jpg", "mini-249": "cn-mini-249.jpg", "mini-250": "cn-mini-250.jpg", "mini-265": "cn-mini-265.jpg", "mini-267": "cn-mini-267.jpg", "mini-283": "cn-mini-283.jpg", "mini-296": "cn-mini-296.jpg", "mini-297": "cn-mini-297.jpg", "mini-303": "cn-mini-303.jpg", "mini-315": "cn-mini-315.jpg", "mini-321": "cn-mini-321.jpg", "mini-322": "cn-mini-322.jpg", "mini-323": "cn-mini-323.jpg", "mini-324": "cn-mini-324.jpg", "mini-325": "cn-mini-325.jpg", "mini-347": "cn-mini-347.jpg", "mini-351": "cn-mini-351.jpg", "mini-356": "cn-mini-356.jpg", "mini-361": "cn-mini-361.jpg", "mini-365": "cn-mini-365.jpg", "mini-370": "cn-mini-370.jpg", "mini-371": "cn-mini-371.jpg", "mini-376": "cn-mini-376.jpg", "mini-378": "cn-mini-378.jpg", "mini-382": "cn-mini-382.jpg", "mini-386": "cn-mini-386.jpg", "mini-387": "cn-mini-387.jpg", "mini-391": "cn-mini-391.jpg", "mini-396": "cn-mini-396.jpg", "mini-423": "cn-mini-423.jpg", "mini-424": "cn-mini-424.jpg", "mini-427": "cn-mini-427.jpg", "mini-435": "cn-mini-435.jpg", "mini-440": "cn-mini-440.jpg", "mini-443": "cn-mini-443.jpg", "mini-477": "cn-mini-477.jpg", "mini-8127": "cn-mini-8127.jpg", "mini-860": "cn-mini-860.jpg", "mini-866": "cn-mini-866.jpg", "mini-880": "cn-mini-880.jpg", "mini-881": "cn-mini-881.jpg", "bc-g-402": "cn-bc-g-402.jpg", "bc-g-477": "cn-bc-g-477.jpg", "bc-g-008": "cn-bc-g-008.jpg", "bc-bs-only-you-087": "cn-bc-bs-only-you-087.jpg", "bc-bs-rose-lady-034": "cn-bc-bs-rose-lady-034.jpg", "bc-bs-pure-402": "cn-bc-bs-pure-402.jpg", "bc-bs-winner-116": "cn-bc-bs-winner-116.jpg", "bc-bs-bare-vanilla": "cn-bc-bs-bare-vanilla.jpg", "bc-bs-coconut-passion": "cn-bc-bs-coconut-passion.jpg", "bc-bs-love-spell": "cn-bc-bs-love-spell.jpg", "bc-bs-pure-seduction": "cn-bc-bs-pure-seduction.jpg", "bc-bs-strawberries-champagne": "cn-bc-bs-strawberries-champagne.jpg", "tx-perfume-arabe-80-a-100ml-rose-petals": "cn-tx-perfume-arabe-80-a-100ml-rose-petals.jpg", "tx-perfume-arabe-80-a-100ml-musamam-white-intense": "cn-tx-perfume-arabe-80-a-100ml-musamam-white-intense.jpg", "tx-perfume-arabe-80-a-100ml-dalal": "cn-tx-perfume-arabe-80-a-100ml-dalal.jpg", "tx-perfume-arabe-80-a-100ml-sabah-sugar": "cn-tx-perfume-arabe-80-a-100ml-sabah-sugar.jpg", "tx-perfume-arabe-80-a-100ml-club-de-nuit-woman": "cn-tx-perfume-arabe-80-a-100ml-club-de-nuit-woman.jpg", "tx-perfume-arabe-80-a-100ml-historic-doria": "cn-tx-perfume-arabe-80-a-100ml-historic-doria.jpg", "tx-perfume-arabe-80-a-100ml-durrat-al-aroos": "cn-tx-perfume-arabe-80-a-100ml-durrat-al-aroos.jpg", "tx-perfume-arabe-80-a-100ml-fakhar-gold": "cn-tx-perfume-arabe-80-a-100ml-fakhar-gold.jpg", "tx-perfume-arabe-80-a-100ml-fakhar-prata": "cn-tx-perfume-arabe-80-a-100ml-fakhar-prata.jpg", "tx-perfume-arabe-80-a-100ml-island-bliss": "cn-tx-perfume-arabe-80-a-100ml-island-bliss.jpg", "tx-perfume-arabe-80-a-100ml-fakhar-rose": "cn-tx-perfume-arabe-80-a-100ml-fakhar-rose.jpg", "tx-perfume-arabe-80-a-100ml-hawas-ice": "cn-tx-perfume-arabe-80-a-100ml-hawas-ice.jpg", "tx-perfume-arabe-80-a-100ml-rayhaan-jungle-vibe": "cn-tx-perfume-arabe-80-a-100ml-rayhaan-jungle-vibe.jpg", "tx-perfume-arabe-80-a-100ml-attar-al-wesal": "cn-tx-perfume-arabe-80-a-100ml-attar-al-wesal.jpg", "tx-perfume-arabe-80-a-100ml-9pm-pour-femme": "cn-tx-perfume-arabe-80-a-100ml-9pm-pour-femme.jpg", "tx-perfume-arabe-80-a-100ml-encode-mountain": "cn-tx-perfume-arabe-80-a-100ml-encode-mountain.jpg", "tx-perfume-arabe-80-a-100ml-coral-blush": "cn-tx-perfume-arabe-80-a-100ml-coral-blush.jpg", "tx-perfume-arabe-80-a-100ml-narissa-for-her": "cn-tx-perfume-arabe-80-a-100ml-narissa-for-her.jpg", "tx-perfume-arabe-80-a-100ml-bright-peach": "cn-tx-perfume-arabe-80-a-100ml-bright-peach.jpg", "tx-perfume-arabe-80-a-100ml-asad-zanzibar-limited-edition": "cn-tx-perfume-arabe-80-a-100ml-asad-zanzibar-limited-edition.jpg", "tx-perfume-arabe-80-a-100ml-asad-zanzibar": "cn-tx-perfume-arabe-80-a-100ml-asad-zanzibar.jpg", "tx-perfume-arabe-80-a-100ml-yara-moi": "cn-tx-perfume-arabe-80-a-100ml-yara-moi.jpg", "tx-perfume-arabe-80-a-100ml-yara-candy": "cn-tx-perfume-arabe-80-a-100ml-yara-candy.jpg", "tx-perfume-arabe-80-a-100ml-yara-elixir": "cn-tx-perfume-arabe-80-a-100ml-yara-elixir.jpg", "tx-perfume-arabe-80-a-100ml-philos-pura": "cn-tx-perfume-arabe-80-a-100ml-philos-pura.jpg", "tx-perfume-arabe-80-a-100ml-abyat": "cn-tx-perfume-arabe-80-a-100ml-abyat.jpg", "tx-perfume-arabe-80-a-100ml-la-rouge-baroque": "cn-tx-perfume-arabe-80-a-100ml-la-rouge-baroque.jpg", "tx-perfume-arabe-80-a-100ml-teriaq": "cn-tx-perfume-arabe-80-a-100ml-teriaq.jpg", "tx-perfume-arabe-80-a-100ml-shagaf-al-ward": "cn-tx-perfume-arabe-80-a-100ml-shagaf-al-ward.jpg", "tx-perfume-arabe-80-a-100ml-bronzite-nawal": "cn-tx-perfume-arabe-80-a-100ml-bronzite-nawal.jpg", "tx-perfume-arabe-80-a-100ml-alexandrite": "cn-tx-perfume-arabe-80-a-100ml-alexandrite.jpg", "tx-perfume-arabe-80-a-100ml-hayat": "cn-tx-perfume-arabe-80-a-100ml-hayat.jpg", "tx-perfume-arabe-80-a-100ml-princess-of-arabia": "cn-tx-perfume-arabe-80-a-100ml-princess-of-arabia.jpg", "tx-inspiracao-arabe-30ml-vulcan-feu": "cn-tx-inspiracao-arabe-30ml-vulcan-feu.jpg", "tx-inspiracao-arabe-50ml-khamrah": "cn-tx-inspiracao-arabe-50ml-khamrah.jpg", "tx-inspiracao-arabe-50ml-club-de-nuit-iconic": "cn-tx-inspiracao-arabe-50ml-club-de-nuit-iconic.jpg", "tx-inspiracao-de-importado-75-a-100ml-sexy-scandal": "cn-tx-inspiracao-de-importado-75-a-100ml-sexy-scandal.jpg", "tx-inspiracao-de-importado-75-a-100ml-robozinho-tradicional-patter-": "cn-tx-inspiracao-de-importado-75-a-100ml-robozinho-tradicional-patter-.jpg", "tx-inspiracao-de-importado-75-a-100ml-mrs-way": "cn-tx-inspiracao-de-importado-75-a-100ml-mrs-way.jpg", "tx-beauty-brand-75-a-100ml-b-040-life-intensely": "cn-tx-beauty-brand-75-a-100ml-b-040-life-intensely.jpg", "tx-beauty-brand-75-a-100ml-b-042-lady-in-gold": "cn-tx-beauty-brand-75-a-100ml-b-042-lady-in-gold.jpg", "tx-dream-brand-75-a-100ml-g-093-light-dream": "cn-tx-dream-brand-75-a-100ml-g-093-light-dream.jpg", "tx-body-splash-brand-collection-n-136-escandal": "cn-tx-body-splash-brand-collection-n-136-escandal.jpg", "tx-body-splash-arabe-hawas-black-for-him": "cn-tx-body-splash-arabe-hawas-black-for-him.jpg", "tx-body-splash-arabe-fakhar-black": "cn-tx-body-splash-arabe-fakhar-black.jpg", "tx-body-splash-arabe-yara-moi": "cn-tx-body-splash-arabe-yara-moi.jpg", "tx-body-splash-arabe-asad-tradicional": "cn-tx-body-splash-arabe-asad-tradicional.jpg", "tx-body-splash-arabe-vulcan-feu": "cn-tx-body-splash-arabe-vulcan-feu.jpg", "tx-body-splash-arabe-marshmallow-blush": "cn-tx-body-splash-arabe-marshmallow-blush.jpg", "tx-body-splash-arabe-vanilla-shimmer": "cn-tx-body-splash-arabe-vanilla-shimmer.jpg", "tx-body-splash-arabe-yara-shimmer": "cn-tx-body-splash-arabe-yara-shimmer.jpg", "tx-body-splash-arabe-dalila-pour-femme": "cn-tx-body-splash-arabe-dalila-pour-femme.jpg", "tx-body-splash-arabe-sabah-delilah": "cn-tx-body-splash-arabe-sabah-delilah.jpg", "tx-body-splash-arabe-diore-fem": "cn-tx-body-splash-arabe-diore-fem.jpg", "tx-body-splash-arabe-sabah-sugar": "cn-tx-body-splash-arabe-sabah-sugar.jpg", "tx-body-splash-arabe-sabah-valentine": "cn-tx-body-splash-arabe-sabah-valentine.jpg", "tx-body-splash-arabe-sabah-tradicional-shimmer": "cn-tx-body-splash-arabe-sabah-tradicional-shimmer.jpg", "tx-body-splash-arabe-sabah-tradicional": "cn-tx-body-splash-arabe-sabah-tradicional.jpg", "tx-body-splash-arabe-afeef": "cn-tx-body-splash-arabe-afeef.jpg", "tx-body-splash-arabe-amber-rouge": "cn-tx-body-splash-arabe-amber-rouge.jpg", "tx-body-splash-arabe-royal-amber": "cn-tx-body-splash-arabe-royal-amber.jpg", "tx-body-splash-arabe-maleka": "cn-tx-body-splash-arabe-maleka.jpg", "tx-pasta-isabelle-la-belle-yara-elixir": "cn-tx-pasta-isabelle-la-belle-yara-elixir.jpg", "tx-pasta-isabelle-la-belle-sabah-sugar": "cn-tx-pasta-isabelle-la-belle-sabah-sugar.jpg", "tx-pasta-isabelle-la-belle-sabah-valentine": "cn-tx-pasta-isabelle-la-belle-sabah-valentine.jpg", "tx-pasta-isabelle-la-belle-sabah-tradicional": "cn-tx-pasta-isabelle-la-belle-sabah-tradicional.jpg", "tx-pasta-isabelle-la-belle-asad-bourbon": "cn-tx-pasta-isabelle-la-belle-asad-bourbon.jpg", "tx-pasta-isabelle-la-belle-atheeri": "cn-tx-pasta-isabelle-la-belle-atheeri.jpg", "tx-pasta-isabelle-la-belle-candid": "cn-tx-pasta-isabelle-la-belle-candid.jpg", "tx-pasta-isabelle-la-belle-hassan": "cn-tx-pasta-isabelle-la-belle-hassan.jpg", "tx-pasta-isabelle-la-belle-alien": "cn-tx-pasta-isabelle-la-belle-alien.jpg", "tx-pasta-isabelle-la-belle-la-belle-bomba": "cn-tx-pasta-isabelle-la-belle-la-belle-bomba.jpg", "tx-pasta-isabelle-la-belle-pure-exclusive": "cn-tx-pasta-isabelle-la-belle-pure-exclusive.jpg", "tx-pasta-isabelle-la-belle-fakhar-gold": "cn-tx-pasta-isabelle-la-belle-fakhar-gold.jpg", "tx-pasta-isabelle-la-belle-fakhar-rose": "cn-tx-pasta-isabelle-la-belle-fakhar-rose.jpg", "tx-pasta-isabelle-la-belle-asad-elixir": "cn-tx-pasta-isabelle-la-belle-asad-elixir.jpg", "tx-pasta-isabelle-la-belle-angel": "cn-tx-pasta-isabelle-la-belle-angel.jpg", "tx-pasta-isabelle-la-belle-club-de-nuit-intense-man": "cn-tx-pasta-isabelle-la-belle-club-de-nuit-intense-man.jpg", "tx-pasta-isabelle-la-belle-sabah-delilah": "cn-tx-pasta-isabelle-la-belle-sabah-delilah.jpg", "tx-pasta-isabelle-la-belle-vulcan-feu": "cn-tx-pasta-isabelle-la-belle-vulcan-feu.jpg", "tx-pasta-isabelle-la-belle-veneno-bianco": "cn-tx-pasta-isabelle-la-belle-veneno-bianco.jpg", "tx-pasta-isabelle-la-belle-queen-of-arabia": "cn-tx-pasta-isabelle-la-belle-queen-of-arabia.jpg", "tx-pasta-isabelle-la-belle-dalila": "cn-tx-pasta-isabelle-la-belle-dalila.jpg", "tx-pasta-isabelle-la-belle-royal-amber": "cn-tx-pasta-isabelle-la-belle-royal-amber.jpg", "tx-pasta-isabelle-la-belle-dalal": "cn-tx-pasta-isabelle-la-belle-dalal.jpg", "tx-hidratante-arabe-asad-tradicional": "cn-tx-hidratante-arabe-asad-tradicional.jpg", "tx-hidratante-inspirado-em-importado-olympea": "cn-tx-hidratante-inspirado-em-importado-olympea.jpg", "tx-hidratante-inspirado-em-importado-the-way": "cn-tx-hidratante-inspirado-em-importado-the-way.jpg", "tx-hidratante-inspirado-em-importado-interdicted": "cn-tx-hidratante-inspirado-em-importado-interdicted.jpg"};
+const cenFoto = p => CENARIO[p.id] ? [imgSrc(CENARIO[p.id])] : [];
 const LINHAS = [{id:"todos",t:"Todos"},{id:"arabe",t:"Árabes"},{id:"miniar",t:"Miniaturas árabes"},{id:"mini",t:"Miniaturas Brand Collection"},{id:"brand",t:"Brand Collection"},{id:"pasta",t:"Pastas corporais"},{id:"cosm",t:"Body splash e hidratantes"}];
 // Linha "importado" (grifes europeias) fica escondida: a C7 trabalha só com árabes e Brand Collection. Para mostrar de novo, troque para false.
 const ESCONDER_IMPORTADOS = true;
@@ -850,7 +874,7 @@ const norm = s => s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
 const brl = v => v.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
 const waLink = msg => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
 const notasDe = p => p.notas || [...p.topo,...p.coracao,...p.fundo];
-const fotos = p => [...(p.fotos || [`img/${p.id}.jpg`,`img/${p.id}-2.jpg`,`img/${p.id}-3.jpg`]), ...((C7_EXTRA.galeria||{})[p.id]||[]).map(imgSrc)];
+const fotos = p => [...cenFoto(p), ...(p.fotos || [`img/${p.id}.jpg`,`img/${p.id}-2.jpg`,`img/${p.id}-3.jpg`]), ...((C7_EXTRA.galeria||{})[p.id]||[]).map(imgSrc)];
 const waIcon = $("#float svg").outerHTML;
 const BC = p => p.linha==="brand" || p.linha==="mini";
 /* NOTAS_INSP: família e notas do perfume em que cada miniatura / frasco Brand Collection se inspira.
@@ -1075,7 +1099,8 @@ const PRECOS_C7 = {"cdnim": {"at": 235, "vj": 270}, "fakhar-black": {"at": 250, 
 PERFUMES.forEach(p => { const v = PRECOS_C7[p.id]; if (v) Object.assign(p, {at:v.at, vj:v.vj, unico:v.unico}); });
 const temPreco = p => p.at || p.unico;
 const temFoto = p => (p.texto || BC(p)) ? !!p.foto : true;
-const FUNDO_RANK = {"tx-perfume-arabe-80-a-100ml-bright-peach": 196.2, "tx-hidratante-inspirado-em-importado-interdicted": 190.9, "tx-hidratante-arabe-asad-tradicional": 189.9, "tx-pasta-isabelle-la-belle-la-belle-bomba": 187.6, "tx-body-splash-arabe-vulcan-feu": 187.5, "tx-hidratante-inspirado-em-importado-the-way": 187.3, "tx-body-splash-arabe-marshmallow-blush": 187.0, "tx-perfume-arabe-80-a-100ml-rose-petals": 185.7, "tx-perfume-arabe-80-a-100ml-island-bliss": 184.4, "tx-body-splash-arabe-maleka": 183.7, "tx-body-splash-arabe-diore-fem": 183.6, "tx-body-splash-arabe-sabah-delilah": 183.0, "yara": 382.8, "tx-body-splash-arabe-sabah-valentine": 182.2, "tx-pasta-isabelle-la-belle-hassan": 181.9, "tx-inspiracao-de-importado-75-a-100ml-sexy-scandal": 181.8, "tx-beauty-brand-75-a-100ml-b-040-life-intensely": 181.6, "tx-body-splash-arabe-hawas-black-for-him": 181.0, "tx-inspiracao-de-importado-75-a-100ml-robozinho-tradicional-patter-": 180.7, "tx-dream-brand-75-a-100ml-g-093-light-dream": 180.6, "tx-beauty-brand-75-a-100ml-b-042-lady-in-gold": 180.2, "tx-body-splash-arabe-dalila-pour-femme": 180.1, "tx-body-splash-arabe-sabah-sugar": 179.9, "tx-inspiracao-de-importado-75-a-100ml-mrs-way": 173.9, "tx-perfume-arabe-80-a-100ml-coral-blush": 172.7, "mini-396": 171.9, "tx-perfume-arabe-80-a-100ml-historic-doria": 168.8, "yara-tous": 367.2, "tx-inspiracao-arabe-30ml-vulcan-feu": 167.1, "tx-inspiracao-arabe-50ml-khamrah": 165.8, "tx-perfume-arabe-80-a-100ml-bronzite-nawal": 162.3, "tx-perfume-arabe-80-a-100ml-alexandrite": 156.8, "mini-a024": 153.6, "tx-perfume-arabe-80-a-100ml-hayat": 147.0, "asad": 331.6, "mini-a001": 131.6, "cdnim": 328.3, "mini-387": 126.6, "khamrah": 325.5, "asad-bourbon": 324.6, "fakhar-black": 322.7, "mini-126": 120.2};
+const FUNDO_RANK_ANTIGO = {"tx-perfume-arabe-80-a-100ml-bright-peach": 196.2, "tx-hidratante-inspirado-em-importado-interdicted": 190.9, "tx-hidratante-arabe-asad-tradicional": 189.9, "tx-pasta-isabelle-la-belle-la-belle-bomba": 187.6, "tx-body-splash-arabe-vulcan-feu": 187.5, "tx-hidratante-inspirado-em-importado-the-way": 187.3, "tx-body-splash-arabe-marshmallow-blush": 187.0, "tx-perfume-arabe-80-a-100ml-rose-petals": 185.7, "tx-perfume-arabe-80-a-100ml-island-bliss": 184.4, "tx-body-splash-arabe-maleka": 183.7, "tx-body-splash-arabe-diore-fem": 183.6, "tx-body-splash-arabe-sabah-delilah": 183.0, "yara": 382.8, "tx-body-splash-arabe-sabah-valentine": 182.2, "tx-pasta-isabelle-la-belle-hassan": 181.9, "tx-inspiracao-de-importado-75-a-100ml-sexy-scandal": 181.8, "tx-beauty-brand-75-a-100ml-b-040-life-intensely": 181.6, "tx-body-splash-arabe-hawas-black-for-him": 181.0, "tx-inspiracao-de-importado-75-a-100ml-robozinho-tradicional-patter-": 180.7, "tx-dream-brand-75-a-100ml-g-093-light-dream": 180.6, "tx-beauty-brand-75-a-100ml-b-042-lady-in-gold": 180.2, "tx-body-splash-arabe-dalila-pour-femme": 180.1, "tx-body-splash-arabe-sabah-sugar": 179.9, "tx-inspiracao-de-importado-75-a-100ml-mrs-way": 173.9, "tx-perfume-arabe-80-a-100ml-coral-blush": 172.7, "mini-396": 171.9, "tx-perfume-arabe-80-a-100ml-historic-doria": 168.8, "yara-tous": 367.2, "tx-inspiracao-arabe-30ml-vulcan-feu": 167.1, "tx-inspiracao-arabe-50ml-khamrah": 165.8, "tx-perfume-arabe-80-a-100ml-bronzite-nawal": 162.3, "tx-perfume-arabe-80-a-100ml-alexandrite": 156.8, "mini-a024": 153.6, "tx-perfume-arabe-80-a-100ml-hayat": 147.0, "asad": 331.6, "mini-a001": 131.6, "cdnim": 328.3, "mini-387": 126.6, "khamrah": 325.5, "asad-bourbon": 324.6, "fakhar-black": 322.7, "mini-126": 120.2};
+const FUNDO_RANK = Object.fromEntries(Object.keys(CENARIO).map(k => [k, 100]));
 const ordemCard = p => !!temPreco(p)*2 + temFoto(p);
 const precoCard = p => p.at
   ? `<div class="precos"><span class="pr at"><small>Atacado</small><b>${brl(p.at)}</b></span><span class="pr vj"><small>Varejo</small><b>${brl(p.vj)}</b></span></div><span class="precos-nota">Atacado a partir de 4 peças</span>`
@@ -1086,7 +1111,29 @@ const precoFicha = p => p.at
   ? `<div><dt>Atacado (4+ peças)</dt><dd><b>${brl(p.at)}</b></dd></div><div><dt>Varejo</dt><dd><b>${brl(p.vj)}</b></dd></div>`
   : `<div><dt>Preço</dt><dd>${p.unico ? `<b>${brl(p.unico)}</b>` : "Em reposição · consulte a disponibilidade"}</dd></div>`;
 function soComPreco(){ for (let i = PERFUMES.length - 1; i >= 0; i--) if (!temPreco(PERFUMES[i])) PERFUMES.splice(i, 1); }
-function render(){ soComPreco();
+
+function montaVitrine(){
+  const el = document.getElementById("vitrine"); if (!el || el.dataset.ok) return; el.dataset.ok = 1;
+  const top = typeof MAIS_VENDIDOS !== "undefined" ? MAIS_VENDIDOS : [];
+  const ok = p => CENARIO[p.id] && temPreco(p) && !p.texto;
+  const peso = p => (p.linha === "arabe" ? 0 : top.includes(p.cod) ? 1 : 2);
+  const itens = PERFUMES.filter(ok).sort((a,b) => peso(a) - peso(b)).slice(0, 12);
+  if (itens.length < 3) { el.remove(); return; }
+  const preco = p => p.at ? `a partir de ${brl(p.at)}` : p.unico ? brl(p.unico) : "";
+  el.innerHTML = `<h3>Destaques da loja</h3><div class="vit-track">${itens.map(p =>
+    `<button class="vit-item" data-i="${p.id}" aria-label="Ver ${p.nome}"><img src="${cenFoto(p)[0]}" alt="${p.nome}" loading="lazy"><span><small>${p.linha === "arabe" ? "Perfume árabe" : p.linha === "mini" ? "Miniatura" : "Brand Collection"}</small>${preco(p)}</span></button>`).join("")}</div>`;
+  const tr = el.querySelector(".vit-track");
+  let pausa = 0;
+  const parar = () => { pausa = Date.now() + 8000; };
+  ["pointerdown","touchstart","wheel"].forEach(ev => tr.addEventListener(ev, parar, {passive:true}));
+  setInterval(() => {
+    if (Date.now() < pausa || document.hidden) return;
+    const passo = tr.firstElementChild.getBoundingClientRect().width + 12;
+    const fim = tr.scrollLeft + tr.clientWidth >= tr.scrollWidth - 4;
+    tr.scrollTo({left: fim ? 0 : tr.scrollLeft + passo, behavior: "smooth"});
+  }, 3500);
+}
+function render(){ setTimeout(montaVitrine, 0); soComPreco();
   document.querySelectorAll("[data-l]").forEach(b => b.setAttribute("aria-pressed", b.dataset.l===state.linha));
   document.querySelectorAll("[data-f]").forEach(b => b.setAttribute("aria-pressed", b.dataset.f===state.fam));
   document.querySelectorAll("[data-r]").forEach(b => b.setAttribute("aria-pressed", b.dataset.r===state.rap));
@@ -1099,7 +1146,7 @@ function render(){ soComPreco();
     ? `<div class="sexo">${["Feminino","Masculino"].map(x=>`<button class="qbtn" data-p="${x}" aria-pressed="${state.pub===x}">${x}</button>`).join("")}</div>` : "";
   const aviso = AVISO[state.linha] ? `<div class="aviso">${AVISO[state.linha]}${filtroSexo}</div>` : "";
   $("#grid").innerHTML = aviso + (list.length ? list.map(p => p.texto ? cardTexto(p) : BC(p) ? cardBrand(p) : `
-    <article class="card">
+    <article class="card${CENARIO[p.id] ? " cn" : ""}">
       <div class="shot" data-i="${p.id}" role="button" tabindex="0" aria-label="Ver detalhes do ${p.nome}">
         <div class="track">${fotos(p).map((f,k)=>`<img src="${f}" alt="${p.nome}, foto ${k+1}" loading="lazy">`).join("")}</div>
         <span class="badge">${p.publico}</span><span class="badge orig">${ORIGEM[p.linha]}</span>
@@ -1126,7 +1173,7 @@ C7_EXTRA.texto.forEach(g => g.itens.forEach(it => {
     foto:(C7_EXTRA.foto||{})[id] ? imgSrc(C7_EXTRA.foto[id]) : null, familias:[], ocasiao:[], tracos:[g.tag], notas:[], at, vj, unico });
 }));
 function cardTexto(p){
-  return `<article class="card bc">
+  return `<article class="card bc${CENARIO[p.id] ? " cn" : ""}">
       <div class="shot tile u${p.foto ? " ph" : ""}">
         ${galeria(p)}
         <span class="badge">${p.tag}</span>
@@ -1142,12 +1189,12 @@ function cardTexto(p){
 }
 const galeria = p => {
   if (!p.foto) return "";
-  const fs = [p.foto, ...((C7_EXTRA.galeria||{})[p.id]||[]).map(imgSrc)];
+  const fs = [...cenFoto(p), p.foto, ...((C7_EXTRA.galeria||{})[p.id]||[]).map(imgSrc)];
   return fs.length < 2 ? `<img src="${p.foto}" alt="" loading="lazy">`
     : `<div class="track">${fs.map((f,k)=>`<img src="${f}" alt="foto ${k+1}" loading="lazy">`).join("")}</div><span class="dots">${fs.map((_,k)=>`<i class="${k?"":"on"}"></i>`).join("")}</span>`;
 };
 function cardBrand(p){
-  return `<article class="card bc">
+  return `<article class="card bc${CENARIO[p.id] ? " cn" : ""}">
       <div class="shot tile ${p.foto?"ph ":""}${p.publico==="Feminino"?"f":p.publico==="Masculino"?"m":"u"}" data-i="${p.id}" role="button" tabindex="0" aria-label="Ver detalhes do ${descr(p)}">
         ${galeria(p)}
         <span class="badge${p.arabe||p.top?" hot":""}">${p.arabe ? "Linha árabe" : p.splash ? "Body Splash" : p.top ? "Mais vendido" : p.linha==="mini" ? "Miniatura" : p.publico}</span>

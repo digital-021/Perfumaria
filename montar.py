@@ -47,6 +47,7 @@ def montar(l, out):
         h = open(tmp, encoding="utf-8").read()
         # Fora do claude.ai não existe /_blob/: as fotos da loja vêm da pasta img/.
         h = re.sub(r"const C7_ASSETS = \{.*?\};", "const C7_ASSETS = {};", h, count=1, flags=re.S)
+    h = re.sub(r"const HMC_ASSETS = \{.*?\};", "const HMC_ASSETS = {};", h, count=1, flags=re.S)
     h = h.replace('<meta name="claude:viewport-fit-sides" content="cover">\n', "")
     h = re.sub(r'LINK_SITE = "[^"]*"', f'LINK_SITE = "{BASE}{l["id"]}/"', h)
     d = os.path.join(out, l["id"])
