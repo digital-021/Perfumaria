@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Monta o site do GitHub Pages (repo digital-021/perfumaria) a partir dos catálogos do projeto.
-Uso: python3 montar.py <pasta-do-repo>
+Uso: python3 montar.py <repo>/docs  (GitHub Pages publica a pasta /docs)
 Gera <repo>/hmc/ e <repo>/c7/ (index.html + img/ + og.jpg) e <repo>/index.html.
 Rodar de novo sempre que o HMC ou a C7 mudar, e depois fazer commit/push."""
 import json, os, re, shutil, subprocess, sys, tempfile
