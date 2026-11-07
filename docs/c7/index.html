@@ -261,6 +261,9 @@ header.wrap .esq-k{display:inline-block;font-weight:900;text-transform:uppercase
 .esq p{font-size:13.5px;color:var(--muted);margin:12px 4px 0;line-height:1.45}
 @media (min-width:700px){.esq ul{grid-template-columns:repeat(3,1fr)}.esq li{grid-template-columns:1fr;text-align:center;justify-items:center;gap:4px}.esq li span{max-width:none}}
 header.wrap .promos{display:none!important}
+.esq-item{position:relative;border-color:#E8781E}
+.esq-tag{position:absolute;top:8px;left:8px;font-style:normal;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:linear-gradient(180deg,#FFC45A,#E8781E);color:#1F1A16;border-radius:6px;padding:3px 7px;box-shadow:0 2px 8px rgba(0,0,0,.5)}
+.esq-item span s{color:var(--muted);font-weight:600;font-size:12px}
 </style>
 
 <header class="wrap top">
@@ -1136,6 +1139,20 @@ const precoFicha = p => p.at
   : `<div><dt>Preço</dt><dd>${p.unico ? `<b>${brl(p.unico)}</b>` : "Em reposição · consulte a disponibilidade"}</dd></div>`;
 function soComPreco(){ for (let i = PERFUMES.length - 1; i >= 0; i--) if (!temPreco(PERFUMES[i])) PERFUMES.splice(i, 1); }
 
+const KITS_ESQ = [{"k": "royal-amber", "nome": "Kit Royal Amber", "liga": "A mesma fragrância no perfume e na pasta corporal", "de": "de R$ 235", "por": "R$ 200", "itens": [{"nome": "Perfume Royal Amber · Nº A024", "det": "Miniatura 25ml · Arabic Collection", "preco": "R$ 85"}, {"nome": "Pasta corporal Royal Amber", "det": "Body cream 200g · Isabelle La Belle", "preco": "R$ 150"}]}, {"k": "asad-bourbon", "nome": "Kit Asad Bourbon", "liga": "A mesma fragrância no perfume e na pasta corporal", "de": "de R$ 240", "por": "R$ 200", "itens": [{"nome": "Perfume Asad Bourbon · Lattafa", "det": "Miniatura 30ml", "preco": "R$ 90"}, {"nome": "Pasta corporal Asad Bourbon", "det": "Body cream · Isabelle La Belle", "preco": "R$ 150"}]}, {"k": "sabah-sugar", "nome": "Kit Sabah Al Ward Sugar", "liga": "A mesma fragrância no perfume, no body splash e na pasta", "de": "de R$ 420", "por": "R$ 340", "itens": [{"nome": "Perfume Sabah Al Ward Sugar", "det": "100ml · Al Wataniah", "preco": "R$ 180"}, {"nome": "Body splash Sabah Al Ward Sugar", "det": "Isabelle La Belle", "preco": "R$ 90"}, {"nome": "Pasta corporal Sabah Al Ward Sugar", "det": "Body cream · Isabelle La Belle", "preco": "R$ 150"}]}, {"k": "olympea", "nome": "Kit inspiração Olympéa", "liga": "Hidratante + miniatura com a mesma fragrância", "de": "de R$ 140", "por": "R$ 95", "itens": [{"nome": "Hidratante inspirado em Olympéa", "det": "Body lotion 200ml · Isabelle La Belle", "preco": "R$ 75"}, {"nome": "Miniatura inspirada em Olympéa · Nº 087", "det": "25ml · Brand Collection", "preco": "R$ 65"}]}, {"k": "alien", "nome": "Kit inspiração Alien", "liga": "Hidratante + miniatura com a mesma fragrância", "de": "de R$ 140", "por": "R$ 95", "itens": [{"nome": "Hidratante inspirado em Alien", "det": "Body lotion 200ml · Isabelle La Belle", "preco": "R$ 75"}, {"nome": "Miniatura inspirada em Alien · Nº 029", "det": "25ml · Beauty Brand", "preco": "R$ 65"}]}, {"k": "erva-pura", "nome": "Kit inspiração Erba Pura", "liga": "Hidratante + miniatura com a mesma fragrância", "de": "de R$ 150", "por": "R$ 115", "itens": [{"nome": "Hidratante X Pure Exclusive", "det": "Body lotion 200ml · Isabelle La Belle", "preco": "R$ 75"}, {"nome": "Miniatura inspirada em Erba Pura · Nº 402", "det": "25ml · Brand Collection", "preco": "R$ 75"}]}, {"k": "decantes", "tag": "Decantes", "nome": "Decantes de 2ml e 5ml", "liga": "Experimente grandes fragrâncias antes de levar o frasco completo", "de": "", "por": "a partir de R$ 5", "itens": [{"nome": "Árabes originais · 2ml", "det": "Decante", "preco": "R$ 10"}, {"nome": "Árabes originais · 5ml", "det": "Decante", "preco": "R$ 30"}, {"nome": "Brand Collection · 2ml", "det": "Decante", "preco": "R$ 5"}, {"nome": "Brand Collection · 5ml", "det": "Decante", "preco": "R$ 15"}]}];
+function abrirKit(k){
+  $("#sheet").innerHTML = `
+    <button class="x" id="fechar" aria-label="Fechar">×</button>
+    <div class="sheet-head"><div><span class="maker">${k.tag ? "C7 Perfumaria" : "Esquenta Black Friday · C7 Perfumaria"}</span><h3 id="sheetTitle">${k.nome}</h3><p style="margin:0;color:var(--muted)">${k.liga}</p></div></div>
+    <img src="${imgSrc("esq-story-"+k.k+".jpg")}" alt="${k.nome}" style="width:min(100%,360px);height:auto;border-radius:14px;justify-self:center">
+    <dl class="facts">${k.itens.map(i => `<div><dt>${i.det}</dt><dd>${i.nome} · ${k.de ? `<s>${i.preco}</s>` : `<b style="color:var(--accent)">${i.preco}</b>`}</dd></div>`).join("")}
+      ${k.de ? `<div><dt>Preço do kit</dt><dd><s>${k.de}</s> por <b style="color:var(--accent);font-size:20px">${k.por}</b></dd></div>` : ""}</dl>
+    <a class="wa" target="_blank" rel="noopener" href="${waLink(`Olá, C7 Perfumaria! ${k.tag ? `Quero comprar decantes. Quais fragrâncias vocês têm?` : `Quero o ${k.nome} do Esquenta Black Friday (${k.por}). Como faço o pedido?`}`)}">${waIcon}${k.tag ? "Quero decantes no WhatsApp" : "Quero este kit no WhatsApp"}</a>`;
+  $("#sheet").hidden = false; $("#sheetBg").hidden = false;
+  document.body.style.overflow = "hidden"; if(!(history.state && history.state.ficha)) try{ history.pushState({ficha:1}, ""); }catch(e){}
+  $("#fechar").focus();
+}
+document.addEventListener("click", e => { const b = e.target.closest("[data-kit]"); if (b) abrirKit(KITS_ESQ.find(k => k.k === b.dataset.kit)); });
 function montaVitrine(){
   const el = document.getElementById("vitrine"); if (!el || el.dataset.ok) return; el.dataset.ok = 1;
   const top = typeof MAIS_VENDIDOS !== "undefined" ? MAIS_VENDIDOS : [];
@@ -1146,6 +1163,8 @@ function montaVitrine(){
   const preco = p => p.at ? `a partir de ${brl(p.at)}` : p.unico ? brl(p.unico) : "";
   el.innerHTML = `<h3>Destaques da loja</h3><div class="vit-track">${itens.map(p =>
     `<button class="vit-item" data-i="${p.id}" aria-label="Ver ${p.nome}"><img src="${cenFoto(p)[0]}" alt="${p.nome}" loading="lazy"><span><small>${p.linha === "arabe" ? "Perfume árabe" : p.linha === "mini" ? "Miniatura" : "Brand Collection"}</small>${preco(p)}</span></button>`).join("")}</div>`;
+  el.querySelector(".vit-track").insertAdjacentHTML("afterbegin", KITS_ESQ.map(k =>
+    `<button class="vit-item esq-item" data-kit="${k.k}" aria-label="Ver ${k.nome}"><img src="${imgSrc("esq-kit-"+k.k+".jpg")}" alt="${k.nome}" loading="lazy"><i class="esq-tag">${k.tag || "Esquenta Black"}</i><span><small>${k.nome}</small>${k.de ? `<s>${k.de}</s> por ${k.por}` : k.por}</span></button>`).join(""));
   const tr = el.querySelector(".vit-track");
   let pausa = 0;
   const parar = () => { pausa = Date.now() + 8000; };
