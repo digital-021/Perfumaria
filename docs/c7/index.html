@@ -264,6 +264,7 @@ header.wrap .promos{display:none!important}
 .esq-item{position:relative;border-color:#E8781E}
 .esq-tag{position:absolute;top:8px;left:8px;font-style:normal;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:linear-gradient(180deg,#FFC45A,#E8781E);color:#1F1A16;border-radius:6px;padding:3px 7px;box-shadow:0 2px 8px rgba(0,0,0,.5)}
 .esq-item span s{color:var(--muted);font-weight:600;font-size:12px}
+.esq-selo{display:block;width:min(78%,320px);height:auto;margin:-6px auto 2px;filter:drop-shadow(0 6px 14px rgba(0,0,0,.6))}
 </style>
 
 <header class="wrap top">
@@ -273,7 +274,7 @@ header.wrap .promos{display:none!important}
     <span class="ar" lang="ar" aria-hidden="true">عطور</span>
   </div>
   <section class="esq" aria-label="Esquenta Black Friday">
-    <span class="esq-k">Esquenta Black Friday</span>
+    <img class="esq-selo" data-asset="selo-esquenta.png" src="img/selo-esquenta.png" alt="Esquenta Black Friday" width="640" height="457">
     <h2>Começou! E já começa presenteando você</h2>
     <ul>
       <li><span>Compras<br>acima de</span><b>R$&nbsp;250</b><em><strong>1</strong>miniatura</em></li>
@@ -1153,6 +1154,7 @@ function abrirKit(k){
   $("#fechar").focus();
 }
 document.addEventListener("click", e => { const b = e.target.closest("[data-kit]"); if (b) abrirKit(KITS_ESQ.find(k => k.k === b.dataset.kit)); });
+document.querySelectorAll("img[data-asset]").forEach(i => { i.src = imgSrc(i.dataset.asset); });
 function montaVitrine(){
   const el = document.getElementById("vitrine"); if (!el || el.dataset.ok) return; el.dataset.ok = 1;
   const top = typeof MAIS_VENDIDOS !== "undefined" ? MAIS_VENDIDOS : [];
