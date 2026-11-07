@@ -1158,8 +1158,7 @@ function montaVitrine(){
   const top = typeof MAIS_VENDIDOS !== "undefined" ? MAIS_VENDIDOS : [];
   const ok = p => CENARIO[p.id] && temPreco(p) && !p.texto;
   const peso = p => (p.linha === "arabe" ? 0 : top.includes(p.cod) ? 1 : 2);
-  const itens = PERFUMES.filter(ok).sort((a,b) => peso(a) - peso(b)).slice(0, 12);
-  if (itens.length < 3) { el.remove(); return; }
+  const itens = [];
   const preco = p => p.at ? `a partir de ${brl(p.at)}` : p.unico ? brl(p.unico) : "";
   el.innerHTML = `<h3>Destaques da loja</h3><div class="vit-track">${itens.map(p =>
     `<button class="vit-item" data-i="${p.id}" aria-label="Ver ${p.nome}"><img src="${cenFoto(p)[0]}" alt="${p.nome}" loading="lazy"><span><small>${p.linha === "arabe" ? "Perfume árabe" : p.linha === "mini" ? "Miniatura" : "Brand Collection"}</small>${preco(p)}</span></button>`).join("")}</div>`;
