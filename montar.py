@@ -47,7 +47,8 @@ def montar(l, out):
         h = open(tmp, encoding="utf-8").read()
         # Fora do claude.ai não existe /_blob/: as fotos da loja vêm da pasta img/.
         h = re.sub(r"const C7_ASSETS = \{.*?\};", "const C7_ASSETS = {};", h, count=1, flags=re.S)
-    h = re.sub(r"const HMC_ASSETS = \{.*?\};", "const HMC_ASSETS = {};", h, count=1, flags=re.S)
+    # Qualquer mapa de asset store (HMC_ASSETS, ESQ_ASSETS...) fica vazio: no Pages tudo vem de img/.
+    h = re.sub(r"const (\w+_ASSETS) = \{.*?\};", r"const \1 = {};", h, flags=re.S)
     # Caminhos fixos do asset store (/_blob/<id>#arquivo.jpg) viram img/arquivo.jpg.
     h = re.sub(r"/_blob/[0-9a-f]+#([^\"'`\s)]+)", r"img/\1", h)
     h = h.replace('<meta name="claude:viewport-fit-sides" content="cover">\n', "")

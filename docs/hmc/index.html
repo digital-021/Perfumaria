@@ -241,6 +241,22 @@ footer p{margin:0 0 6px;max-width:60ch}
 .vit-item span small{display:block;font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 @media (min-width:700px){.vit-item{flex-basis:200px}.vitrine{margin:22px 0 6px}}
 .seal svg{flex:none}
+.esq{margin:16px 0 6px;padding:18px 16px 16px;border:1.5px solid var(--accent);border-radius:20px;background:radial-gradient(120% 80% at 50% 0%,rgba(232,120,30,.22),transparent 60%),rgba(14,10,6,.88);box-shadow:0 10px 30px rgba(0,0,0,.5),inset 0 0 0 4px rgba(14,10,6,.9),inset 0 0 0 5px rgba(215,168,94,.35);text-align:center}
+.esq h2{font-family:var(--f-display);font-weight:700;font-size:clamp(20px,5.4vw,28px);line-height:1.15;margin:6px 0 14px;color:#F0CD8C}
+.esq ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.esq li{display:grid;grid-template-columns:58px auto 1fr;align-items:center;gap:8px;padding:10px 12px;border:1px solid rgba(215,168,94,.45);border-radius:14px;background:rgba(0,0,0,.35);text-align:left}
+.esq li span{font-size:11.5px;line-height:1.15;color:#BEB2A0;white-space:nowrap}
+.esq li b{font-weight:900;font-size:clamp(24px,7vw,36px);line-height:1;color:#F0CD8C;text-shadow:0 0 14px rgba(255,120,30,.45);white-space:nowrap}
+.esq li em{font-style:normal;display:flex;justify-content:flex-end;align-items:center;gap:6px;font-size:13px;color:#F3E6CF;line-height:1.1}
+.esq li em strong{font-size:30px;font-weight:900;color:#F0CD8C;line-height:1}
+.esq li em::before{content:"ganhe";font-size:12px;color:#BEB2A0}
+.esq p{font-size:13.5px;color:var(--muted);margin:12px 4px 0;line-height:1.45}
+.esq-selo{display:block;width:min(78%,320px);height:auto;margin:-6px auto 2px;filter:drop-shadow(0 6px 14px rgba(0,0,0,.6))}
+@media (min-width:700px){.esq ul{grid-template-columns:repeat(3,1fr)}.esq li{grid-template-columns:1fr;text-align:center;justify-items:center;gap:4px}}
+header.wrap .promos{display:none!important}
+.esq-item{position:relative;border-color:#E8781E}
+.esq-tag{position:absolute;top:8px;left:8px;font-style:normal;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:linear-gradient(180deg,#FFC45A,#E8781E);color:#1F1A16;border-radius:6px;padding:3px 7px;box-shadow:0 2px 8px rgba(0,0,0,.5)}
+.esq-item span s{color:var(--muted);font-weight:600;font-size:12px}
 </style>
 
 <header class="wrap top">
@@ -249,6 +265,16 @@ footer p{margin:0 0 6px;max-width:60ch}
     <h1><small>Perfumes árabes e inspirações</small>HMC Perfumaria</h1>
     <span class="ar" lang="ar" aria-hidden="true">عطور</span>
   </div>
+  <section class="esq" aria-label="Esquenta Black Friday">
+    <img class="esq-selo" data-asset="selo-esquenta.png" src="img/selo-esquenta.png" alt="Esquenta Black Friday" width="640" height="457">
+    <h2>Começou! E já começa presenteando você</h2>
+    <ul>
+      <li><span>Compras<br>acima de</span><b>R$&nbsp;250</b><em><strong>1</strong>body splash</em></li>
+      <li><span>Compras<br>acima de</span><b>R$&nbsp;550</b><em><strong>2</strong>body splashes</em></li>
+      <li><span>Compras<br>acima de</span><b>R$&nbsp;750</b><em><strong>3</strong>body splashes</em></li>
+    </ul>
+    <p>Você escolhe o seu body splash na loja, entre os selecionados para brinde. Muitos itens da loja já estão no Esquenta: além dos kits, perfumes para todos os gostos e bolsos.</p>
+  </section>
   <p class="from"><span>Perfumes árabes originais e inspirações</span> a partir de <strong>R$&nbsp;47</strong></p>
   <p class="tagline">Nosso foco são os perfumes árabes 100% originais e as inspirações dos perfumes de sucesso do momento, da Brand Collection. Escolha pela família, procure pela nota que você ama e peça direto no WhatsApp.</p>
   <button class="go" data-l="todos" data-ir="1">Ver os perfumes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg></button>
@@ -1111,16 +1137,34 @@ const temFoto = p => (p.texto || BC(p)) ? !!p.foto : true;
 // Ordem (Ednando, 29/10): com preço e foto > com preço sem foto > com foto sem preço (não tem na loja) > resto
 const ordemCard = p => temPreco(p) ? (temFoto(p) ? 3 : 2) : (temFoto(p) ? 1 : 0);
 
+const ESQ_ASSETS = {};
+const esqSrc = f => (ESQ_ASSETS[f] && location.protocol !== "file:") ? `/_blob/${ESQ_ASSETS[f]}#${f}` : `img/${f}`;
+const KITS_ESQ = [{"k": "1-sabah-valentine", "nome": "Kit Sabah Al Ward Valentine", "liga": "A mesma fragrância no body splash e na pasta", "de": "de R$ 240", "por": "R$ 200", "itens": [{"nome": "Body splash Sabah Al Ward Valentine", "det": "Isabelle La Belle", "preco": "R$ 90"}, {"nome": "Pasta corporal Sabah Al Ward Valentine", "det": "Body cream 200g · Isabelle La Belle", "preco": "R$ 150"}]}, {"k": "2-sabah-sugar", "nome": "Kit Sabah Al Ward Sugar", "liga": "A mesma fragrância no body splash e na pasta", "de": "de R$ 240", "por": "R$ 200", "itens": [{"nome": "Body splash Sabah Al Ward Sugar", "det": "Isabelle La Belle", "preco": "R$ 90"}, {"nome": "Pasta corporal Sabah Al Ward Sugar", "det": "Body cream 200g · Isabelle La Belle", "preco": "R$ 150"}]}, {"k": "3-maleka", "nome": "Kit Club de Nuit Maleka", "liga": "A mesma fragrância no body splash e no hidratante", "de": "de R$ 180", "por": "R$ 110", "itens": [{"nome": "Body splash Club de Nuit Maleka", "det": "Isabelle La Belle", "preco": "R$ 90"}, {"nome": "Hidratante Club de Nuit Maleka", "det": "Loção hidratante · Isabelle La Belle", "preco": "R$ 90"}]}, {"k": "4-interdit", "nome": "Kit inspiração L'Interdit", "liga": "Hidratante + miniatura com a mesma fragrância", "de": "de R$ 150", "por": "R$ 100", "itens": [{"nome": "Miniatura Nº 382 · inspiração L'Interdit", "det": "Miniatura 25ml · Brand Collection", "preco": "R$ 75"}, {"nome": "Hidratante Interdicted", "det": "Loção hidratante · Isabelle La Belle", "preco": "R$ 75"}]}, {"k": "5-yara-candy", "nome": "Kit Yara Candy", "liga": "A mesma fragrância no perfume e na pasta corporal", "de": "de R$ 230", "por": "R$ 200", "itens": [{"nome": "Perfume Yara Candy · Nº A033", "det": "Miniatura · Arabic Collection", "preco": "R$ 80"}, {"nome": "Pasta corporal Yara Candy", "det": "Body cream 200g · Isabelle La Belle", "preco": "R$ 150"}]}, {"k": "6-royal-amber", "nome": "Kit Royal Amber", "liga": "A mesma fragrância no perfume e na pasta corporal", "de": "de R$ 235", "por": "R$ 200", "itens": [{"nome": "Perfume Royal Amber · Nº A024", "det": "Miniatura · Arabic Collection", "preco": "R$ 85"}, {"nome": "Pasta corporal Royal Amber", "det": "Body cream 200g · Isabelle La Belle", "preco": "R$ 150"}]}];
+function abrirKit(k){
+  $("#sheet").innerHTML = `
+    <button class="x" id="fechar" aria-label="Fechar">×</button>
+    <div class="sheet-head"><div><span class="maker">Esquenta Black Friday · HMC Perfumaria</span><h3 id="sheetTitle">${k.nome}</h3><p style="margin:0;color:var(--muted)">${k.liga}</p></div></div>
+    <img src="${esqSrc("esq-story-"+k.k+".jpg")}" alt="${k.nome}" style="width:min(100%,360px);height:auto;border-radius:14px;justify-self:center">
+    <dl class="facts">${k.itens.map(i => `<div><dt>${i.det}</dt><dd>${i.nome} · <s>${i.preco}</s></dd></div>`).join("")}
+      <div><dt>Preço do kit</dt><dd><s>${k.de}</s> por <b style="color:var(--accent);font-size:20px">${k.por}</b></dd></div></dl>
+    <a class="wa" target="_blank" rel="noopener" href="${waLink(`Olá, HMC Perfumaria! Quero o ${k.nome} do Esquenta Black Friday (${k.por}). Como faço o pedido?`)}">${waIcon}Quero este kit no WhatsApp</a>`;
+  $("#sheet").hidden = false; $("#sheetBg").hidden = false;
+  document.body.style.overflow = "hidden"; if(!(history.state && history.state.ficha)) try{ history.pushState({ficha:1}, ""); }catch(e){}
+  $("#fechar").focus();
+}
+document.addEventListener("click", e => { const b = e.target.closest("[data-kit]"); if (b) abrirKit(KITS_ESQ.find(k => k.k === b.dataset.kit)); });
+document.querySelectorAll("img[data-asset]").forEach(i => { i.src = esqSrc(i.dataset.asset); });
 function montaVitrine(){
   const el = document.getElementById("vitrine"); if (!el || el.dataset.ok) return; el.dataset.ok = 1;
   const top = typeof MAIS_VENDIDOS !== "undefined" ? MAIS_VENDIDOS : [];
   const ok = p => CENARIO[p.id] && temPreco(p) && !p.texto;
   const peso = p => (p.linha === "arabe" ? 0 : top.includes(p.cod) ? 1 : 2);
-  const itens = PERFUMES.filter(ok).sort((a,b) => peso(a) - peso(b)).slice(0, 12);
-  if (itens.length < 3) { el.remove(); return; }
+  const itens = [];
   const preco = p => p.at ? `a partir de ${brl(p.at)}` : p.unico ? brl(p.unico) : "";
   el.innerHTML = `<h3>Destaques da loja</h3><div class="vit-track">${itens.map(p =>
     `<button class="vit-item" data-i="${p.id}" aria-label="Ver ${p.nome}"><img src="${cenFoto(p)[0]}" alt="${p.nome}" loading="lazy"><span><small>${p.linha === "arabe" ? "Perfume árabe" : p.linha === "mini" ? "Miniatura" : "Brand Collection"}</small>${preco(p)}</span></button>`).join("")}</div>`;
+  el.querySelector(".vit-track").insertAdjacentHTML("afterbegin", KITS_ESQ.map(k =>
+    `<button class="vit-item esq-item" data-kit="${k.k}" aria-label="Ver ${k.nome}"><img src="${esqSrc("esq-kit-"+k.k+".jpg")}" alt="${k.nome}" loading="lazy"><i class="esq-tag">Esquenta Black</i><span><small>${k.nome}</small><s>${k.de}</s> por ${k.por}</span></button>`).join(""));
   const tr = el.querySelector(".vit-track");
   let pausa = 0;
   const parar = () => { pausa = Date.now() + 8000; };
