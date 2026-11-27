@@ -265,15 +265,15 @@ header.wrap .promos{display:none!important}
     <h1><small>Perfumes árabes e inspirações</small>HMC Perfumaria</h1>
     <span class="ar" lang="ar" aria-hidden="true">عطور</span>
   </div>
-  <section class="esq" aria-label="Esquenta Black Friday">
-    <img class="esq-selo" data-asset="selo-esquenta.png" src="img/selo-esquenta.png" alt="Esquenta Black Friday" width="640" height="457">
+  <section class="esq" aria-label="Black Friday">
+    <img class="esq-selo" data-asset="selo-black.png" src="img/selo-black.png" alt="Chegou a Black Friday" width="640" height="457">
     <h2>Começou! E já começa presenteando você</h2>
     <ul>
       <li><span>Compras<br>acima de</span><b>R$&nbsp;250</b><em><strong>1</strong>body splash</em></li>
       <li><span>Compras<br>acima de</span><b>R$&nbsp;550</b><em><strong>2</strong>body splashes</em></li>
       <li><span>Compras<br>acima de</span><b>R$&nbsp;750</b><em><strong>3</strong>body splashes</em></li>
     </ul>
-    <p>Você escolhe o seu body splash na loja, entre os selecionados para brinde. Muitos itens da loja já estão no Esquenta: além dos kits, perfumes para todos os gostos e bolsos.</p>
+    <p>Você escolhe o seu body splash na loja, entre os selecionados para brinde. Muitos itens da loja já estão na Black Friday: além dos kits, perfumes para todos os gostos e bolsos.</p>
   </section>
   <p class="from"><span>Perfumes árabes originais e inspirações</span> a partir de <strong>R$&nbsp;47</strong></p>
   <p class="tagline">Nosso foco são os perfumes árabes 100% originais e as inspirações dos perfumes de sucesso do momento, da Brand Collection. Escolha pela família, procure pela nota que você ama e peça direto no WhatsApp.</p>
@@ -1144,11 +1144,11 @@ const KITS_ESQ = [{"k": "1-sabah-valentine", "nome": "Kit Sabah Al Ward Valentin
 function abrirKit(k){
   $("#sheet").innerHTML = `
     <button class="x" id="fechar" aria-label="Fechar">×</button>
-    <div class="sheet-head"><div><span class="maker">Esquenta Black Friday · HMC Perfumaria</span><h3 id="sheetTitle">${k.nome}</h3><p style="margin:0;color:var(--muted)">${k.liga}</p></div></div>
+    <div class="sheet-head"><div><span class="maker">Black Friday · HMC Perfumaria</span><h3 id="sheetTitle">${k.nome}</h3><p style="margin:0;color:var(--muted)">${k.liga}</p></div></div>
     <img src="${esqSrc("esq-story-"+k.k+".jpg")}" alt="${k.nome}" style="width:min(100%,360px);height:auto;border-radius:14px;justify-self:center">
     <dl class="facts">${k.itens.map(i => `<div><dt>${i.det}</dt><dd>${i.nome} · <s>${i.preco}</s></dd></div>`).join("")}
       <div><dt>Preço do kit</dt><dd><s>${k.de}</s> por <b style="color:var(--accent);font-size:20px">${k.por}</b></dd></div></dl>
-    <a class="wa" target="_blank" rel="noopener" href="${waLink(`Olá, HMC Perfumaria! Quero o ${k.nome} do Esquenta Black Friday (${k.por}). Como faço o pedido?`)}">${waIcon}Quero este kit no WhatsApp</a>`;
+    <a class="wa" target="_blank" rel="noopener" href="${waLink(`Olá, HMC Perfumaria! Quero o ${k.nome} da Black Friday (${k.por}). Como faço o pedido?`)}">${waIcon}Quero este kit no WhatsApp</a>`;
   $("#sheet").hidden = false; $("#sheetBg").hidden = false;
   document.body.style.overflow = "hidden"; if(!(history.state && history.state.ficha)) try{ history.pushState({ficha:1}, ""); }catch(e){}
   $("#fechar").focus();
@@ -1165,7 +1165,7 @@ function montaVitrine(){
   el.innerHTML = `<h3>Destaques da loja</h3><div class="vit-track">${itens.map(p =>
     `<button class="vit-item" data-i="${p.id}" aria-label="Ver ${p.nome}"><img src="${cenFoto(p)[0]}" alt="${p.nome}" loading="lazy"><span><small>${p.linha === "arabe" ? "Perfume árabe" : p.linha === "mini" ? "Miniatura" : "Brand Collection"}</small>${preco(p)}</span></button>`).join("")}</div>`;
   el.querySelector(".vit-track").insertAdjacentHTML("afterbegin", KITS_ESQ.map(k =>
-    `<button class="vit-item esq-item" data-kit="${k.k}" aria-label="Ver ${k.nome}"><img src="${esqSrc("esq-kit-"+k.k+".jpg")}" alt="${k.nome}" loading="lazy"><i class="esq-tag">Esquenta Black</i><span><small>${k.nome}</small><s>${k.de}</s> por ${k.por}</span></button>`).join(""));
+    `<button class="vit-item esq-item" data-kit="${k.k}" aria-label="Ver ${k.nome}"><img src="${esqSrc("esq-kit-"+k.k+".jpg")}" alt="${k.nome}" loading="lazy"><i class="esq-tag">Black Friday</i><span><small>${k.nome}</small><s>${k.de}</s> por ${k.por}</span></button>`).join(""));
   const tr = el.querySelector(".vit-track");
   let pausa = 0;
   const parar = () => { pausa = Date.now() + 8000; };
