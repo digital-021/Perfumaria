@@ -327,10 +327,8 @@ header.wrap .promos{display:none!important}
 
 <main class="wrap">
   <details class="helper">
-    <summary>Não sabe qual escolher? Filtre por ocasião, para quem e nota</summary>
+    <summary>Não sabe qual escolher? Filtre por ocasião e nota</summary>
     <div class="quick" id="quick"></div>
-    <h3>Para quem</h3>
-    <div class="quick" id="pub"></div>
     <h3>Procure por nota</h3>
     <div class="notes-pop" id="notes"></div>
   </details>
@@ -1116,7 +1114,7 @@ function filtrar(){
 
 const AVISO = {
   miniar: `<b>MINIATURAS ÁRABES · ATÉ 50ML</b><span class="faixa">Atacado a partir de R$ 60 (4 peças ou mais) · Varejo a partir de R$ 80</span><p>Miniaturas da marca <b>Arabic</b>, de inspiração árabe e originais da marca. Cada uma mostra o número e o nome da caixa. Procura outra? Chame no WhatsApp.</p>`,
-  mini: `<b>MINIATURAS BRAND COLLECTION · 25ML</b><span class="faixa">Atacado de R$ 47 a R$ 65 (4 peças ou mais) · Varejo de R$ 65 a R$ 85</span><p>Miniaturas inspiradas nos perfumes de sucesso, originais da marca <b>Brand Collection</b>. Primeiro as <b>mais vendidas</b>. Escolha feminino ou masculino. Cada uma mostra o número e o perfume em que é inspirada. Procura outra? Chame no WhatsApp.</p>`,
+  mini: `<b>MINIATURAS BRAND COLLECTION · 25ML</b><span class="faixa">Atacado de R$ 47 a R$ 65 (4 peças ou mais) · Varejo de R$ 65 a R$ 85</span><p>Miniaturas inspiradas nos perfumes de sucesso, originais da marca <b>Brand Collection</b>. Primeiro as <b>mais vendidas</b>. Cada uma mostra o número e o perfume em que é inspirada. Procura outra? Chame no WhatsApp.</p>`,
   brand: `<b>BRAND COLLECTION · ACIMA DE 50ML</b><p>Frascos grandes e body splash, inspirados nos perfumes de sucesso e originais da marca Brand Collection. Procura outro? Chame no WhatsApp.</p>`,
   kit: `<b>KITS DE PERFUME</b><span class="faixa">Kits originais em caixa de presente</span><p>Quer montar um presente? Chame no WhatsApp.</p>`,
   pasta: `<b>PASTAS CORPORAIS ISABELLE LA BELLE</b><span class="faixa">Atacado R$ 135 (4 peças ou mais) · Varejo R$ 150</span><p>Procura outra fragrância? Chame no WhatsApp.</p>`,
@@ -1190,7 +1188,7 @@ function render(){ setTimeout(montaVitrine, 0);
   $("#limpar").hidden = !(state.fam!=="Todas" || state.rap || state.pub || state.nota || state.q);
   const filtroSexo = (state.linha==="cosm" || state.linha==="pasta" || state.linha==="kit") ? "" : (state.linha==="mini" || state.linha==="miniar" || state.linha==="brand")
     ? `<div class="sexo">${["Feminino","Masculino"].map(x=>`<button class="qbtn" data-p="${x}" aria-pressed="${state.pub===x}">${x}</button>`).join("")}</div>` : "";
-  const aviso = AVISO[state.linha] ? `<div class="aviso">${AVISO[state.linha]}${filtroSexo}</div>` : "";
+  const aviso = AVISO[state.linha] ? `<div class="aviso">${AVISO[state.linha]}</div>` : "";
   $("#grid").innerHTML = aviso + (list.length ? list.map(p => p.texto ? cardTexto(p) : BC(p) ? cardBrand(p) : `
     <article class="card${CENARIO[p.id] ? " cn" : ""}">
       <div class="shot" data-i="${p.id}" role="button" tabindex="0" aria-label="Ver detalhes do ${p.nome}">
@@ -1326,7 +1324,7 @@ window.addEventListener("popstate", () => { if(!$("#sheet").hidden){ $("#sheet")
 $("#seg").innerHTML = LINHAS.map(l=>`<button data-l="${l.id}">${l.t}</button>`).join("");
 $("#tabs").innerHTML = FAMILIAS.map(f=>`<button class="tab" data-f="${f}">${f}</button>`).join("");
 $("#quick").innerHTML = RAPIDO.map(r=>`<button class="qbtn" data-r="${r.id}">${r.t}</button>`).join("");
-$("#pub").innerHTML = PUBLICO.map(p=>`<button class="qbtn" data-p="${p}">${p}</button>`).join("");
+if ($("#pub")) $("#pub").innerHTML = PUBLICO.map(p=>`<button class="qbtn" data-p="${p}">${p}</button>`).join("");
 $("#notes").innerHTML = NOTAS_POP.map(n=>`<button class="npill" data-n="${n}">${n}</button>`).join("");
 $("#ctaAtacado").href = waLink("Olá, HMC Perfumaria! Quero saber os preços de atacado.");
 $("#ctaLoja").href = waLink("Olá, HMC Perfumaria! Qual o endereço da loja em Bonsucesso e o horário de funcionamento?");
